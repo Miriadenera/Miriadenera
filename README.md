@@ -1,6 +1,7 @@
 # Codex Alpha – Unified Theory
 
 ![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15557393.svg)
+English Version: https://doi.org/10.5281/zenodo.15587185
 
 > "The Universe as a Coherent Information Network."
 ---

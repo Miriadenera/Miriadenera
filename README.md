@@ -3,6 +3,7 @@
 ![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15557393.svg)
 
 > "The Universe as a Coherent Information Network."
+---
 Disclosure:
 This theoretical framework, including its physical insights, conceptual structures, and mathematical derivations, was developed by me independently. For the sake of clarity and coherence, I used AI tools to convert my handwritten formulas into LaTeX and to help structure the document in a more fluid and readable way. In the spirit of transparency, I’ve stated this at the beginning of the manuscript. However, all the core ideas, reasoning, and theoretical constructs are entirely my own.
 ---

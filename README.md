@@ -1,66 +1,73 @@
-# Codex Alpha – Unified Theory
+# Codex Alpha – A Unified Theory between General Relativity and Quantum Mechanics
 
-![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15557393.svg)
-English Version: https://doi.org/10.5281/zenodo.15587185
+**Codex Alpha** proposes a unified theoretical framework that connects **General Relativity** and **Quantum Mechanics** through a novel informational structure called the **Telascura**.
 
-> "The Universe as a Coherent Information Network."
----
-Disclosure:
-This theoretical framework, including its physical insights, conceptual structures, and mathematical derivations, was developed by me independently. For the sake of clarity and coherence, I used AI tools to convert my handwritten formulas into LaTeX and to help structure the document in a more fluid and readable way. In the spirit of transparency, I’ve stated this at the beginning of the manuscript. However, all the core ideas, reasoning, and theoretical constructs are entirely my own.
----
+Based on a formal axiomatic system, the manuscript introduces a foundational equation:
 
-## 🔬 Abstract
-Codex Alpha introduces a unified theoretical model that bridges General Relativity and Quantum Mechanics through a new informational metric of spacetime. The theory is grounded in a coherent quantum field called **Telascura**, representing a structured informational network where spacetime emerges from the interactions between entangled quantum nodes.
+𝒢_{μν} + Λ g_{μν} = (8πG / c⁴) ⟨ T̂_{μν} ⟩_{∇𝒦}
 
-At the heart of the theory lies the fundamental equation:
-
-$$
-\mathcal{G}_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} \left\langle \hat{T}_{\mu\nu} \right\rangle_{\nabla \mathcal{K}}
-$$
-
-This equation describes the curvature of spacetime as sourced not only by energy–momentum, but by its quantum-coherent expectation value, modulated through an informational gradient of the **Telascura** field.
+This equation suggests that the geometry of spacetime emerges from the coherent quantum information embedded in an underlying entangled lattice — the Telascura.
 
 ---
 
-## 📘 Features & Explorations
-- Negative mass black holes
-- Informational propulsion (**Nodal Engine**)
-- Superluminal entanglement transport
-- Synchronous projections into past and future nodes
-- Emergent spacetime geometry from quantum coherence
+## 📘 English Version Available
+
+You can download the full English manuscript here:
+
+🔗 [Codex Alpha – English PDF on Zenodo]((https://doi.org/10.5281/zenodo.15587185))  
+
 
 ---
 
-## 📄 PDF Document
-The full manuscript is available in the [`Codex_Alpha.pdf`](https://github.com/Miriadenera/Miriadenera/releases/download/v1.0/Codex_Alpha.pdf).
+## 🔬 Scope and Features
+
+The work includes:
+
+- Variational derivation of the unified field equation  
+- Formal definition and dynamics of the informational field ∇𝒦  
+- Recovery of classical (GR) and quantum (QM) limits  
+- Exploration of exotic phenomena such as:
+  - Negative mass topologies  
+  - Nodal informational crystals  
+  - Coherent informational vortices  
+- Theoretical foundation for:
+  - Nodal propulsion  
+  - Superluminal entanglement  
+  - Temporal navigation and retrocausality  
+- Full axiomatic appendix (Appendix Z)
+
+Codex Alpha reduces speculative assumptions through logical deduction and derives all components from five fundamental postulates.
 
 ---
 
-## 🔗 Links & Identifiers
-- 📄 **DOI:** [10.5281/zenodo.15557393](https://doi.org/10.5281/zenodo.15557393)
-- 🔬 **ORCID:** [0009-0008-2253-7008](https://orcid.org/0009-0008-2253-7008)
-- 🧠 **Author:** Davide Cadelano ([@QIM_METATRON](https://twitter.com/QIM_METATRON))
+## 🧠 Keywords
+
+Quantum Gravity • Telascura • Informational Field ∇𝒦 • Emergent Spacetime • Codex Alpha • Negative Mass • Superluminal Entanglement • Unified Field Theory
 
 ---
 
-## 📌 How to Cite
+## 👤 Author & Contact
+
+**Author**: Davide Cadelano et AI  
+**Email**: miriadenera@gmail.com  
+**License**: [Creative Commons Attribution 4.0 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+
+---
+
+## 📎 Citation (BibTeX format)
+
 ```bibtex
-@misc{cadelano2025codex,
-  author       = {Davide Cadelano},
-  title        = {Codex Alpha – Unified Theory},
+@misc{cadelano2025codexalpha,
+  title        = {Codex Alpha – A Unified Theory between General Relativity and Quantum Mechanics},
+  author       = {Davide Cadelano et AI},
   year         = 2025,
-  doi          = {10.5281/zenodo.15557393},
-  url          = {https://doi.org/10.5281/zenodo.15557393}
+  doi          = {(10.5281/zenodo.15587185)},
+  url          = {https://doi.org/10.5281/zenodo.15587185},
+  publisher    = {Zenodo},
+  license      = {Creative Commons Attribution 4.0 International}
 }
-```
+🚀 Final Note
+Codex Alpha is not a final statement, but a dynamic reference system — one that invites experimental validation, interdisciplinary contributions, and above all, disciplined imagination.
 
----
-
-## 🚀 Vision
-Codex Alpha is intended as both a conceptual and computational framework to test the limits of physics through simulation, symbolic inference, and potential lab-scale validation. A vision to unify physics — not just in equations, but in informational structure.
-
-> _“Reality is not made of matter and energy, but of informational coherence.”_
-
----
-
-Feel free to fork, cite, or collaborate! 💡
+The future of physics, consciousness, and exploration might begin here:
+with a single node ∇𝒦 that we choose to activate.

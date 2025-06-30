@@ -2,46 +2,54 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Orbitron', sans-serif;
-    background-color: black;
+    background: url('space_bg_1.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #00ffff;
+    font-family: 'Arial', sans-serif;
+    color: #00ffe0;
 }
 
 .overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
     text-align: center;
-    background-color: rgba(0, 0, 40, 0.75);
-    padding: 30px;
-    border-radius: 15px;
+    padding: 2em;
+    border: 2px solid #00ffe0;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 30px #00ffe0;
 }
 
 h1 {
     font-size: 3em;
     margin-bottom: 0.5em;
+    color: #00ffff;
 }
 
 p {
     font-size: 1.2em;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
 }
 
-.button {
+.buttons .button {
     display: inline-block;
-    margin: 0.5em;
-    padding: 10px 20px;
-    background-color: #001F3F;
-    color: #00ffff;
-    border: 2px solid #00ffff;
-    border-radius: 10px;
+    padding: 12px 24px;
+    margin: 0 10px;
+    background-color: #00ffe0;
+    color: #000;
+    font-weight: bold;
     text-decoration: none;
-    transition: all 0.3s ease;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 10px #00ffe0;
 }
 
-.button:hover {
-    background-color: #00ffff;
-    color: #000;
+.buttons .button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00ffe0;
 }

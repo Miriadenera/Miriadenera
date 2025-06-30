@@ -1,18 +1,65 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Codex Alpha – Unified Theory</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codex Alpha – Unified Theory</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- SEO -->
+  <meta name="description" content="Codex Alpha is a unified framework connecting General Relativity and Quantum Mechanics via the Telascura, a coherent informational quantum lattice.">
+  <meta name="keywords" content="Codex Alpha, Unified Theory, Quantum Gravity, Telascura, Relativity, Quantum Mechanics, Negative Mass, Entanglement, ∇𝒦, Spacetime">
+  <meta name="author" content="Davide Cadelano">
+
+  <!-- Social Sharing -->
+  <meta property="og:title" content="Codex Alpha – Unified Framework">
+  <meta property="og:description" content="Unification of General Relativity and Quantum Mechanics through an emergent spacetime model.">
+  <meta property="og:image" content="favicon.png">
+  <meta property="og:url" content="https://www.codexalpha.org">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #0ff;
+      font-family: 'Orbitron', sans-serif;
+    }
+    #splash {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #000;
+      font-size: 2em;
+      animation: fadeOut 1.5s ease-in-out 2s forwards;
+    }
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+    #main-content {
+      display: none;
+      text-align: center;
+      padding: 50px;
+    }
+  </style>
 </head>
 <body>
-    <div class="overlay">
-        <h1>Codex Alpha</h1>
-        <p>A Unified Framework of General Relativity and Quantum Mechanics</p>
-        <a href="https://doi.org/10.5281/zenodo.15587185" target="_blank" class="button">Download PDF on Zenodo</a>
-        <a href="https://github.com/Miriadenera/codex-alpha-data" target="_blank" class="button">Visit GitHub Repository</a>
-    </div>
+  <div id="splash">Loading Codex Alpha...</div>
+  <div id="main-content">
+    <h1>Codex Alpha</h1>
+    <p>A Unified Framework of General Relativity and Quantum Mechanics</p>
+    <a href="https://zenodo.org/records/15587185" target="_blank">Download PDF on Zenodo</a><br>
+    <a href="https://github.com/codex-alpha" target="_blank">Visit GitHub Repository</a>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("splash").style.display = "none";
+      document.getElementById("main-content").style.display = "block";
+    }, 2500);
+  </script>
 </body>
 </html>

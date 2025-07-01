@@ -50,6 +50,7 @@ Quantum Gravity • Telascura • Informational Field ∇𝒦 • Emergent Space
 
 **Author**: Davide Cadelano et AI  
 **Email**: miriadenera@gmail.com  
+**WEB SITE**: www.codexalpha.org
 **License**: [Creative Commons Attribution 4.0 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 
 ---

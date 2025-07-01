@@ -7,35 +7,12 @@
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="style.css" /> 
   <style>
-    /* Rimuovi tutte le regole CSS duplicate che hai qui,
-       mantieni solo quelle che sono specifiche per questa pagina
-       e non sono nel tuo file CSS esterno.
-       Nel tuo caso, puoi rimuovere quasi tutto da qui tranne
-       le regole per header, nav, section, ecc. se non le hai nel CSS esterno.
-       L'importante è rimuovere il background dal body.
-    */
     body {
-      /* Rimuovi queste regole o assicurati che non si scontrino con il CSS esterno */
-      /* margin: 0; */
-      /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-      /* background: url('space_bg_3.jpg') no-repeat center center fixed; */
-      /* background-size: cover; */
-      /* color: white; */
-      /* text-align: center; */
+      /* Le regole del body dovrebbero essere nel file CSS esterno */
     }
     header {
       padding: 5vh 0 1vh;
     }
-    /*
-    h1 {
-      font-size: 3em;
-      color: #00ffff;
-    }
-    p {
-      font-size: 1.2em;
-      margin: 0.5em 0;
-    }
-    */
     .button-container {
       margin-top: 2vh;
     }
@@ -62,7 +39,7 @@
       padding: 1em;
       background-color: rgba(0, 0, 0, 0.6);
       border-bottom-left-radius: 10px;
-      z-index: 10; /* Assicurati che la nav sia sopra lo sfondo */
+      z-index: 10;
     }
     nav a {
       margin: 0 0.5em;
@@ -78,14 +55,20 @@
       background: rgba(0, 0, 0, 0.6);
       margin-top: 10vh;
       border-radius: 10px;
-      position: relative; /* Potrebbe essere utile se hai altri z-index */
-      z-index: 1; /* Assicurati che il contenuto sia sopra lo sfondo */
+      position: relative;
+      z-index: 1;
     }
     h2 {
       color: #00ffff;
     }
     .news-entry {
       margin-bottom: 1.5em;
+    }
+    /* Nuovo stile per l'immagine cliccabile nello slideshow */
+    .cosmic-slideshow-link {
+        display: block; /* Fa sì che il link occupi tutto lo spazio dell'immagine */
+        width: 100%;
+        height: 100%;
     }
   </style>
 </head>
@@ -119,15 +102,17 @@
       <p><strong>April 2020:</strong> Origin of the Codex Alpha theoretical research project during the first COVID-19 lockdown. Initial investigations included quantum coherence, negative mass models, and ESA/LIGO/GAIA public datasets. Simulations were conducted to identify possible entangled gravitational nodes and emergent spacetime structures.</p>
     </div>
   </section>
+  
   <div style="margin: 4vh auto; width: 90%; max-width: 960px; border-radius: 12px; overflow: hidden; box-shadow: 0 0 25px #00ffff;">
-  <div style="position: relative; width: 100%; height: 500px;">
-    <a href="Subject 109757440 Codex Alpha BH-003.png" target="_blank" title="Clicca per ingrandire l'immagine">
-      <img id="cosmic-slideshow" src="Subject 109757440 Codex Alpha BH-003.png" alt="Codex Alpha Slide" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" />
-    </a>
+    <div style="position: relative; width: 100%; height: 500px;">
+      <a id="cosmic-slideshow-link" href="Subject 109757440 Codex Alpha BH-003.png" target="_blank" title="Clicca per ingrandire l'immagine" class="cosmic-slideshow-link">
+        <img id="cosmic-slideshow-img" src="Subject 109757440 Codex Alpha BH-003.png" alt="Codex Alpha Slide" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" />
+      </a>
+    </div>
   </div>
-</div>
 
   <script>
+    // Script per lo slideshow delle immagini di sfondo (già funzionante)
     const backgrounds = [
       'space_bg_1.jpg',
       'space_bg_2.jpg',
@@ -135,37 +120,65 @@
       'space_bg_4.jpg'
     ];
 
-    let currentIndex = 0;
+    let currentIndexBg = 0; // Ho rinominato per evitare conflitti
     const bg1 = document.getElementById('bg1');
     const bg2 = document.getElementById('bg2');
-    const intervalTime = 10000; // 10 secondi
+    const intervalTimeBg = 10000; // 10 secondi
 
-    // Funzione per aggiornare lo sfondo
     function updateBackgrounds() {
-      const currentBg = backgrounds[currentIndex];
-      const nextIndex = (currentIndex + 1) % backgrounds.length;
-      const nextBg = backgrounds[nextIndex];
+      const currentBg = backgrounds[currentIndexBg];
+      const nextIndexBg = (currentIndexBg + 1) % backgrounds.length;
+      const nextBg = backgrounds[nextIndexBg];
 
-      // Imposta il prossimo sfondo sul div attualmente nascosto
-      if (bg1.style.opacity == 1) { // bg1 è visibile, il prossimo andrà su bg2
+      if (bg1.style.opacity == 1) {
         bg2.style.backgroundImage = `url('${nextBg}')`;
         bg2.style.opacity = 1;
         bg1.style.opacity = 0;
-      } else { // bg2 è visibile, il prossimo andrà su bg1
+      } else {
         bg1.style.backgroundImage = `url('${nextBg}')`;
         bg1.style.opacity = 1;
         bg2.style.opacity = 0;
       }
 
-      currentIndex = nextIndex; // Aggiorna l'indice per la prossima iterazione
+      currentIndexBg = nextIndexBg;
     }
 
-    // Imposta il primo sfondo all'inizio
     bg1.style.backgroundImage = `url('${backgrounds[0]}')`;
-    bg1.style.opacity = 1; // Rendi il primo sfondo visibile
+    bg1.style.opacity = 1;
 
-    // Avvia l'intervallo per la rotazione delle immagini
-    setInterval(updateBackgrounds, intervalTime);
+    setInterval(updateBackgrounds, intervalTimeBg);
+
+
+    // NUOVO SCRIPT PER LO SLIDESHOW DELL'IMMAGINE INTERNA
+    const cosmicImages = [
+      'Subject 109757440 Codex Alpha BH-003.png',
+      'Subject 109757440 Codex Alpha BH-004.png', // Assicurati di avere queste immagini
+      'Subject 109757440 Codex Alpha BH-005.png', // Aggiungi qui i percorsi delle tue immagini
+      'Subject 109757440 Codex Alpha BH-006.png'  // Quante ne vuoi
+    ];
+
+    let currentCosmicIndex = 0;
+    const cosmicImageElement = document.getElementById('cosmic-slideshow-img');
+    const cosmicLinkElement = document.getElementById('cosmic-slideshow-link');
+    const intervalTimeCosmic = 5000; // Esempio: 5 secondi per lo slideshow interno
+
+    function updateCosmicImage() {
+      currentCosmicIndex = (currentCosmicIndex + 1) % cosmicImages.length;
+      const newImageSrc = cosmicImages[currentCosmicIndex];
+      
+      // Aggiorna l'attributo src dell'immagine
+      cosmicImageElement.src = newImageSrc;
+      // Aggiorna anche l'attributo href del link per aprire l'immagine corretta
+      cosmicLinkElement.href = newImageSrc;
+    }
+
+    // Imposta la prima immagine all'avvio
+    cosmicImageElement.src = cosmicImages[0];
+    cosmicLinkElement.href = cosmicImages[0];
+
+    // Avvia l'intervallo per la rotazione delle immagini interne
+    setInterval(updateCosmicImage, intervalTimeCosmic);
+
   </script>
 
   <section id="about">

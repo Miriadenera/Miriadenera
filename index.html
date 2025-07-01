@@ -1,54 +1,143 @@
 
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Codex Alpha – Teoria Unificata</title>
-  <link rel="icon" type="image/png" href="entanglement_resized_for_github.jpg">
-  <link rel="stylesheet" href="style.css" />
+  <title>Codex Alpha</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('space_bg_3.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+    header {
+      padding: 5vh 0 1vh;
+    }
+    h1 {
+      font-size: 3em;
+      color: #00ffff;
+    }
+    p {
+      font-size: 1.2em;
+      margin: 0.5em 0;
+    }
+    .button-container {
+      margin-top: 2vh;
+    }
+    .neon-button {
+      display: inline-block;
+      padding: 1em 2em;
+      margin: 0 1em;
+      background-color: #6a0dad;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #00ffff;
+      transition: all 0.3s ease-in-out;
+      font-weight: bold;
+    }
+    .neon-button:hover {
+      background-color: #4b0082;
+      box-shadow: 0 0 40px #00ffff;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 1em;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-bottom-left-radius: 10px;
+    }
+    nav a {
+      margin: 0 0.5em;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 10vh 5vw;
+      background: rgba(0, 0, 0, 0.6);
+      margin-top: 10vh;
+      border-radius: 10px;
+    }
+    h2 {
+      color: #00ffff;
+    }
+    .news-entry {
+      margin-bottom: 1.5em;
+    }
+  </style>
 </head>
 <body>
+  <nav>
+    <a href="#news">News</a>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+  </nav>
+  <header>
+    <h1>Codex Alpha</h1>
+    <p>A Unified Framework of General Relativity and Quantum Mechanics</p>
+    <div class="button-container">
+      <a class="neon-button" href="https://zenodo.org/doi/10.5281/zenodo.15587185" target="_blank">Download PDF on Zenodo</a>
+      <a class="neon-button" href="https://github.com/davidecadelano/codex-alpha" target="_blank">Visit GitHub Repository</a>
+    </div>
+  </header>
 
-<header>
-  <h1>Codex Alpha – Unified Theory</h1>
-  <p>Unificazione teorica tra relatività generale e meccanica quantistica</p>
-</header>
-
-<div class="button-container">
-  <a href="https://zenodo.org/records/10587185" class="custom-button" target="_blank">Scarica da Zenodo</a>
-  <a href="https://github.com/Miriadenera/codexalpha.org" class="custom-button" target="_blank">Vai al Repository GitHub</a>
+  <section id="news">
+    <h2>News</h2>
+    <div class="news-entry">
+      <p><strong>July 2025:</strong> Major site update: redesigned News, About, and Research sections with enhanced structure and aesthetic. Launch of phase 2.0 of the Codex Alpha theory, integrating real astrophysical data from black holes and stellar dynamics.</p>
+    </div>
+    <div class="news-entry">
+      <p><strong>June 2025:</strong> Codex Alpha English version officially published on Zenodo with DOI and international indexing.</p>
+    </div>
+    <div class="news-entry">
+      <p><strong>April 2020:</strong> Origin of the Codex Alpha theoretical research project during the first COVID-19 lockdown. Initial investigations included quantum coherence, negative mass models, and ESA/LIGO/GAIA public datasets. Simulations were conducted to identify possible entangled gravitational nodes and emergent spacetime structures.</p>
+    </div>
+  </section>
+<!-- Cosmic Image Slideshow -->
+<div style="margin: 4vh auto; width: 90%; max-width: 960px; border-radius: 12px; overflow: hidden; box-shadow: 0 0 25px #00ffff;">
+  <div style="position: relative; width: 100%; height: 500px;">
+    <img id="cosmic-slideshow" src="Subject 109757440 Codex Alpha BH-003.png" alt="Codex Alpha Slide" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" />
+  </div>
 </div>
 
-<section class="news-section">
-  <h2>News</h2>
-  <p>
-    Il progetto <strong>Codex Alpha</strong> nasce nel 2020, durante il lockdown causato dal COVID-19. 
-    Costretti a casa, abbiamo iniziato una profonda riflessione scientifica sull’unificazione tra relatività generale e meccanica quantistica. 
-    Utilizzando dati reali provenienti da missioni ESA, GAIA, LIGO e altre fonti astrofisiche, abbiamo condotto simulazioni e verifiche sperimentali.
-    Il lavoro si è consolidato con la pubblicazione su Zenodo nel 2025, e oggi è in sviluppo la <strong>Versione 2.0</strong>, con modelli computazionali 
-    basati su dati osservativi di buchi neri e stelle di neutroni.
-  </p>
-</section>
+<script>
+  const images = [
+    'Subject 109757440 Codex Alpha BH-003.png',
+    'Subject 109759123 Codex Alpha-20.png',
+    'Subject 109760980 Codex Alpha BH-QSO-009.png',
+    'Subject 109766453 Codex Alpha BH-001.png',
+    'codex_alpha_field.png',
+    'gradiente.png',
+    'formula codex(1).png',
+    'work in progress.png'
+  ];
+  let index = 0;
+  setInterval(() => {
+    const img = document.getElementById('cosmic-slideshow');
+    index = (index + 1) % images.length;
+    img.src = images[index];
+  }, 5000); // cambia immagine ogni 5 secondi
+</script>
 
-<section class="slideshow-section">
-  <div class="slideshow-container">
-    <div class="slideshow-scroll">
-      <a href="codex_alpha_field.png" target="_blank"><img src="codex_alpha_field.png" alt="Codex Alpha Field" /></a>
-      <a href="formula codex(1).png" target="_blank"><img src="formula codex(1).png" alt="Formula Codex" /></a>
-      <a href="gradiente.png" target="_blank"><img src="gradiente.png" alt="Gradiente Informazionale" /></a>
-      <a href="work in progress.png" target="_blank"><img src="work in progress.png" alt="Work in Progress" /></a>
-      <a href="Subject 109757440 Codex Alpha BH-003.png" target="_blank"><img src="Subject 109757440 Codex Alpha BH-003.png" alt="BH-003" /></a>
-      <a href="Subject 109759123 Codex Alpha-20.png" target="_blank"><img src="Subject 109759123 Codex Alpha-20.png" alt="Alpha-20" /></a>
-      <a href="Subject 109760980 Codex Alpha BH-QSO-009.png" target="_blank"><img src="Subject 109760980 Codex Alpha BH-QSO-009.png" alt="BH-QSO-009" /></a>
-      <a href="Subject 109766453 Codex Alpha BH-001.png" target="_blank"><img src="Subject 109766453 Codex Alpha BH-001.png" alt="BH-001" /></a>
-    </div>
-  </div>
-</section>
 
-<footer>
-  <p>&copy; 2025 Codex Alpha Research</p>
-</footer>
+  <section id="about">
+    <h2>About the Author</h2>
+    <p>Davide Cadelano is a physicist and independent researcher from Italy. Creator of <strong>Codex Alpha</strong> — a unified theoretical framework that explores the emergence of spacetime from a coherent quantum informational network, the <em>Telascura</em>. The project is a result of years of isolated yet passionate scientific dedication, aimed at bridging general relativity with quantum mechanics in an innovative, informational-based formalism.</p>
+  </section>
 
+  <section id="research">
+    <h2>Codex Alpha Research</h2>
+    <p>The Research section tracks theoretical progress, AI-assisted derivations, numerical simulations, and upcoming publications. Current research integrates real data from ESA's GAIA mission, LIGO gravitational wave detections, and cosmic microwave background patterns, toward deriving the gradient ∇𝒦 of informational coherence between quantum nodes. All collaborators and contributions are published transparently through Zenodo and GitHub for scientific integrity and reproducibility.</p>
+  </section>
 </body>
 </html>

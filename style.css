@@ -1,11 +1,11 @@
 
+
 body {
   margin: 0;
   position: relative; /* per permettere ai figli z-index > -1 */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   text-align: center;
-  background-color: black;
   overflow-x: hidden; /* solo orizzontale */
 }
 
@@ -24,7 +24,6 @@ body {
   pointer-events: none;
   opacity: 0; /* sarà impostato a 1 dallo script JS */
 }
-
 .overlay {
     background-color: rgba(0, 0, 0, 0.7);
     min-height: 100vh;

@@ -117,11 +117,28 @@
     'space_bg_3.jpg',
     'space_bg_4.jpg'
   ];
-  let bgIndex = 0;
+
+  let index = 0;
+  let showingBg1 = true;
+
   setInterval(() => {
-    document.body.style.backgroundImage = `url('${backgrounds[bgIndex]}')`;
-    bgIndex = (bgIndex + 1) % backgrounds.length;
-  }, 10000); // cambia sfondo ogni 10 secondi
+    const bg1 = document.getElementById('bg1');
+    const bg2 = document.getElementById('bg2');
+
+    index = (index + 1) % backgrounds.length;
+
+    if (showingBg1) {
+      bg2.style.backgroundImage = `url('${backgrounds[index]}')`;
+      bg2.style.opacity = 1;
+      bg1.style.opacity = 0;
+    } else {
+      bg1.style.backgroundImage = `url('${backgrounds[index]}')`;
+      bg1.style.opacity = 1;
+      bg2.style.opacity = 0;
+    }
+
+    showingBg1 = !showingBg1;
+  }, 10000); // ogni 10 secondi
 </script>
 
 

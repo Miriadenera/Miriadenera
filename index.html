@@ -111,22 +111,18 @@
 </div>
 
 <script>
-  const images = [
-    'Subject 109757440 Codex Alpha BH-003.png',
-    'Subject 109759123 Codex Alpha-20.png',
-    'Subject 109760980 Codex Alpha BH-QSO-009.png',
-    'Subject 109766453 Codex Alpha BH-001.png',
-    'codex_alpha_field.png',
-    'gradiente.png',
-    'formula codex(1).png',
-    'work in progress.png'
+  const backgrounds = [
+    'space_bg.jpg',
+    'space_bg_1.jpg',
+    'space_bg_2.jpg',
+    'space_bg_3.jpg',
+    'space_bg_4.jpg'
   ];
-  let index = 0;
+  let bgIndex = 0;
   setInterval(() => {
-    const img = document.getElementById('cosmic-slideshow');
-    index = (index + 1) % images.length;
-    img.src = images[index];
-  }, 5000); // cambia immagine ogni 5 secondi
+    document.body.style.backgroundImage = `url('${backgrounds[bgIndex]}')`;
+    bgIndex = (bgIndex + 1) % backgrounds.length;
+  }, 5000); // cambia sfondo ogni 5 secondi
 </script>
 
 

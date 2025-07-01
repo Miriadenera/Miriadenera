@@ -1,119 +1,117 @@
 
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Codex Alpha</title>
-<link href="favicon.png" rel="icon" type="image/png"/>
-<link href="style.css" rel="stylesheet"/>
-<style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .slideshow {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            z-index: -1;
-        }
-        .slideshow img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-        .slideshow img.active {
-            opacity: 1;
-        }
-        .overlay {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            color: white;
-            text-shadow: 1px 1px 3px black;
-        }
-        .container {
-            text-align: center;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 2rem;
-            border-radius: 12px;
-        }
-        h1 {
-            font-size: 3rem;
-        }
-        p {
-            font-size: 1.2rem;
-            margin: 1rem 0 2rem 0;
-        }
-        .buttons .button {
-            display: inline-block;
-            margin: 0 10px;
-            padding: 0.8rem 1.5rem;
-            color: white;
-            background-color: #5a1acb;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        .buttons .button:hover {
-            background-color: #7c40ff;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Codex Alpha</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('space_bg_3.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+    header {
+      padding: 5vh 0 1vh;
+    }
+    h1 {
+      font-size: 3em;
+      color: #00ffff;
+    }
+    p {
+      font-size: 1.2em;
+      margin: 0.5em 0;
+    }
+    .button-container {
+      margin-top: 2vh;
+    }
+    .neon-button {
+      display: inline-block;
+      padding: 1em 2em;
+      margin: 0 1em;
+      background-color: #6a0dad;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #00ffff;
+      transition: all 0.3s ease-in-out;
+      font-weight: bold;
+    }
+    .neon-button:hover {
+      background-color: #4b0082;
+      box-shadow: 0 0 40px #00ffff;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 1em;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-bottom-left-radius: 10px;
+    }
+    nav a {
+      margin: 0 0.5em;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 10vh 5vw;
+      background: rgba(0, 0, 0, 0.6);
+      margin-top: 10vh;
+      border-radius: 10px;
+    }
+    h2 {
+      color: #00ffff;
+    }
+    .news-entry {
+      margin-bottom: 1.5em;
+    }
+  </style>
 </head>
-<body><nav style="position: fixed; top: 0; right: 0; background: rgba(0,0,0,0.7); padding: 10px; z-index: 999;"><a href="#news" style="color:white; margin-right:10px;">News</a><a href="#about" style="color:white; margin-right:10px;">About</a><a href="#research" style="color:white;">Research</a></nav>
-<div class="slideshow">
-<img class="active" src="space_bg_1.jpg"/>
-<img src="space_bg_2.jpg"/>
-<img src="space_bg_3.jpg"/>
-<img src="space_bg_4.jpg"/>
-</div>
-<div class="overlay">
-<div class="container">
-<h1>Codex Alpha</h1>
-<p>A Unified Framework of General Relativity and Quantum Mechanics</p>
-<div class="buttons">
-<a class="button" href="https://doi.org/10.5281/zenodo.15587185">Download PDF on Zenodo</a>
-<a class="button" href="https://github.com/Miriadenera/Miriadenera">Visit GitHub Repository</a>
-</div>
-</div>
-</div>
-<script>
-        const slides = document.querySelectorAll('.slideshow img');
-        let index = 0;
-        setInterval(() => {
-            slides[index].classList.remove('active');
-            index = (index + 1) % slides.length;
-            slides[index].classList.add('active');
-        }, 8000);
-    </script>
+<body>
+  <nav>
+    <a href="#news">News</a>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+  </nav>
+  <header>
+    <h1>Codex Alpha</h1>
+    <p>A Unified Framework of General Relativity and Quantum Mechanics</p>
+    <div class="button-container">
+      <a class="neon-button" href="https://zenodo.org/doi/10.5281/zenodo.15587185" target="_blank">Download PDF on Zenodo</a>
+      <a class="neon-button" href="https://github.com/davidecadelano/codex-alpha" target="_blank">Visit GitHub Repository</a>
+    </div>
+  </header>
 
-<section id="news" style="margin-top:100px;">
-<h2 style="color:#00ffff;">News</h2>
-<ul style="color:white;">
-<li><strong>July 2025:</strong> Website structure updated with News, About, Research section.</li>
-<li><strong>June 2025:</strong> Codex Alpha English Version published on Zenodo with DOI.</li>
-</ul>
-</section>
+  <section id="news">
+    <h2>News</h2>
+    <div class="news-entry">
+      <p><strong>July 2025:</strong> Major site update: redesigned News, About, and Research sections with enhanced structure and aesthetic. Launch of phase 2.0 of the Codex Alpha theory, integrating real astrophysical data from black holes and stellar dynamics.</p>
+    </div>
+    <div class="news-entry">
+      <p><strong>June 2025:</strong> Codex Alpha English version officially published on Zenodo with DOI and international indexing.</p>
+    </div>
+    <div class="news-entry">
+      <p><strong>April 2020:</strong> Origin of the Codex Alpha theoretical research project during the first COVID-19 lockdown. Initial investigations included quantum coherence, negative mass models, and ESA/LIGO/GAIA public datasets. Simulations were conducted to identify possible entangled gravitational nodes and emergent spacetime structures.</p>
+    </div>
+  </section>
 
-<section id="about" style="margin-top:60px;">
-<h2 style="color:#00ffff;">About the Author</h2>
-<p style="color:white;">Davide Cadelano is a physicist and independent researcher from Italy. Creator of <strong>Codex Alpha</strong> – a unified theoretical framework that explores the emergence of spacetime from a coherent quantum informational network, the <strong>Telascura</strong>.</p>
-</section>
+  <section id="about">
+    <h2>About the Author</h2>
+    <p>Davide Cadelano is a physicist and independent researcher from Italy. Creator of <strong>Codex Alpha</strong> — a unified theoretical framework that explores the emergence of spacetime from a coherent quantum informational network, the <em>Telascura</em>. The project is a result of years of isolated yet passionate scientific dedication, aimed at bridging general relativity with quantum mechanics in an innovative, informational-based formalism.</p>
+  </section>
 
-<section id="research" style="margin-top:60px;">
-<h2 style="color:#00ffff;">Codex Alpha Research</h2>
-<p style="color:white;">This section will contain updates about collaborations, simulation results, experimental validation, and theoretical expansions related to the Codex Alpha project.</p>
-</section>
+  <section id="research">
+    <h2>Codex Alpha Research</h2>
+    <p>The Research section tracks theoretical progress, AI-assisted derivations, numerical simulations, and upcoming publications. Current research integrates real data from ESA's GAIA mission, LIGO gravitational wave detections, and cosmic microwave background patterns, toward deriving the gradient ∇𝒦 of informational coherence between quantum nodes. All collaborators and contributions are published transparently through Zenodo and GitHub for scientific integrity and reproducibility.</p>
+  </section>
 </body>
 </html>

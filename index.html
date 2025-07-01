@@ -103,6 +103,32 @@
       <p><strong>April 2020:</strong> Origin of the Codex Alpha theoretical research project during the first COVID-19 lockdown. Initial investigations included quantum coherence, negative mass models, and ESA/LIGO/GAIA public datasets. Simulations were conducted to identify possible entangled gravitational nodes and emergent spacetime structures.</p>
     </div>
   </section>
+<!-- Cosmic Image Slideshow -->
+<div style="margin: 4vh auto; width: 90%; max-width: 960px; border-radius: 12px; overflow: hidden; box-shadow: 0 0 25px #00ffff;">
+  <div style="position: relative; width: 100%; height: 500px;">
+    <img id="cosmic-slideshow" src="Subject 109757440 Codex Alpha BH-003.png" alt="Codex Alpha Slide" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" />
+  </div>
+</div>
+
+<script>
+  const images = [
+    'Subject 109757440 Codex Alpha BH-003.png',
+    'Subject 109759123 Codex Alpha-20.png',
+    'Subject 109760980 Codex Alpha BH-QSO-009.png',
+    'Subject 109766453 Codex Alpha BH-001.png',
+    'codex_alpha_field.png',
+    'gradiente.png',
+    'formula codex(1).png',
+    'work in progress.png'
+  ];
+  let index = 0;
+  setInterval(() => {
+    const img = document.getElementById('cosmic-slideshow');
+    index = (index + 1) % images.length;
+    img.src = images[index];
+  }, 5000); // cambia immagine ogni 5 secondi
+</script>
+
 
   <section id="about">
     <h2>About the Author</h2>

@@ -5,96 +5,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Codex Alpha</title>
-    <link rel="icon" type="image/png" href="favicon.png"/>
-    <link rel="stylesheet" href="style.css"/>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .slideshow {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            z-index: -1;
-        }
-        .slideshow img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-        .slideshow img.active {
-            opacity: 1;
-        }
-        .overlay {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            color: white;
-            text-shadow: 1px 1px 3px black;
-        }
-        .container {
-            text-align: center;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 2rem;
-            border-radius: 12px;
-        }
-        h1 {
-            font-size: 3rem;
-        }
-        p {
-            font-size: 1.2rem;
-            margin: 1rem 0 2rem 0;
-        }
-        .buttons .button {
-            display: inline-block;
-            margin: 0 10px;
-            padding: 0.8rem 1.5rem;
-            color: white;
-            background-color: #5a1acb;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        .buttons .button:hover {
-            background-color: #7c40ff;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
-    <div class="slideshow">
-        <img src="space_bg_1.jpg" class="active" />
-        <img src="space_bg_2.jpg" />
-        <img src="space_bg_3.jpg" />
-        <img src="space_bg_4.jpg" />
+    <div class="slideshow-container">
+        <div class="slideshow" id="slideshow"></div>
     </div>
-    <div class="overlay">
-        <div class="container">
-            <h1>Codex Alpha</h1>
-            <p>A Unified Framework of General Relativity and Quantum Mechanics</p>
-            <div class="buttons">
-                <a href="https://doi.org/10.5281/zenodo.15587185" class="button">Download PDF on Zenodo</a>
-                <a href="https://github.com/Miriadenera/Miriadenera" class="button">Visit GitHub Repository</a>
-            </div>
+    <div class="content-box">
+        <h1>Codex Alpha</h1>
+        <p>A Unified Framework of General Relativity and Quantum Mechanics</p>
+        <div class="button-group">
+            <a href="Codex_Alpha_English_Version.pdf" target="_blank" class="button">Download PDF on Zenodo</a>
+            <a href="https://github.com/Miriadenera/Miriadenera" target="_blank" class="button">Visit GitHub Repository</a>
         </div>
     </div>
+
+    <section class="section" id="news">
+        <h2>News</h2>
+        <ul>
+            <li><strong>July 2025:</strong> Website structure updated with News, About, PDF Viewer, and Research section.</li>
+            <li><strong>June 2025:</strong> Codex Alpha English Version published on Zenodo with DOI.</li>
+        </ul>
+    </section>
+
+    <section class="section" id="about">
+        <h2>About the Author</h2>
+        <p>Davide Cadelano is a physicist and independent researcher from Italy. Creator of Codex Alpha – a unified theoretical framework that explores the emergence of spacetime from a coherent quantum informational network, the Telascura.</p>
+    </section>
+
+    <section class="section" id="viewer">
+        <h2>PDF Viewer</h2>
+        <iframe src="Codex_Alpha_English_Version.pdf" width="100%" height="600px"></iframe>
+    </section>
+
+    <section class="section" id="research">
+        <h2>Codex Alpha Research</h2>
+        <p>This section will be dedicated to ongoing research, updates, collaborative partners, and technical appendices of the Codex Alpha project. Integration with AI teams, simulations, and peer feedback will be progressively included.</p>
+    </section>
+
     <script>
-        const slides = document.querySelectorAll('.slideshow img');
+        const images = ["space_bg.jpg", "space_bg_1.jpg", "space_bg_2.jpg", "space_bg_3.jpg", "space_bg_4.jpg"];
         let index = 0;
-        setInterval(() => {
-            slides[index].classList.remove('active');
-            index = (index + 1) % slides.length;
-            slides[index].classList.add('active');
-        }, 8000);
+        const slideshow = document.getElementById("slideshow");
+
+        function changeBackground() {
+            slideshow.style.backgroundImage = `url(${images[index]})`;
+            index = (index + 1) % images.length;
+        }
+
+        setInterval(changeBackground, 7000);
+        window.onload = changeBackground;
     </script>
 </body>
 </html>

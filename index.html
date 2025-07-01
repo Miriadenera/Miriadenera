@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,18 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Codex Alpha</title>
   <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" /> 
   <style>
+    /* Rimuovi tutte le regole CSS duplicate che hai qui,
+       mantieni solo quelle che sono specifiche per questa pagina
+       e non sono nel tuo file CSS esterno.
+       Nel tuo caso, puoi rimuovere quasi tutto da qui tranne
+       le regole per header, nav, section, ecc. se non le hai nel CSS esterno.
+       L'importante è rimuovere il background dal body.
+    */
     body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('space_bg_3.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-      text-align: center;
+      /* Rimuovi queste regole o assicurati che non si scontrino con il CSS esterno */
+      /* margin: 0; */
+      /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+      /* background: url('space_bg_3.jpg') no-repeat center center fixed; */
+      /* background-size: cover; */
+      /* color: white; */
+      /* text-align: center; */
     }
     header {
       padding: 5vh 0 1vh;
     }
+    /*
     h1 {
       font-size: 3em;
       color: #00ffff;
@@ -26,6 +35,7 @@
       font-size: 1.2em;
       margin: 0.5em 0;
     }
+    */
     .button-container {
       margin-top: 2vh;
     }
@@ -52,6 +62,7 @@
       padding: 1em;
       background-color: rgba(0, 0, 0, 0.6);
       border-bottom-left-radius: 10px;
+      z-index: 10; /* Assicurati che la nav sia sopra lo sfondo */
     }
     nav a {
       margin: 0 0.5em;
@@ -67,6 +78,8 @@
       background: rgba(0, 0, 0, 0.6);
       margin-top: 10vh;
       border-radius: 10px;
+      position: relative; /* Potrebbe essere utile se hai altri z-index */
+      z-index: 1; /* Assicurati che il contenuto sia sopra lo sfondo */
     }
     h2 {
       color: #00ffff;
@@ -76,9 +89,10 @@
     }
   </style>
 </head>
-<body> 
-  <div id="bg1" class="bg-fade" style="background-image: url('space_bg_3.jpg'); opacity: 1; z-index: -1; position: fixed; top: 0; left: 0; width: 100%; height: 100%;"></div>
-  <div id="bg2" class="bg-fade" style="z-index: -1; position: fixed; top: 0; left: 0; width: 100%; height: 100%;"></div>
+<body>
+  <div id="bg1" class="bg-fade"></div>
+  <div id="bg2" class="bg-fade"></div>
+
   <nav>
     <a href="#news">News</a>
     <a href="#about">About</a>
@@ -105,47 +119,52 @@
       <p><strong>April 2020:</strong> Origin of the Codex Alpha theoretical research project during the first COVID-19 lockdown. Initial investigations included quantum coherence, negative mass models, and ESA/LIGO/GAIA public datasets. Simulations were conducted to identify possible entangled gravitational nodes and emergent spacetime structures.</p>
     </div>
   </section>
-<!-- Cosmic Image Slideshow -->
-<div style="margin: 4vh auto; width: 90%; max-width: 960px; border-radius: 12px; overflow: hidden; box-shadow: 0 0 25px #00ffff;">
-  <div style="position: relative; width: 100%; height: 500px;">
-    <img id="cosmic-slideshow" src="Subject 109757440 Codex Alpha BH-003.png" alt="Codex Alpha Slide" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" />
+  <div style="margin: 4vh auto; width: 90%; max-width: 960px; border-radius: 12px; overflow: hidden; box-shadow: 0 0 25px #00ffff;">
+    <div style="position: relative; width: 100%; height: 500px;">
+      <img id="cosmic-slideshow" src="Subject 109757440 Codex Alpha BH-003.png" alt="Codex Alpha Slide" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" />
+    </div>
   </div>
-</div>
 
-<script>
- 
-const backgrounds = [
-  'space_bg_1.jpg',
-  'space_bg_2.jpg',
-  'space_bg_3.jpg',
-  'space_bg_4.jpg'
-];
+  <script>
+    const backgrounds = [
+      'space_bg_1.jpg',
+      'space_bg_2.jpg',
+      'space_bg_3.jpg',
+      'space_bg_4.jpg'
+    ];
 
-let index = 0;
-let showingBg1 = true;
+    let currentIndex = 0;
+    const bg1 = document.getElementById('bg1');
+    const bg2 = document.getElementById('bg2');
+    const intervalTime = 10000; // 10 secondi
 
-document.getElementById('bg1').style.backgroundImage = `url('${backgrounds[0]}')`;
-document.getElementById('bg1').style.opacity = 1;
+    // Funzione per aggiornare lo sfondo
+    function updateBackgrounds() {
+      const currentBg = backgrounds[currentIndex];
+      const nextIndex = (currentIndex + 1) % backgrounds.length;
+      const nextBg = backgrounds[nextIndex];
 
-setInterval(() => {
-  const bg1 = document.getElementById('bg1');
-  const bg2 = document.getElementById('bg2');
+      // Imposta il prossimo sfondo sul div attualmente nascosto
+      if (bg1.style.opacity == 1) { // bg1 è visibile, il prossimo andrà su bg2
+        bg2.style.backgroundImage = `url('${nextBg}')`;
+        bg2.style.opacity = 1;
+        bg1.style.opacity = 0;
+      } else { // bg2 è visibile, il prossimo andrà su bg1
+        bg1.style.backgroundImage = `url('${nextBg}')`;
+        bg1.style.opacity = 1;
+        bg2.style.opacity = 0;
+      }
 
-  index = (index + 1) % backgrounds.length;
+      currentIndex = nextIndex; // Aggiorna l'indice per la prossima iterazione
+    }
 
-  if (showingBg1) {
-    bg2.style.backgroundImage = `url('${backgrounds[index]}')`;
-    bg2.style.opacity = 1;
-    bg1.style.opacity = 0;
-  } else {
-    bg1.style.backgroundImage = `url('${backgrounds[index]}')`;
-    bg1.style.opacity = 1;
-    bg2.style.opacity = 0;
-  }
+    // Imposta il primo sfondo all'inizio
+    bg1.style.backgroundImage = `url('${backgrounds[0]}')`;
+    bg1.style.opacity = 1; // Rendi il primo sfondo visibile
 
-  showingBg1 = !showingBg1;
-}, 10000);
-</script>
+    // Avvia l'intervallo per la rotazione delle immagini
+    setInterval(updateBackgrounds, intervalTime);
+  </script>
 
   <section id="about">
     <h2>About the Author</h2>

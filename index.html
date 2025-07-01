@@ -1,13 +1,14 @@
 
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Codex Alpha</title>
-    <link rel="icon" type="image/png" href="favicon.png"/>
-    <link rel="stylesheet" href="style.css"/>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Codex Alpha</title>
+<link href="favicon.png" rel="icon" type="image/png"/>
+<link href="style.css" rel="stylesheet"/>
+<style>
         body, html {
             margin: 0;
             padding: 0;
@@ -70,24 +71,24 @@
         }
     </style>
 </head>
-<body>
-    <div class="slideshow">
-        <img src="space_bg_1.jpg" class="active" />
-        <img src="space_bg_2.jpg" />
-        <img src="space_bg_3.jpg" />
-        <img src="space_bg_4.jpg" />
-    </div>
-    <div class="overlay">
-        <div class="container">
-            <h1>Codex Alpha</h1>
-            <p>A Unified Framework of General Relativity and Quantum Mechanics</p>
-            <div class="buttons">
-                <a href="https://doi.org/10.5281/zenodo.15587185" class="button">Download PDF on Zenodo</a>
-                <a href="https://github.com/Miriadenera/Miriadenera" class="button">Visit GitHub Repository</a>
-            </div>
-        </div>
-    </div>
-    <script>
+<body><nav style="position: fixed; top: 0; right: 0; background: rgba(0,0,0,0.7); padding: 10px; z-index: 999;"><a href="#news" style="color:white; margin-right:10px;">News</a><a href="#about" style="color:white; margin-right:10px;">About</a><a href="#research" style="color:white;">Research</a></nav>
+<div class="slideshow">
+<img class="active" src="space_bg_1.jpg"/>
+<img src="space_bg_2.jpg"/>
+<img src="space_bg_3.jpg"/>
+<img src="space_bg_4.jpg"/>
+</div>
+<div class="overlay">
+<div class="container">
+<h1>Codex Alpha</h1>
+<p>A Unified Framework of General Relativity and Quantum Mechanics</p>
+<div class="buttons">
+<a class="button" href="https://doi.org/10.5281/zenodo.15587185">Download PDF on Zenodo</a>
+<a class="button" href="https://github.com/Miriadenera/Miriadenera">Visit GitHub Repository</a>
+</div>
+</div>
+</div>
+<script>
         const slides = document.querySelectorAll('.slideshow img');
         let index = 0;
         setInterval(() => {
@@ -96,5 +97,23 @@
             slides[index].classList.add('active');
         }, 8000);
     </script>
+
+<section id="news" style="margin-top:100px;">
+<h2 style="color:#00ffff;">News</h2>
+<ul style="color:white;">
+<li><strong>July 2025:</strong> Website structure updated with News, About, Research section.</li>
+<li><strong>June 2025:</strong> Codex Alpha English Version published on Zenodo with DOI.</li>
+</ul>
+</section>
+
+<section id="about" style="margin-top:60px;">
+<h2 style="color:#00ffff;">About the Author</h2>
+<p style="color:white;">Davide Cadelano is a physicist and independent researcher from Italy. Creator of <strong>Codex Alpha</strong> – a unified theoretical framework that explores the emergence of spacetime from a coherent quantum informational network, the <strong>Telascura</strong>.</p>
+</section>
+
+<section id="research" style="margin-top:60px;">
+<h2 style="color:#00ffff;">Codex Alpha Research</h2>
+<p style="color:white;">This section will contain updates about collaborations, simulation results, experimental validation, and theoretical expansions related to the Codex Alpha project.</p>
+</section>
 </body>
 </html>

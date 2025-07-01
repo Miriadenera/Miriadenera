@@ -1,5 +1,6 @@
 
 
+
 body {
   margin: 0;
   position: relative; /* per permettere ai figli z-index > -1 */
@@ -7,6 +8,7 @@ body {
   color: white;
   text-align: center;
   overflow-x: hidden; /* solo orizzontale */
+  background: none; /* rimuovi lo sfondo */
 }
 
 .bg-fade {

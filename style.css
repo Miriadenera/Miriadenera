@@ -1,11 +1,12 @@
 
 body {
   margin: 0;
+  position: relative; /* per permettere ai figli z-index > -1 */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   text-align: center;
   background-color: black;
-  overflow: hidden;
+  overflow-x: hidden; /* solo orizzontale */
 }
 
 .bg-fade {
@@ -20,6 +21,8 @@ body {
   background-attachment: fixed;
   transition: opacity 2s ease-in-out;
   will-change: opacity;
+  pointer-events: none;
+  opacity: 0; /* sarà impostato a 1 dallo script JS */
 }
 
 .overlay {

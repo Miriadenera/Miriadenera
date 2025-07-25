@@ -48,12 +48,42 @@ Quantum Gravity • Telascura • Informational Field ∇𝒦 • Emergent Space
 
 ## 👤 Author & Contact
 
-**Author**: Davide Cadelano et AI  
-**Email**: miriadenera@gmail.com  
-**WEB SITE**: www.codexalpha.org
-**License**: [Creative Commons Attribution 4.0 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+**👨‍🔬 Davide Cadelano** – Theoretical Physicist, Independent Researcher  
+**🚀 Founder & Lead Theorist** – *Codex Alpha Research*  
+**📘 Author of**: *Codex Alpha – Unified Theory (v2.0)*  
 
 ---
+
+### 🔗 Academic & Repository Links
+
+- 📄 **DOI (Italian version)**: [10.5281/zenodo.16131379](https://doi.org/10.5281/zenodo.16131379)  
+- 🧬 **ORCID**: [0009-0008-2253-7008](https://orcid.org/0009-0008-2253-7008)  
+- 🧠 **GitHub v2.0**: [github.com/Miriadenera/codex-alpha-v2.0](https://github.com/Miriadenera/codex-alpha-v2.0)  
+- 🌐 **OpenAIRE**: [Publication Page](https://explore.openaire.eu/search/publication?pid=10.5281%2Fzenodo.16131379)  
+- 🪐 **Website**: [www.codexalpha.org](https://www.codexalpha.org)
+
+---
+
+### 📬 Contact Info
+
+- 🏛️ **Mail istituzionale**: [davide.cadelano@codexalpha.org](mailto:davide.cadelano@codexalpha.org)  
+- 📧 **Mail personale**: [miriadenera@gmail.com](mailto:miriadenera@gmail.com)  
+- 📱 **Cell**: +39 366 7449960
+
+---
+
+### 🌍 Social & Networks
+
+- 🔗 **LinkedIn**: [linkedin.com/in/davide-cadelano-5b68a936a](https://www.linkedin.com/in/davide-cadelano-5b68a936a)  
+- 🐦 **X (Twitter)**: [x.com/QIM_METATRON](https://x.com/QIM_METATRON)  
+- 📘 **Facebook**: [facebook.com/profile.php?id=61577184890331](https://www.facebook.com/profile.php?id=61577184890331)
+
+---
+
+### 🪪 License
+
+📄 Licensed under: [Creative Commons Attribution 4.0 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+
 
 ## 📎 Citation (BibTeX format)
 

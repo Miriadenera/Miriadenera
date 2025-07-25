@@ -97,6 +97,19 @@ Quantum Gravity • Telascura • Informational Field ∇𝒦 • Emergent Space
   publisher    = {Zenodo},
   license      = {Creative Commons Attribution 4.0 International}
 }
+
+@misc{cadelano2025codexalpha_v2,
+  title        = {Codex Alpha – Teoria Unificata: unificazione teorica tra relatività generale e meccanica quantistica},
+  author       = {Davide Cadelano et AI},
+  year         = 2025,
+  version      = {v2.0},
+  doi          = {10.5281/zenodo.16131379},
+  url          = {https://doi.org/10.5281/zenodo.16131379},
+  publisher    = {Zenodo},
+  language     = {Italian},
+  license      = {Creative Commons Attribution 4.0 International}
+}
+
 🚀 Final Note
 Codex Alpha is not a final statement, but a dynamic reference system — one that invites experimental validation, interdisciplinary contributions, and above all, disciplined imagination.
 

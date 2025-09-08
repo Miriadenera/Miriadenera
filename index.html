@@ -1,74 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Codex Alpha</title>
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="stylesheet" href="style.css" /> 
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="stylesheet" href="style.css"/>
   <style>
-    body {
-      /* Le regole del body dovrebbero essere nel file CSS esterno */
-    }
-    header {
-      padding: 5vh 0 1vh;
-    }
-    .button-container {
-      margin-top: 2vh;
-    }
+    header { padding: 5vh 0 1vh; }
+    .button-container { margin-top: 2vh; }
     .neon-button {
-      display: inline-block;
-      padding: 1em 2em;
-      margin: 0 1em;
-      background-color: #6a0dad;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      box-shadow: 0 0 20px #00ffff;
-      transition: all 0.3s ease-in-out;
-      font-weight: bold;
+      display:inline-block; padding:1em 2em; margin:0 1em 0.75em 0;
+      background-color:#6a0dad; color:#fff; text-decoration:none; border-radius:10px;
+      box-shadow:0 0 20px #00ffff; transition:all .3s ease-in-out; font-weight:bold;
     }
-    .neon-button:hover {
-      background-color: #4b0082;
-      box-shadow: 0 0 40px #00ffff;
-    }
+    .neon-button:hover { background-color:#4b0082; box-shadow:0 0 40px #00ffff; }
+    .neon-button[href="#"]{ cursor:not-allowed; opacity:.75; }
+    .neon-button[href="#"]:hover{ box-shadow:0 0 20px #00ffff; background-color:#6a0dad; }
+
     nav {
-      position: fixed;
-      top: 0;
-      right: 0;
-      padding: 1em;
-      background-color: rgba(0, 0, 0, 0.6);
-      border-bottom-left-radius: 10px;
-      z-index: 10;
+      position:fixed; top:0; right:0; padding:1em;
+      background-color:rgba(0,0,0,0.6); border-bottom-left-radius:10px; z-index:10;
     }
-    nav a {
-      margin: 0 0.5em;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
+    nav a { margin:0 0.5em; color:#fff; text-decoration:none; font-weight:bold; }
+    nav a:hover { text-decoration:underline; }
+
     section {
-      padding: 10vh 5vw;
-      background: rgba(0, 0, 0, 0.6);
-      margin-top: 10vh;
-      border-radius: 10px;
-      position: relative;
-      z-index: 1;
+      padding:10vh 5vw; background:rgba(0,0,0,0.6);
+      margin-top:10vh; border-radius:10px; position:relative; z-index:1;
     }
-    h2 {
-      color: #00ffff;
-    }
-    .news-entry {
-      margin-bottom: 1.5em;
-    }
-    /* Nuovo stile per l'immagine cliccabile nello slideshow */
-    .cosmic-slideshow-link {
-        display: block; /* Fa sì che il link occupi tutto lo spazio dell'immagine */
-        width: 100%;
-        height: 100%;
+    h2 { color:#00ffff; }
+    .news-entry { margin-bottom:1.5em; }
+
+    /* Slideshow link wrapper */
+    .cosmic-slideshow-link { display:block; width:100%; height:100%; }
+
+    /* Background cross-fade layers */
+    .bg-fade{
+      position:fixed; inset:0; background-size:cover; background-position:center;
+      transition:opacity 1s ease; opacity:0; z-index:-1;
+      filter:brightness(.6);
     }
   </style>
 </head>
@@ -78,203 +49,236 @@
 
   <nav>
     <a href="#news">News</a>
+    <a href="#amazon">Amazon</a>
     <a href="#about">About</a>
     <a href="#research">Research</a>
   </nav>
+
   <header>
-    <h1 style="font-size: 4em; text-shadow: 0 0 10px #00ffff;">Codex Alpha</h1>
-  <h2 style="font-size: 1.5em; font-weight: normal; color: #ffffff; margin-top: -0.5em;">
-    Unified Theory of Relativity and Quantum Mechanics
+    <h1 style="font-size:4em; text-shadow:0 0 10px #00ffff;">Codex Alpha</h1>
+    <h2 style="font-size:1.5em; font-weight:normal; color:#ffffff; margin-top:-0.5em;">
+      Unified Theory of Relativity and Quantum Mechanics
+    </h2>
+
     <div class="button-container">
-      <a class="neon-button" href="https://doi.org/10.5281/zenodo.16131379" target="_blank">Download PDF 2.0 Italian Version on Zenodo</a>
-      <a class="neon-button" href="https://github.com/Miriadenera/Miriadenera" target="_blank">Visit GitHub Repository</a>
+      <a class="neon-button" href="https://doi.org/10.5281/zenodo.17074972" target="_blank">
+        Download PDF 3.0 (Iconoclast) on Zenodo
+      </a>
+      <a class="neon-button" href="https://doi.org/10.5281/zenodo.16131379" target="_blank">
+        Italian PDF 2.0 on Zenodo
+      </a>
+      <a class="neon-button" href="#" title="Amazon page coming soon">
+        Amazon (Kindle & Paperback) – Coming Soon
+      </a>
+      <a class="neon-button" href="https://github.com/Miriadenera/Miriadenera" target="_blank">
+        Visit GitHub Repository
+      </a>
     </div>
   </header>
 
+  <!-- AMAZON TEASER -->
+  <section id="amazon" style="margin:4vh auto; width:92%; max-width:1100px; background:rgba(0,0,0,0.55); border-radius:12px; padding:2rem;">
+    <h2>Codex Alpha – Iconoclast Edition: Amazon Release</h2>
+    <p style="color:#fff; margin-bottom:1rem;">
+      The book edition of <em>Codex Alpha – Unified Theory (Iconoclast Edition)</em> is entering publication on Amazon in both
+      <strong>Kindle</strong> and <strong>Paperback</strong> formats. Meanwhile, the official research release is available on Zenodo (DOI below).
+    </p>
+    <div style="display:flex; gap:1.25rem; align-items:center; flex-wrap:wrap;">
+      <a href="#" title="Amazon page coming soon" style="flex:1 1 320px; max-width:520px;">
+        <img src="copertina kindle.png" alt="Codex Alpha – Amazon cover teaser"
+             style="width:100%; height:auto; border-radius:12px; box-shadow:0 0 25px #00ffff;">
+      </a>
+      <div style="flex:1 1 280px; min-width:280px;">
+        <p style="margin:0 0 1rem 0; color:#cfefff;">
+          🔗 DOI (v3.0 – Iconoclast): <a href="https://doi.org/10.5281/zenodo.17074972" target="_blank" style="color:#00ffff;">10.5281/zenodo.17074972</a><br>
+          📕 Amazon: <em>coming soon</em> (Kindle & Paperback)
+        </p>
+        <a class="neon-button" href="https://doi.org/10.5281/zenodo.17074972" target="_blank">Open v3.0 on Zenodo</a>
+        <a class="neon-button" href="#" title="Amazon page coming soon">Amazon – Coming Soon</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
   <section id="news">
     <h2>News</h2>
     <div class="news-entry">
-      <p><strong>July 2025:</strong> Major site update: redesigned News, About, and Research sections with enhanced structure and aesthetic. Launch of phase 2.0 of the Codex Alpha theory, integrating real astrophysical data from black holes and stellar dynamics.</p>
+      <p><strong>September 2025:</strong> Published the <em>Codex Alpha 3.0 – Iconoclast Edition</em> (English). New DOI:
+        <a href="https://doi.org/10.5281/zenodo.17074972" target="_blank">10.5281/zenodo.17074972</a>.
+        Amazon release (Kindle & Paperback) is in progress – cover and series page coming soon.
+      </p>
+    </div>
+    <div class="news-entry">
+      <p><strong>July 2025:</strong> Major site update: redesigned News, About, and Research sections with enhanced structure and aesthetic.
+         Launch of phase 2.0 of the Codex Alpha theory, integrating real astrophysical data from black holes and stellar dynamics.</p>
     </div>
     <div class="news-entry">
       <p><strong>June 2025:</strong> Codex Alpha English version officially published on Zenodo with DOI and international indexing.</p>
     </div>
     <div class="news-entry">
-      <p><strong>April 2020:</strong> Origin of the Codex Alpha theoretical research project during the first COVID-19 lockdown. Initial investigations included quantum coherence, negative mass models, and ESA/LIGO/GAIA public datasets. Simulations were conducted to identify possible entangled gravitational nodes and emergent spacetime structures.</p>
+      <p><strong>April 2020:</strong> Origin of the Codex Alpha theoretical research project during the first COVID-19 lockdown. Initial
+         investigations included quantum coherence, negative mass models, and ESA/LIGO/GAIA public datasets. Simulations were conducted
+         to identify possible entangled gravitational nodes and emergent spacetime structures.</p>
     </div>
   </section>
-  
-  <div style="margin: 4vh auto; width: 90%; max-width: 960px; border-radius: 12px; overflow: hidden; box-shadow: 0 0 25px #00ffff;">
-    <div style="position: relative; width: 100%; height: 500px;">
-      <a id="cosmic-slideshow-link" href="Subject 109757440 Codex Alpha BH-003.png" target="_blank" title="Clicca per ingrandire l'immagine" class="cosmic-slideshow-link">
-        <img id="cosmic-slideshow-img" src="Subject 109757440 Codex Alpha BH-003.png" alt="Codex Alpha Slide" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" />
+
+  <!-- IMAGE STRIP / INTERNAL SLIDESHOW -->
+  <div style="margin:4vh auto; width:90%; max-width:960px; border-radius:12px; overflow:hidden; box-shadow:0 0 25px #00ffff;">
+    <div style="position:relative; width:100%; height:500px;">
+      <a id="cosmic-slideshow-link" href="Subject 109757440 Codex Alpha BH-003.png" target="_blank" title="Click to enlarge" class="cosmic-slideshow-link">
+        <img id="cosmic-slideshow-img" src="Subject 109757440 Codex Alpha BH-003.png" alt="Codex Alpha Slide"
+             style="width:100%; height:100%; object-fit:cover; border-radius:12px;"/>
       </a>
     </div>
   </div>
 
-  <script>
-    // Script per lo slideshow delle immagini di sfondo (già funzionante)
-    const backgrounds = [
-      'space_bg_1.jpg',
-      'space_bg_2.jpg',
-      'space_bg_3.jpg',
-      'space_bg_4.jpg'
-    ];
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About the Author</h2>
+    <p>
+      <strong>Davide Cadelano</strong> is a physicist, independent researcher, and visionary mind behind <strong>Codex Alpha</strong> — an original unified theoretical framework that seeks to reconcile <em>general relativity</em> and <em>quantum mechanics</em> through an emergent model of spacetime. His work introduces the concept of the <em>Telascura</em>: a coherent quantum informational network from which spacetime itself unfolds, not as a fundamental entity, but as a <em>derivative structure</em> born from informational gradients and coherence fields.
+    </p>
+    <p>
+      Over the span of many years of solitary yet deeply focused research, Cadelano has pursued this bold idea outside of conventional institutions, combining expertise in <em>theoretical physics</em>, <em>quantum field theory</em>, and <em>computational modeling</em>. His interdisciplinary approach integrates principles from gravitation, information theory, and quantum entanglement, proposing a metric-independent model based on the informational flow between entangled nodes — a vision where geometry is no longer the starting point, but the consequence.
+    </p>
+    <p>
+      The <strong>Codex Alpha</strong> project has evolved into a comprehensive theory that includes predictions about <em>negative-mass black holes</em>, <em>superluminal propulsion via nodal engines</em>, and <em>quantum-coherent time projection</em>. It also proposes an informational version of the Einstein Field Equations, introducing a novel gradient operator ∇𝒦 that governs coherence dynamics across spacetime.
+    </p>
+    <p>
+      Cadelano’s mission is to <em>expand the frontiers of modern physics</em> through independent thought, open scientific dissemination, and collaboration with advanced AI systems. His work is published publicly on
+      <a href="https://zenodo.org/doi/10.5281/zenodo.15587185" target="_blank" style="color:#00ffff;">Zenodo</a> and
+      <a href="https://github.com/Miriadenera/Miriadenera" target="_blank" style="color:#00ffff;">GitHub</a>, maintaining transparency, reproducibility, and integrity.
+    </p>
+    <hr>
+    <p style="font-size:0.95em; line-height:1.6;">
+      <strong>Davide Cadelano</strong><br>
+      Theoretical Physicist, Independent Researcher<br>
+      Founder & Lead Theorist – <strong>Codex Alpha Research</strong><br>
+      Author of: <em>Codex Alpha – Unified Theory (v2.0)</em>
+    </p>
+    <p style="font-size:0.95em; line-height:1.6;">
+      <strong>DOI (English v3.0 – Iconoclast):</strong>
+      <a href="https://doi.org/10.5281/zenodo.17074972" target="_blank">https://doi.org/10.5281/zenodo.17074972</a><br>
+      <strong>DOI (Italian v2.0):</strong>
+      <a href="https://doi.org/10.5281/zenodo.16131379" target="_blank">https://doi.org/10.5281/zenodo.16131379</a><br>
+      <strong>ORCID:</strong> <a href="https://orcid.org/0009-0008-2253-7008" target="_blank">https://orcid.org/0009-0008-2253-7008</a><br>
+      <strong>GitHub v2.0:</strong> <a href="https://github.com/Miriadenera/codex-alpha-v2.0" target="_blank">https://github.com/Miriadenera/codex-alpha-v2.0</a><br>
+      <strong>OpenAIRE:</strong> <a href="https://explore.openaire.eu/search/publication?pid=10.5281%2Fzenodo.16131379" target="_blank">OpenAIRE Entry</a><br>
+      <strong>Website:</strong> <a href="https://www.codexalpha.org" target="_blank">https://www.codexalpha.org</a>
+    </p>
+    <p style="font-size:0.95em; line-height:1.6;">
+      <strong>Mail istituzionale:</strong> <a href="mailto:davide.cadelano@codexalpha.org">davide.cadelano@codexalpha.org</a><br>
+      <strong>Mail personale:</strong> <a href="mailto:miriadenera@gmail.com">miriadenera@gmail.com</a><br>
+      <strong>Cell:</strong> +39 366 7449960
+    </p>
+    <p style="font-size:0.95em; line-height:1.6;">
+      <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/davide-cadelano-5b68a936a" target="_blank">linkedin.com/in/davide-cadelano-5b68a936a</a><br>
+      <strong>X (Twitter):</strong> <a href="https://x.com/QIM_METATRON" target="_blank">https://x.com/QIM_METATRON</a><br>
+      <strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61577184890331" target="_blank">Profile</a>
+    </p>
+  </section>
 
-    let currentIndexBg = 0; // Ho rinominato per evitare conflitti
+  <!-- RESEARCH -->
+  <section id="research">
+    <h2>Codex Alpha Research</h2>
+    <p>
+      The Research section tracks theoretical progress, AI-assisted derivations, numerical simulations, and upcoming publications. Current research integrates real data from ESA's GAIA mission, LIGO gravitational wave detections, and cosmic microwave background patterns, toward deriving the gradient ∇𝒦 of informational coherence between quantum nodes. All collaborators and contributions are published transparently through Zenodo and GitHub for scientific integrity and reproducibility.
+    </p>
+
+    <h3>🧩 Collaborative Abstract — Davide Cadelano & Louis-François Claro</h3>
+    <p>
+      Over the course of an intensive and highly interdisciplinary collaboration, Davide Cadelano and Louis-François Claro have jointly authored a series of scientific works that tackle some of the most complex open problems in theoretical physics — including the Yang–Mills Mass Gap, the Navier–Stokes equations, and the Gravitational N-body Problem. By merging tools from torsional geometry, fractal dimensionality, and information-based field theory, the authors developed an original 5D framework capable of providing analytical, numerical, and conceptual breakthroughs.
+    </p>
+
+    <p>The collaboration evolved through four major publications, each addressing a core component of modern physics:</p>
+
+    <ul>
+      <li><strong>🧠 Yang–Mills Mass Gap</strong><br>
+        <em>Title:</em> Proposal of Unified Resolution of the Yang-Mills Mass Gap via 5D Higgs-Torsion Geometry and Fractal Control<br>
+        <em>DOI:</em> <a href="https://doi.org/10.5281/zenodo.16168587" target="_blank">10.5281/zenodo.16168587</a><br>
+        This work presents a novel mechanism where torsion-induced fields within a 5D framework generate a non-perturbative mass gap, numerically aligned with Quantum Chromodynamics (QCD), and stabilized by fractal convergence criteria.
+      </li>
+
+      <li><strong>🌌 Hybrid Cosmology + N-Body + Navier–Stokes</strong><br>
+        <em>Title:</em> Proposal of Unified Resolution of Navier-Stokes Equations, N-Body Problem and Cosmology via 5D Higgs-Torsion Geometry<br>
+        <em>DOI:</em> <a href="https://doi.org/10.5281/zenodo.16153428" target="_blank">10.5281/zenodo.16153428</a><br>
+        This paper merges cosmological dynamics with fluidic and gravitational systems, showing how a single geometric-torsional field can regularize turbulence, stabilize N-body orbits, and account for dark energy contributions via a negative mass density tensor.
+      </li>
+
+      <li><strong>🌊 Navier–Stokes (Complete Solution)</strong><br>
+        <em>Title:</em> Proposal of Complete Solution of the Navier-Stokes Equations via 5D Higgs-Torsion Geometry and Information Dimension<br>
+        <em>DOI:</em> <a href="https://doi.org/10.5281/zenodo.16039574" target="_blank">10.5281/zenodo.16039574</a><br>
+        Focused exclusively on fluid dynamics, this work proposes a geometric field coupling that suppresses chaotic dissipation in incompressible flows, offering an exact solution under controlled fractal boundary conditions.
+      </li>
+
+      <li><strong>🌐 Three-Body Problem in 5D</strong><br>
+        <em>Title:</em> Proposal of Resolution of the Gravitational N-Body Problem in 5D via Higgs Torsion Gradient and Information Dimension: Theory, Simulation, and Cosmological Implications<br>
+        <em>DOI:</em> <a href="https://doi.org/10.5281/zenodo.15874407" target="_blank">10.5281/zenodo.15874407</a><br>
+        This work extends Newtonian and relativistic dynamics to a 5D torsional framework, demonstrating how chaotic three-body systems can be stabilized via informational gradients, with implications for galactic dynamics and orbital resonance control.
+      </li>
+    </ul>
+
+    <p>
+      These four works converge into a unified theoretical document entitled:
+      <br><strong>📘 Fractal Geometric Theory of Fundamental Problems</strong><br>
+      A comprehensive synthesis that merges geometry, torsion, quantum fields and informational dynamics into a coherent framework designed to solve, regularize and unify several Millennium-class problems in physics.<br><br>
+      The manuscript is now complete.
+    </p>
+
+    <li><strong>🧩 Fractal Geometric Theory of Fundamental Problems</strong><br>
+      <em>Title:</em> Fractal Geometric Theory of Fundamental Problems: Unified Resolution of Yang–Mills Mass Gap, Navier–Stokes, N-Body Problem, and Cosmology<br>
+      <em>DOI:</em> <a href="https://doi.org/10.5281/zenodo.16466845" target="_blank">10.5281/zenodo.16466845</a><br>
+      This research introduces a unified geometric–fractal approach to four Millennium Problems, combining Higgs field torsion, information dimension, and a multifractal formalism. It provides novel analytical and simulation-based resolutions to the Yang–Mills mass gap, Navier–Stokes fluid behavior, gravitational N-body dynamics, and cosmological evolution, all within a 5D topological field framework.
+    </li>
+  </section>
+
+  <!-- SCRIPTS -->
+  <script>
+    // BACKGROUND SLIDESHOW
+    const backgrounds = ['space_bg_1.jpg','space_bg_2.jpg','space_bg_3.jpg','space_bg_4.jpg'];
+    let currentIndexBg = 0;
     const bg1 = document.getElementById('bg1');
     const bg2 = document.getElementById('bg2');
-    const intervalTimeBg = 10000; // 10 secondi
+    const intervalTimeBg = 10000;
 
-    function updateBackgrounds() {
-      const currentBg = backgrounds[currentIndexBg];
+    function updateBackgrounds(){
       const nextIndexBg = (currentIndexBg + 1) % backgrounds.length;
       const nextBg = backgrounds[nextIndexBg];
-
-      if (bg1.style.opacity == 1) {
-        bg2.style.backgroundImage = `url('${nextBg}')`;
-        bg2.style.opacity = 1;
-        bg1.style.opacity = 0;
+      if (bg1.style.opacity == 1){
+        bg2.style.backgroundImage = `url('${nextBg}')`; bg2.style.opacity = 1; bg1.style.opacity = 0;
       } else {
-        bg1.style.backgroundImage = `url('${nextBg}')`;
-        bg1.style.opacity = 1;
-        bg2.style.opacity = 0;
+        bg1.style.backgroundImage = `url('${nextBg}')`; bg1.style.opacity = 1; bg2.style.opacity = 0;
       }
-
       currentIndexBg = nextIndexBg;
     }
-
-    bg1.style.backgroundImage = `url('${backgrounds[0]}')`;
-    bg1.style.opacity = 1;
-
+    bg1.style.backgroundImage = `url('${backgrounds[0]}')`; bg1.style.opacity = 1;
     setInterval(updateBackgrounds, intervalTimeBg);
 
-
-    // NUOVO SCRIPT PER LO SLIDESHOW DELL'IMMAGINE INTERNA
+    // INTERNAL IMAGE SLIDESHOW
     const cosmicImages = [
       'Subject 109757440 Codex Alpha BH-003.png',
-      'Subject 109759123 Codex Alpha-20.png', // Assicurati di avere queste immagini
-      'Subject 109760980 Codex Alpha BH-QSO-009.png', // Aggiungi qui i percorsi delle tue immagini
-      'Subject 109766453 Codex Alpha BH-001.png',  // Quante ne vuoi
+      'Subject 109759123 Codex Alpha-20.png',
+      'Subject 109760980 Codex Alpha BH-QSO-009.png',
+      'Subject 109766453 Codex Alpha BH-001.png',
       'codex_alpha_field.png',
       'formula codex(1).png',
       'gradiente.png',
       'work in progress.png'
     ];
-
     let currentCosmicIndex = 0;
     const cosmicImageElement = document.getElementById('cosmic-slideshow-img');
-    const cosmicLinkElement = document.getElementById('cosmic-slideshow-link');
-    const intervalTimeCosmic = 5000; // Esempio: 5 secondi per lo slideshow interno
+    const cosmicLinkElement  = document.getElementById('cosmic-slideshow-link');
+    const intervalTimeCosmic = 5000;
 
-    function updateCosmicImage() {
+    function updateCosmicImage(){
       currentCosmicIndex = (currentCosmicIndex + 1) % cosmicImages.length;
-      const newImageSrc = cosmicImages[currentCosmicIndex];
-      
-      // Aggiorna l'attributo src dell'immagine
-      cosmicImageElement.src = newImageSrc;
-      // Aggiorna anche l'attributo href del link per aprire l'immagine corretta
-      cosmicLinkElement.href = newImageSrc;
+      const newSrc = cosmicImages[currentCosmicIndex];
+      cosmicImageElement.src = newSrc;
+      cosmicLinkElement.href = newSrc;
     }
-
-    // Imposta la prima immagine all'avvio
     cosmicImageElement.src = cosmicImages[0];
     cosmicLinkElement.href = cosmicImages[0];
-
-    // Avvia l'intervallo per la rotazione delle immagini interne
     setInterval(updateCosmicImage, intervalTimeCosmic);
-
   </script>
-
- <section id="about">
-  <h2>About the Author</h2>
-  <p>
-    <strong>Davide Cadelano</strong> is a physicist, independent researcher, and visionary mind behind <strong>Codex Alpha</strong> — an original unified theoretical framework that seeks to reconcile <em>general relativity</em> and <em>quantum mechanics</em> through an emergent model of spacetime. His work introduces the concept of the <em>Telascura</em>: a coherent quantum informational network from which spacetime itself unfolds, not as a fundamental entity, but as a <em>derivative structure</em> born from informational gradients and coherence fields.
-  </p>
-  <p>
-    Over the span of many years of solitary yet deeply focused research, Cadelano has pursued this bold idea outside of conventional institutions, combining expertise in <em>theoretical physics</em>, <em>quantum field theory</em>, and <em>computational modeling</em>. His interdisciplinary approach integrates principles from gravitation, information theory, and quantum entanglement, proposing a metric-independent model based on the informational flow between entangled nodes — a vision where geometry is no longer the starting point, but the consequence.
-  </p>
-  <p>
-    The <strong>Codex Alpha</strong> project has evolved into a comprehensive theory that includes predictions about <em>negative-mass black holes</em>, <em>superluminal propulsion via nodal engines</em>, and <em>quantum-coherent time projection</em>. It also proposes an informational version of the Einstein Field Equations, introducing a novel gradient operator ∇𝒦 that governs coherence dynamics across spacetime.
-  </p>
-  <p>
-    Cadelano’s mission is to <em>expand the frontiers of modern physics</em> through independent thought, open scientific dissemination, and collaboration with advanced AI systems. His work is published publicly on <a href="https://zenodo.org/doi/10.5281/zenodo.15587185" target="_blank" style="color:#00ffff;">Zenodo</a> and <a href="https://github.com/Miriadenera/Miriadenera" target="_blank" style="color:#00ffff;">GitHub</a>, maintaining transparency, reproducibility, and integrity.
-  </p>
-   <hr>
-  <p style="font-size: 0.95em; line-height: 1.6;">
-    <strong>Davide Cadelano</strong><br>
-    Theoretical Physicist, Independent Researcher<br>
-    Founder & Lead Theorist – <strong>Codex Alpha Research</strong><br>
-    Author of: <em>Codex Alpha – Unified Theory (v2.0)</em>
-  </p>
-  <p style="font-size: 0.95em; line-height: 1.6;">
-    <strong>DOI (Italian version):</strong> <a href="https://doi.org/10.5281/zenodo.16131379" target="_blank">https://doi.org/10.5281/zenodo.16131379</a><br>
-    <strong>ORCID:</strong> <a href="https://orcid.org/0009-0008-2253-7008" target="_blank">https://orcid.org/0009-0008-2253-7008</a><br>
-    <strong>GitHub v2.0:</strong> <a href="https://github.com/Miriadenera/codex-alpha-v2.0" target="_blank">https://github.com/Miriadenera/codex-alpha-v2.0</a><br>
-    <strong>OpenAIRE:</strong> <a href="https://explore.openaire.eu/search/publication?pid=10.5281%2Fzenodo.16131379" target="_blank">OpenAIRE Entry</a><br>
-    <strong>Website:</strong> <a href="https://www.codexalpha.org" target="_blank">https://www.codexalpha.org</a>
-  </p>
-  <p style="font-size: 0.95em; line-height: 1.6;">
-    <strong>Mail istituzionale:</strong> <a href="mailto:davide.cadelano@codexalpha.org">davide.cadelano@codexalpha.org</a><br>
-    <strong>Mail personale:</strong> <a href="mailto:miriadenera@gmail.com">miriadenera@gmail.com</a><br>
-    <strong>Cell:</strong> +39 366 7449960
-  </p>
-  <p style="font-size: 0.95em; line-height: 1.6;">
-    <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/davide-cadelano-5b68a936a" target="_blank">linkedin.com/in/davide-cadelano-5b68a936a</a><br>
-    <strong>X (Twitter):</strong> <a href="https://x.com/QIM_METATRON" target="_blank">https://x.com/QIM_METATRON</a><br>
-    <strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61577184890331" target="_blank">Profile</a>
-  </p>
-</section>
-
-  <section id="research">
-  <h2>Codex Alpha Research</h2>
-  <p>
-    The Research section tracks theoretical progress, AI-assisted derivations, numerical simulations, and upcoming publications. Current research integrates real data from ESA's GAIA mission, LIGO gravitational wave detections, and cosmic microwave background patterns, toward deriving the gradient ∇𝒦 of informational coherence between quantum nodes. All collaborators and contributions are published transparently through Zenodo and GitHub for scientific integrity and reproducibility.
-  </p>
-
-  <h3>🧩 Collaborative Abstract — Davide Cadelano & Louis-François Claro</h3>
-  <p>
-    Over the course of an intensive and highly interdisciplinary collaboration, Davide Cadelano and Louis-François Claro have jointly authored a series of scientific works that tackle some of the most complex open problems in theoretical physics — including the Yang–Mills Mass Gap, the Navier–Stokes equations, and the Gravitational N-body Problem. By merging tools from torsional geometry, fractal dimensionality, and information-based field theory, the authors developed an original 5D framework capable of providing analytical, numerical, and conceptual breakthroughs.
-  </p>
-
-  <p>The collaboration evolved through four major publications, each addressing a core component of modern physics:</p>
-
-  <ul>
-    <li><strong>🧠 Yang–Mills Mass Gap</strong><br>
-    <em>Title:</em> Proposal of Unified Resolution of the Yang-Mills Mass Gap via 5D Higgs-Torsion Geometry and Fractal Control<br>
-    <em>DOI:</em> <a href="https://doi.org/10.5281/zenodo.16168587" target="_blank">10.5281/zenodo.16168587</a><br>
-    This work presents a novel mechanism where torsion-induced fields within a 5D framework generate a non-perturbative mass gap, numerically aligned with Quantum Chromodynamics (QCD), and stabilized by fractal convergence criteria.
-    </li>
-
-    <li><strong>🌌 Hybrid Cosmology + N-Body + Navier–Stokes</strong><br>
-    <em>Title:</em> Proposal of Unified Resolution of Navier-Stokes Equations, N-Body Problem and Cosmology via 5D Higgs-Torsion Geometry<br>
-    <em>DOI:</em> <a href="https://doi.org/10.5281/zenodo.16153428" target="_blank">10.5281/zenodo.16153428</a><br>
-    This paper merges cosmological dynamics with fluidic and gravitational systems, showing how a single geometric-torsional field can regularize turbulence, stabilize N-body orbits, and account for dark energy contributions via a negative mass density tensor.
-    </li>
-
-    <li><strong>🌊 Navier–Stokes (Complete Solution)</strong><br>
-    <em>Title:</em> Proposal of Complete Solution of the Navier-Stokes Equations via 5D Higgs-Torsion Geometry and Information Dimension<br>
-    <em>DOI:</em> <a href="https://doi.org/10.5281/zenodo.16039574" target="_blank">10.5281/zenodo.16039574</a><br>
-    Focused exclusively on fluid dynamics, this work proposes a geometric field coupling that suppresses chaotic dissipation in incompressible flows, offering an exact solution under controlled fractal boundary conditions.
-    </li>
-
-    <li><strong>🌐 Three-Body Problem in 5D</strong><br>
-    <em>Title:</em> Proposal of Resolution of the Gravitational N-Body Problem in 5D via Higgs Torsion Gradient and Information Dimension: Theory, Simulation, and Cosmological Implications<br>
-    <em>DOI:</em> <a href="https://doi.org/10.5281/zenodo.15874407" target="_blank">10.5281/zenodo.15874407</a><br>
-    This work extends Newtonian and relativistic dynamics to a 5D torsional framework, demonstrating how chaotic three-body systems can be stabilized via informational gradients, with implications for galactic dynamics and orbital resonance control.
-    </li>
-  </ul>
-
-  <p>
-    These four works converge into a unified theoretical document entitled:
-    <br><strong>📘 Fractal Geometric Theory of Fundamental Problems</strong><br>
-    A comprehensive synthesis that merges geometry, torsion, quantum fields and informational dynamics into a coherent framework designed to solve, regularize and unify several Millennium-class problems in physics.<br><br>
-    The manuscript is now complete.
-  </p>
-    
-   <li><strong>🧩 Fractal Geometric Theory of Fundamental Problems</strong><br>
-   <em>Title:</em> Fractal Geometric Theory of Fundamental Problems: Unified Resolution of Yang–Mills Mass Gap, Navier–Stokes, N-Body Problem, and Cosmology<br>
-   <em>DOI:</em> <a href="https://doi.org/10.5281/zenodo.16466845" target="_blank">10.5281/zenodo.16466845</a><br>
-   This research introduces a unified geometric–fractal approach to four Millennium Problems, combining Higgs field torsion, information dimension, and a multifractal formalism. It provides novel analytical and simulation-based resolutions to the Yang–Mills mass gap, Navier–Stokes fluid behavior, gravitational N-body dynamics, and cosmological evolution, all within a 5D topological field framework.
-   </li>
-</section>
+</body>
+</html>

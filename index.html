@@ -41,6 +41,29 @@
       transition:opacity 1s ease; opacity:0; z-index:-1;
       filter:brightness(.6);
     }
+
+    /* --- Media & Interviews --- */
+    .video-grid{
+      display:grid; gap:18px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      align-items:start;
+    }
+    .video-wrap{
+      position:relative; width:100%; padding-top:56.25%; /* 16:9 */
+      border-radius:12px; overflow:hidden; box-shadow:0 0 20px #00ffff55;
+      background:#000;
+    }
+    .video-wrap iframe{
+      position:absolute; inset:0; width:100%; height:100%; border:0;
+    }
+    .link-card{
+      border-radius:12px; padding:1rem 1.25rem; background:rgba(0,0,0,0.55);
+      box-shadow:0 0 20px #00ffff33; color:#e9f7ff;
+    }
+    .link-card a{ color:#00ffff; font-weight:700; text-decoration:none; }
+    .link-card a:hover{ text-decoration:underline; }
+    .card-title{ font-size:1.1rem; margin:0 0 .25rem 0; }
+    .card-desc{ opacity:.9; margin:.25rem 0 .75rem 0; }
   </style>
 </head>
 <body>
@@ -50,6 +73,7 @@
   <nav>
     <a href="#news">News</a>
     <a href="#amazon">Amazon</a>
+    <a href="#media">Media</a>
     <a href="#about">About</a>
     <a href="#research">Research</a>
   </nav>
@@ -131,6 +155,46 @@
       </a>
     </div>
   </div>
+
+  <!-- MEDIA & INTERVIEWS -->
+  <section id="media">
+    <h2>Media & Interviews</h2>
+    <div class="video-grid">
+      <!-- Angelica Sirotin short -->
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/tyuq-iJpSq0"
+          title="Angelica Sirotin on Codex Alpha" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <!-- Your video #1 -->
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/AvKcVVA8rzU"
+          title="Codex Alpha – Video 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <!-- Your video #2 -->
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/gPz3whul60g"
+          title="Codex Alpha – Video 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div style="margin-top:22px;" class="link-card">
+      <div class="card-title">Sirotin Intelligence – Feature Article</div>
+      <div class="card-desc">“The Universe Isn’t a Machine — It’s an Information Processing System: How Theoretical Physicist Davide Cadelano’s Codex Alpha Framework Challenges Everything We Know About Reality.”</div>
+      <!-- If the site allows embedding, show iframe; otherwise the card with link is a clean fallback -->
+      <div class="video-wrap" style="padding-top:0; height:0; display:none;">
+        <iframe src="https://www.sirotinintelligence.com/the-universe-isnt-a-machine-its-an-information-processing-system-how-theoretical-physicist-davide-cadelanos-codex-alpha-framework-challenges-everything-we-know-about-reality-2/"></iframe>
+      </div>
+      <a href="https://www.sirotinintelligence.com/the-universe-isnt-a-machine-its-an-information-processing-system-how-theoretical-physicist-davide-cadelanos-codex-alpha-framework-challenges-everything-we-know-about-reality-2/" target="_blank" rel="noopener">
+        Read the full article on Sirotin Intelligence →
+      </a>
+    </div>
+  </section>
 
   <!-- ABOUT -->
   <section id="about">

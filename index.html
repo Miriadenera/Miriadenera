@@ -298,6 +298,83 @@
     </li>
   </section>
 
+    <!-- DIGITAL HUB (condensed, single section) -->
+  <section id="digital-hub">
+    <h2>Codex Alpha Digital Hub</h2>
+    <p>
+      A unified place for theory, code, data and collaboration — tightly integrated with DOI-tracked releases and reproducible workflows.
+      Mission: advance and validate the Codex Alpha framework with open, testable methods.
+    </p>
+
+    <!-- Quick actions -->
+    <div class="button-container" style="margin-bottom:1rem;">
+      <a class="neon-button" href="https://doi.org/10.5281/zenodo.17074972" target="_blank">Latest Release (DOI)</a>
+      <a class="neon-button" href="#digital-hub-methods">Methods</a>
+      <a class="neon-button" href="#digital-hub-data">Data</a>
+      <a class="neon-button" href="#digital-hub-join">Collaborate</a>
+      <a class="neon-button" href="#digital-hub-press">Press</a>
+    </div>
+
+    <!-- Methods (condensed) -->
+    <h3 id="digital-hub-methods" style="color:#00ffff;">Methods &amp; Reproducibility</h3>
+    <p>
+      Environments: <code>environment.yml</code> (conda) + <code>requirements.txt</code>. Container: <code>Dockerfile</code> with pinned versions.
+      Determinism: document random seeds and note any non-deterministic kernels.
+    </p>
+    <ol>
+      <li>Clone: <code>github.com/Miriadenera/codex-alpha-*</code></li>
+      <li><code>conda env create -f environment.yml</code> (or Docker build)</li>
+      <li>Run notebooks in <code>simulations/</code> top-to-bottom</li>
+      <li>Compare outputs with reference logs (Zenodo DOI)</li>
+    </ol>
+    <p style="margin-top:.5rem;">
+      Cite software/data via <code>CITATION.cff</code> and listed DOIs.
+    </p>
+
+    <!-- Data (condensed) -->
+    <h3 id="digital-hub-data" style="color:#00ffff;">Data &amp; Releases</h3>
+    <ul>
+      <li>
+        <strong>Codex Alpha v3.0 (Iconoclast Edition)</strong> — DOI:
+        <a href="https://doi.org/10.5281/zenodo.17074972" target="_blank">10.5281/zenodo.17074972</a>
+      </li>
+      <li><strong>Supplementary datasets / figures</strong> — (to be released; listed here as minted)</li>
+    </ul>
+    <p>All releases include SHA256 checksums and a manifest for verification.</p>
+
+    <!-- Collaborate (condensed) -->
+    <h3 id="digital-hub-join" style="color:#00ffff;">Collaborate with Codex Alpha</h3>
+    <p>We welcome contributions in:</p>
+    <ul>
+      <li>Mathematical physics (GR, QFT, cosmology)</li>
+      <li>Scientific computing (JAX/PyTorch/HPC)</li>
+      <li>Data &amp; visualization</li>
+    </ul>
+    <p>Send a one-page PDF including:</p>
+    <ol>
+      <li>Background (≤150 words)</li>
+      <li>Proposed contribution (≤300 words)</li>
+      <li>Availability (hours/week)</li>
+    </ol>
+    <div class="button-container" style="margin-top:.5rem;">
+      <a class="neon-button" href="#" title="Add your Google Form link">Submit via Form</a>
+      <a class="neon-button" href="https://github.com/Miriadenera/Miriadenera/issues/new" target="_blank">Open GitHub Issue</a>
+    </div>
+
+    <!-- Press (condensed) -->
+    <h3 id="digital-hub-press" style="color:#00ffff;">Press Kit</h3>
+    <p>
+      <strong>Abstract (150 words)</strong><br>
+      Codex Alpha proposes an informational unification of General Relativity and Quantum Mechanics through coherence gradients (∇𝒦) across an entangled network (Telascura). The framework derives an informational extension of Einstein’s equations and yields falsifiable predictions, reproducible simulations, and observational signatures. The Digital Hub integrates theory, code, and data under DOI-tracked releases to facilitate peer review and community collaboration.
+    </p>
+    <p>
+      <strong>Bio (100 words)</strong><br>
+      Davide Cadelano is an independent theoretical physicist and founder of Codex Alpha Research. His work explores spacetime as an emergent informational structure governed by coherence gradients (∇𝒦), with implications for quantum nonlocality, propulsion, and cosmology. Codex Alpha is openly published with reproducible code and datasets.
+    </p>
+    <p><strong>Contact</strong>: <a href="mailto:press@codexalpha.org">press@codexalpha.org</a></p>
+  </section>
+
+
   <!-- SCRIPTS -->
   <script>
     // BACKGROUND SLIDESHOW

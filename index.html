@@ -430,18 +430,7 @@
     }
     bg1.style.backgroundImage = `url('${backgrounds[0]}')`; bg1.style.opacity = 1;
     setInterval(updateBackgrounds, intervalTimeBg);
-<script>
-// OPEN/CLOSE Netlify form modal
-const openCollab = document.getElementById('open-collab-form');
-const collabModal = document.getElementById('collab-modal');
-const closeCollab = document.getElementById('close-collab-form');
 
-if (openCollab && collabModal && closeCollab) {
-  openCollab.addEventListener('click', (e) => { e.preventDefault(); collabModal.style.display = 'block'; });
-  closeCollab.addEventListener('click', () => { collabModal.style.display = 'none'; });
-  collabModal.addEventListener('click', (e) => { if (e.target === collabModal) collabModal.style.display = 'none'; });
-}
-</script>
 
     // INTERNAL IMAGE SLIDESHOW
     const cosmicImages = [
@@ -468,6 +457,17 @@ if (openCollab && collabModal && closeCollab) {
     cosmicImageElement.src = cosmicImages[0];
     cosmicLinkElement.href = cosmicImages[0];
     setInterval(updateCosmicImage, intervalTimeCosmic);
+
+    // OPEN/CLOSE Netlify form modal
+const openCollab = document.getElementById('open-collab-form');
+const collabModal = document.getElementById('collab-modal');
+const closeCollab = document.getElementById('close-collab-form');
+
+if (openCollab && collabModal && closeCollab) {
+  openCollab.addEventListener('click', (e) => { e.preventDefault(); collabModal.style.display = 'block'; });
+  closeCollab.addEventListener('click', () => { collabModal.style.display = 'none'; });
+  collabModal.addEventListener('click', (e) => { if (e.target === collabModal) collabModal.style.display = 'none'; });
+}
   </script>
 </body>
 </html>

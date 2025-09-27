@@ -381,28 +381,28 @@
     <h3 style="color:#00ffff; margin:.25rem 0 1rem;">Collaboration proposal</h3>
 
     <!-- IMPORTANT: action now points to home with anchor to avoid 404 -->
-    <form name="codexalpha-collab" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/#digital-hub-join" accept-charset="UTF-8">
-      <input type="hidden" name="form-name" value="codexalpha-collab">
-      <p style="display:none;"><label>Don’t fill this out: <input name="bot-field"></label></p>
+    <form name="codexalpha-collab" method="POST" data-netlify="true"
+      netlify-honeypot="bot-field" action="/thanks.html" accept-charset="UTF-8">
+  <input type="hidden" name="form-name" value="codexalpha-collab">
+  <p style="display:none;"><label>Don’t fill this out: <input name="bot-field"></label></p>
 
-      <div style="display:grid; gap:.75rem;">
-        <input name="name"  type="text"  placeholder="Full name" required
-               style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;">
-        <input name="email" type="email" placeholder="Email" required
-               style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;">
-        <textarea name="background" rows="3" placeholder="Background (≤150 words)" required
-                  style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;"></textarea>
-        <textarea name="proposal" rows="5" placeholder="Proposed contribution (≤300 words)" required
-                  style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;"></textarea>
-        <input name="availability" type="text" placeholder="Availability (hours/week)" required
-               style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;">
-        <input name="links" type="url" placeholder="Link to PDF / portfolio / repo (optional)"
-               style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;">
-        <button type="submit" class="neon-button" style="width:max-content;">Submit</button>
-      </div>
-    </form>
+  <div style="display:grid; gap:.75rem;">
+    <input name="name"  type="text"  placeholder="Full name" required
+           style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;">
+    <input name="email" type="email" placeholder="Email" required
+           style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;">
+    <textarea name="background" rows="3" placeholder="Background (≤150 words)" required
+              style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;"></textarea>
+    <textarea name="proposal" rows="5" placeholder="Proposed contribution (≤300 words)" required
+              style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;"></textarea>
+    <input name="availability" type="text" placeholder="Availability (hours/week)" required
+           style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;">
+    <input name="links" type="url" placeholder="Link to PDF / portfolio / repo (optional)"
+           style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;">
+    <button type="submit" class="neon-button" style="width:max-content;">Submit</button>
   </div>
-</div>
+</form>
+
 
 <script>
 // OPEN/CLOSE Netlify form modal

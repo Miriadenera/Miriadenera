@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank you — Codex Alpha</title>
+  <link rel="icon" type="image/png" href="/favicon.png"/>
+  <style>
+    body{
+      margin:0; min-height:100vh; display:grid; place-items:center;
+      background:#0b0b14 url('/space_bg_2.jpg') center/cover no-repeat fixed;
+      color:#e9f7ff; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;
+    }
+    .card{
+      background:rgba(0,0,0,.55); padding:2rem 2.25rem; border-radius:14px;
+      box-shadow:0 0 30px #00ffff55; max-width:760px; width:90%;
+      text-align:center;
+    }
+    h1{ color:#00ffff; margin:.25rem 0 1rem; }
+    a.neon-button{
+      display:inline-block; padding:.8rem 1.4rem; margin-top:1rem;
+      background-color:#6a0dad; color:#fff; text-decoration:none; border-radius:10px;
+      box-shadow:0 0 20px #00ffff; font-weight:700; transition:.25s;
+    }
+    a.neon-button:hover{ background:#4b0082; box-shadow:0 0 36px #00ffff; }
+    p{ line-height:1.6; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Submission received ✅</h1>
+    <p>Thanks for your interest in collaborating with <strong>Codex Alpha</strong>.<br>
+       Your proposal has been received. We’ll review it and get back to you.</p>
+    <p style="opacity:.9; margin-top:.75rem;">
+      Tip: you can also open a public discussion via GitHub issues for technical follow-ups.
+    </p>
+    <div>
+      <a class="neon-button" href="/">← Back to homepage</a>
+      <a class="neon-button" href="https://github.com/Miriadenera/Miriadenera/issues/new?labels=collaboration&title=Collaboration%20proposal%20follow-up" target="_blank" rel="noopener">Open a GitHub issue</a>
+    </div>
+  </div>
+</body>
+</html>

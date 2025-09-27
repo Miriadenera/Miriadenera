@@ -298,93 +298,105 @@
     </li>
   </section>
 
-  <!-- DIGITAL HUB (condensed, single section - uniform font, no bullets) -->
+  <!-- DIGITAL HUB (sezione condensata, tutta in italiano, senza puntini/numero) -->
   <section id="digital-hub">
     <h2>Codex Alpha Digital Hub</h2>
 
-    <!-- Intro (stesso font dell'Abstract) -->
+    <!-- Intro -->
     <div style="background:rgba(0,0,0,0.40); padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
-      The Digital Hub is the operational entry-point for Codex Alpha: one place to access papers (DOIs), code, data and collaboration policies.
-      Everything here is designed to be reproducible, citable and verifiable, so external teams can audit, reproduce and extend the work before opening a pull request.
+      Questo è il punto operativo unico di <strong>Codex Alpha</strong>: qui trovi pubblicazioni (DOI), codice, dati e linee guida di collaborazione.
+      Tutto è pensato per essere riproducibile, citabile e verificabile: chiunque può auditare, riprodurre ed estendere i risultati prima di aprire una pull request.
     </div>
 
-    <!-- Quick actions -->
+    <!-- Azioni rapide -->
     <div class="button-container" style="margin-bottom:1rem;">
-      <a class="neon-button" href="https://doi.org/10.5281/zenodo.17074972" target="_blank">Latest Release (DOI)</a>
-      <a class="neon-button" href="#digital-hub-methods">Methods</a>
-      <a class="neon-button" href="#digital-hub-data">Data</a>
-      <a class="neon-button" href="#digital-hub-join">Collaborate</a>
+      <a class="neon-button" href="https://doi.org/10.5281/zenodo.17074972" target="_blank">Ultima release (DOI)</a>
+      <a class="neon-button" href="#digital-hub-methods">Metodi</a>
+      <a class="neon-button" href="#digital-hub-data">Dati</a>
+      <a class="neon-button" href="#digital-hub-join">Collabora</a>
       <a class="neon-button" href="#digital-hub-press">Press</a>
     </div>
 
     <!-- METHODS -->
-    <h3 id="digital-hub-methods" style="color:#00ffff;">Methods &amp; Reproducibility</h3>
+    <h3 id="digital-hub-methods" style="color:#00ffff;">Metodi &amp; Riproducibilità</h3>
     <div style="background:rgba(0,0,0,0.40); padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
       <p style="margin:.35rem 0;">
-        <strong>Scope:</strong> questa sezione è per chi vuole <em>collaborare</em> o <em>verificare</em> i risultati. Spiega come eseguire localmente gli script pubblici e confrontare gli output con gli artefatti archiviati via DOI.
+        <strong>Per chi è questa sezione:</strong> collaboratori e revisori che vogliono eseguire localmente gli script pubblici e confrontare gli output con gli artefatti archiviati via DOI.
       </p>
       <p style="margin:.35rem 0;">
-        <strong>Requirements:</strong> <span>Python (3.x)</span>. Le librerie da installare sono quelle indicate negli <code>import</code> degli script e/o nel <code>README</code> del repository.
+        <strong>Requisiti:</strong> <span>Python (3.x)</span>. Le librerie da installare sono quelle dichiarate negli <em>import</em> degli script
+        e/o nel <em>README</em> del repository (se presente un <code>requirements.txt</code>, usare quello).
       </p>
       <p style="margin:.35rem 0;">
         <strong>Setup rapido:</strong><br>
-        1) Clona il repo: <code>git clone https://github.com/Miriadenera/Miriadenera</code><br>
-        2) (Opzionale) crea un virtual env: <code>python -m venv .venv</code> e attivalo<br>
-        3) Installa le librerie: se c’è <code>requirements.txt</code> usa <code>pip install -r requirements.txt</code>;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;in alternativa installa i pacchetti che vedi negli <code>import</code> degli script.<br>
-        4) Esegui gli script/notebook nella cartella <code>simulations/</code> nell’ordine indicato nel <code>README</code> o dal prefisso numerico dei file.<br>
-        5) <strong>Validazione:</strong> confronta grafici, log e tabelle con quelli della release su Zenodo (DOI).
+        Clona: <code>git clone https://github.com/Miriadenera/Miriadenera</code><br>
+        (Opzionale) ambiente virtuale: <code>python -m venv .venv</code> → attivalo<br>
+        Installa dipendenze: <code>pip install -r requirements.txt</code> (oppure installa i pacchetti che trovi negli <em>import</em>)<br>
+        Esegui: script/notebook nella cartella <code>simulations/</code> nell’ordine indicato dal <em>README</em> o dal prefisso dei file<br>
+        Validazione: confronta grafici, tabelle e log con la release su Zenodo (DOI v3.0)
       </p>
       <p style="margin:.35rem 0;">
-        <strong>Citation:</strong> usa <code>CITATION.cff</code> (se presente) e i DOIs elencati qui sotto per citare software e dati.
+        <strong>Citazione:</strong> usa <code>CITATION.cff</code> (se presente) e i DOI elencati qui sotto per citare software e dati.
       </p>
     </div>
 
     <!-- DATA -->
-    <h3 id="digital-hub-data" style="color:#00ffff;">Data &amp; Releases</h3>
+    <h3 id="digital-hub-data" style="color:#00ffff;">Dati &amp; Release</h3>
     <div style="background:rgba(0,0,0,0.40); padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
       <p style="margin:.35rem 0;">
         <strong>Codex Alpha v3.0 (Iconoclast Edition)</strong> — DOI:
         <a href="https://doi.org/10.5281/zenodo.17074972" target="_blank">10.5281/zenodo.17074972</a>
       </p>
       <p style="margin:.35rem 0;">
-        <strong>Supplementary datasets / figures</strong> — (to be released; listed here as minted)
+        <strong>Dataset/figure supplementari</strong> — saranno elencati qui man mano che vengono pubblicati con DOI dedicato.
       </p>
-      <p style="margin:.35rem 0;">All releases include SHA256 checksums and a manifest for verification.</p>
+      <p style="margin:.35rem 0;">Ogni release include checksum SHA256 e un manifesto dei file.</p>
     </div>
 
     <!-- COLLABORATE -->
-    <h3 id="digital-hub-join" style="color:#00ffff;">Collaborate with Codex Alpha</h3>
+    <h3 id="digital-hub-join" style="color:#00ffff;">Collabora con Codex Alpha</h3>
     <div style="background:rgba(0,0,0,0.40); padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
       <p style="margin:.35rem 0;">
-        <strong>Areas:</strong> Mathematical physics (GR, QFT, cosmology) · Scientific computing (JAX/PyTorch/HPC) · Data &amp; visualization
+        <strong>Aree di interesse:</strong> fisica matematica (GR, QFT, cosmologia) · calcolo scientifico (JAX/PyTorch/HPC) · dati &amp; visualizzazione
       </p>
       <p style="margin:.35rem 0;">
-        <strong>Invia una pagina (PDF) con:</strong><br>
-        • Background (≤150 words)<br>
-        • Proposed contribution (≤300 words)<br>
-        • Availability (hours/week)
+        <strong>Invio proposta (1 pagina, PDF):</strong><br>
+        Background (≤150 parole) · Contributo proposto (≤300 parole) · Disponibilità (ore/settimana)
       </p>
       <div class="button-container" style="margin-top:.5rem;">
-        <a class="neon-button" href="#" title="Add your Google Form link">Submit via Form</a>
-        <a class="neon-button" href="https://github.com/Miriadenera/Miriadenera/issues/new" target="_blank">Open GitHub Issue</a>
+        <a class="neon-button" href="#" title="Aggiungi il link al tuo Google Form">Invia tramite form</a>
+        <a class="neon-button" href="https://github.com/Miriadenera/Miriadenera/issues/new" target="_blank">Apri issue su GitHub</a>
       </div>
     </div>
 
     <!-- PRESS -->
     <h3 id="digital-hub-press" style="color:#00ffff;">Press Kit</h3>
     <div style="background:rgba(0,0,0,0.40); padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
+      <!-- Sintesi per media: un solo paragrafo breve -->
       <p style="margin:.35rem 0;">
-        <strong>Abstract (150 words)</strong><br>
-        Codex Alpha proposes an informational unification of General Relativity and Quantum Mechanics through coherence gradients (∇𝒦) across an entangled network (Telascura). The framework derives an informational extension of Einstein’s equations and yields falsifiable predictions, reproducible simulations, and observational signatures. The Digital Hub integrates theory, code, and data under DOI-tracked releases to facilitate peer review and community collaboration.
+        <strong>Sintesi per la stampa</strong><br>
+        <em>Codex Alpha</em> propone un modello di unificazione tra relatività generale e meccanica quantistica in cui lo spaziotempo emerge
+        dalla <em>Telascura</em>, una rete informazionale quantistica coerente. La dinamica è governata da gradienti di coerenza (∇𝒦) e
+        porta a previsioni falsificabili, simulazioni riproducibili e segnature osservazionali. Il progetto è pubblicato in modo aperto con
+        codice e dataset tracciati da DOI per facilitare verifica indipendente e collaborazione.
       </p>
+      <!-- Bio breve dell'autore: un solo paragrafo breve -->
       <p style="margin:.35rem 0;">
-        <strong>Bio (100 words)</strong><br>
-        Davide Cadelano is an independent theoretical physicist and founder of Codex Alpha Research. His work explores spacetime as an emergent informational structure governed by coherence gradients (∇𝒦), with implications for quantum nonlocality, propulsion, and cosmology. Codex Alpha is openly published with reproducible code and datasets.
+        <strong>Bio breve</strong><br>
+        Davide Cadelano è un fisico teorico indipendente, fondatore di Codex Alpha Research. Studia lo spaziotempo come struttura
+        informazionale emergente guidata da ∇𝒦, con implicazioni per non-località quantistica, propulsione e cosmologia. Le sue pubblicazioni
+        sono rese disponibili con codice e dati riproducibili.
       </p>
-      <p style="margin:.35rem 0;"><strong>Contact</strong>: <a href="mailto:press@codexalpha.org">press@codexalpha.org</a></p>
+      <!-- Contatti e link rapidi -->
+      <p style="margin:.35rem 0;">
+        <strong>Contatti stampa:</strong> <a href="mailto:press@codexalpha.org">press@codexalpha.org</a><br>
+        <strong>Link rapidi:</strong> DOI v3.0 <a href="https://doi.org/10.5281/zenodo.17074972" target="_blank">10.5281/zenodo.17074972</a> ·
+        GitHub <a href="https://github.com/Miriadenera/Miriadenera" target="_blank">Miriadenera/Miriadenera</a> ·
+        Sito <a href="https://www.codexalpha.org" target="_blank">codexalpha.org</a>
+      </p>
     </div>
   </section>
+
 
 
 

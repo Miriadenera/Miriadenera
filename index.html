@@ -298,18 +298,14 @@
     </li>
   </section>
 
-  <!-- DIGITAL HUB (condensed, single section) -->
+  <!-- DIGITAL HUB (condensed, single section - uniform font, no bullets) -->
   <section id="digital-hub">
     <h2>Codex Alpha Digital Hub</h2>
 
-    <!-- Preambolo: cos'è e a chi serve -->
-    <div style="
-      font-family: Consolas, 'Courier New', monospace; white-space: pre-wrap;
-      line-height:1.55; color:#cfefff; background:rgba(0,0,0,0.40);
-      padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
-The Digital Hub is the operational entry-point for Codex Alpha: one place to access papers (DOIs),
-code, data and collaboration policies. Everything here is designed to be reproducible, citable and
-verifiable, so external teams can audit, reproduce and extend the work before opening a pull request.
+    <!-- Intro (stesso font dell'Abstract) -->
+    <div style="background:rgba(0,0,0,0.40); padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
+      The Digital Hub is the operational entry-point for Codex Alpha: one place to access papers (DOIs), code, data and collaboration policies.
+      Everything here is designed to be reproducible, citable and verifiable, so external teams can audit, reproduce and extend the work before opening a pull request.
     </div>
 
     <!-- Quick actions -->
@@ -321,87 +317,75 @@ verifiable, so external teams can audit, reproduce and extend the work before op
       <a class="neon-button" href="#digital-hub-press">Press</a>
     </div>
 
-    <!-- Methods (condensed, cleaned) -->
+    <!-- METHODS -->
     <h3 id="digital-hub-methods" style="color:#00ffff;">Methods &amp; Reproducibility</h3>
-
-    <!-- Preambolo Methods -->
-    <div style="
-      font-family: Consolas, 'Courier New', monospace; white-space: pre-wrap;
-      line-height:1.55; color:#cfefff; background:rgba(0,0,0,0.40);
-      padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
-This section is for collaborators and reviewers. It explains how to set up the exact software
-environment, run the public simulations, and verify results against DOI-archived artefacts.
-Follow these steps if you want to reproduce figures/tables, contribute code or perform independent checks.
+    <div style="background:rgba(0,0,0,0.40); padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
+      <p style="margin:.35rem 0;">
+        <strong>Scope:</strong> questa sezione è per chi vuole <em>collaborare</em> o <em>verificare</em> i risultati. Spiega come eseguire localmente gli script pubblici e confrontare gli output con gli artefatti archiviati via DOI.
+      </p>
+      <p style="margin:.35rem 0;">
+        <strong>Requirements:</strong> <span>Python (3.x)</span>. Le librerie da installare sono quelle indicate negli <code>import</code> degli script e/o nel <code>README</code> del repository.
+      </p>
+      <p style="margin:.35rem 0;">
+        <strong>Setup rapido:</strong><br>
+        1) Clona il repo: <code>git clone https://github.com/Miriadenera/Miriadenera</code><br>
+        2) (Opzionale) crea un virtual env: <code>python -m venv .venv</code> e attivalo<br>
+        3) Installa le librerie: se c’è <code>requirements.txt</code> usa <code>pip install -r requirements.txt</code>;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;in alternativa installa i pacchetti che vedi negli <code>import</code> degli script.<br>
+        4) Esegui gli script/notebook nella cartella <code>simulations/</code> nell’ordine indicato nel <code>README</code> o dal prefisso numerico dei file.<br>
+        5) <strong>Validazione:</strong> confronta grafici, log e tabelle con quelli della release su Zenodo (DOI).
+      </p>
+      <p style="margin:.35rem 0;">
+        <strong>Citation:</strong> usa <code>CITATION.cff</code> (se presente) e i DOIs elencati qui sotto per citare software e dati.
+      </p>
     </div>
 
-    <!-- Blocco monospace unico (no bullet/number) -->
-    <div style="
-      font-family: Consolas, 'Courier New', monospace; white-space: pre-wrap;
-      line-height:1.55; color:#cfefff; background:rgba(0,0,0,0.40);
-      padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
-Environments: environment.yml (conda) + requirements.txt
-Container:   Dockerfile with pinned versions
-Determinism: document random seeds and note any non-deterministic kernels
-
-Clone:       github.com/Miriadenera/codex-alpha-*
-Create env:  conda env create -f environment.yml    (or: docker build .)
-Run:         notebooks in simulations/  top-to-bottom
-Validate:    compare outputs with reference logs (Zenodo DOI)
-
-Cite software/data via CITATION.cff and the listed DOIs.
-    </div>
-
-    <!-- Data (condensed, bullets disattivati) -->
+    <!-- DATA -->
     <h3 id="digital-hub-data" style="color:#00ffff;">Data &amp; Releases</h3>
-    <ul style="list-style:none; padding-left:0; margin-left:0;">
-      <li>
+    <div style="background:rgba(0,0,0,0.40); padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
+      <p style="margin:.35rem 0;">
         <strong>Codex Alpha v3.0 (Iconoclast Edition)</strong> — DOI:
         <a href="https://doi.org/10.5281/zenodo.17074972" target="_blank">10.5281/zenodo.17074972</a>
-      </li>
-      <li><strong>Supplementary datasets / figures</strong> — (to be released; listed here as minted)</li>
-    </ul>
-    <p>All releases include SHA256 checksums and a manifest for verification.</p>
+      </p>
+      <p style="margin:.35rem 0;">
+        <strong>Supplementary datasets / figures</strong> — (to be released; listed here as minted)
+      </p>
+      <p style="margin:.35rem 0;">All releases include SHA256 checksums and a manifest for verification.</p>
+    </div>
 
-    <!-- Collaborate (condensed, no bullet/number) -->
+    <!-- COLLABORATE -->
     <h3 id="digital-hub-join" style="color:#00ffff;">Collaborate with Codex Alpha</h3>
-
-    <div style="
-      font-family: Consolas, 'Courier New', monospace; white-space: pre-wrap;
-      line-height:1.55; color:#cfefff; background:rgba(0,0,0,0.40);
-      padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
-We welcome contributions in:
-- Mathematical physics (GR, QFT, cosmology)
-- Scientific computing (JAX/PyTorch/HPC)
-- Data & visualization
+    <div style="background:rgba(0,0,0,0.40); padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
+      <p style="margin:.35rem 0;">
+        <strong>Areas:</strong> Mathematical physics (GR, QFT, cosmology) · Scientific computing (JAX/PyTorch/HPC) · Data &amp; visualization
+      </p>
+      <p style="margin:.35rem 0;">
+        <strong>Invia una pagina (PDF) con:</strong><br>
+        • Background (≤150 words)<br>
+        • Proposed contribution (≤300 words)<br>
+        • Availability (hours/week)
+      </p>
+      <div class="button-container" style="margin-top:.5rem;">
+        <a class="neon-button" href="#" title="Add your Google Form link">Submit via Form</a>
+        <a class="neon-button" href="https://github.com/Miriadenera/Miriadenera/issues/new" target="_blank">Open GitHub Issue</a>
+      </div>
     </div>
 
-    <div style="
-      font-family: Consolas, 'Courier New', monospace; white-space: pre-wrap;
-      line-height:1.55; color:#cfefff; background:rgba(0,0,0,0.40);
-      padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
-Send a one-page PDF including:
-• Background (≤150 words)
-• Proposed contribution (≤300 words)
-• Availability (hours/week)
-    </div>
-
-    <div class="button-container" style="margin-top:.5rem;">
-      <a class="neon-button" href="#" title="Add your Google Form link">Submit via Form</a>
-      <a class="neon-button" href="https://github.com/Miriadenera/Miriadenera/issues/new" target="_blank">Open GitHub Issue</a>
-    </div>
-
-    <!-- Press (condensed) -->
+    <!-- PRESS -->
     <h3 id="digital-hub-press" style="color:#00ffff;">Press Kit</h3>
-    <p>
-      <strong>Abstract (150 words)</strong><br>
-      Codex Alpha proposes an informational unification of General Relativity and Quantum Mechanics through coherence gradients (∇𝒦) across an entangled network (Telascura). The framework derives an informational extension of Einstein’s equations and yields falsifiable predictions, reproducible simulations, and observational signatures. The Digital Hub integrates theory, code, and data under DOI-tracked releases to facilitate peer review and community collaboration.
-    </p>
-    <p>
-      <strong>Bio (100 words)</strong><br>
-      Davide Cadelano is an independent theoretical physicist and founder of Codex Alpha Research. His work explores spacetime as an emergent informational structure governed by coherence gradients (∇𝒦), with implications for quantum nonlocality, propulsion, and cosmology. Codex Alpha is openly published with reproducible code and datasets.
-    </p>
-    <p><strong>Contact</strong>: <a href="mailto:press@codexalpha.org">press@codexalpha.org</a></p>
+    <div style="background:rgba(0,0,0,0.40); padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
+      <p style="margin:.35rem 0;">
+        <strong>Abstract (150 words)</strong><br>
+        Codex Alpha proposes an informational unification of General Relativity and Quantum Mechanics through coherence gradients (∇𝒦) across an entangled network (Telascura). The framework derives an informational extension of Einstein’s equations and yields falsifiable predictions, reproducible simulations, and observational signatures. The Digital Hub integrates theory, code, and data under DOI-tracked releases to facilitate peer review and community collaboration.
+      </p>
+      <p style="margin:.35rem 0;">
+        <strong>Bio (100 words)</strong><br>
+        Davide Cadelano is an independent theoretical physicist and founder of Codex Alpha Research. His work explores spacetime as an emergent informational structure governed by coherence gradients (∇𝒦), with implications for quantum nonlocality, propulsion, and cosmology. Codex Alpha is openly published with reproducible code and datasets.
+      </p>
+      <p style="margin:.35rem 0;"><strong>Contact</strong>: <a href="mailto:press@codexalpha.org">press@codexalpha.org</a></p>
+    </div>
   </section>
+
 
 
 

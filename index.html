@@ -348,12 +348,12 @@
     <p style="margin:.35rem 0;"><strong>Focus areas:</strong> mathematical physics (GR, QFT, cosmology) · scientific computing (JAX/PyTorch/HPC) · data &amp; visualization</p>
     <p style="margin:.35rem 0;"><strong>Send a one-page PDF with:</strong> Background (≤150 words) · Proposed contribution (≤300 words) · Availability (hours/week)</p>
     <div class="button-container" style="margin-top:.5rem;">
-      <!-- WORKING BUTTON 1: opens Netlify modal form -->
-      <a class="neon-button" href="#" id="open-collab-form">Submit via form</a>
+      <!-- WORKING BUTTON 1: open Netlify modal form -->
+      <a class="neon-button" href="#open-collab" id="open-collab-form">Submit via form</a>
       <!-- WORKING BUTTON 2: pre-filled GitHub issue -->
-      <a class="neon-button"
-         href="https://github.com/Miriadenera/Miriadenera/issues/new?title=Collaboration%20proposal%3A%20%5BYour%20Name%5D&labels=collaboration&body=Please%20complete%20the%20sections%20below%20(and%20attach%20links%20to%20PDF%2Frepo%20if%20needed)%3A%0A%0A**Background%20(%E2%89%A4150%20words)**%0A%0A**Proposed%20contribution%20(%E2%89%A4300%20words)**%0A%0A**Availability%20(hours%2Fweek)**%0A%0A**Links%20(repo%2Fportfolio%2FPDF)**%0A"
-         target="_blank" rel="noopener">Open a GitHub issue</a>
+      <a class="neon-button" target="_blank" rel="noopener"
+         href="https://github.com/Miriadenera/Miriadenera/issues/new?title=Collaboration%20proposal%3A%20%5BYour%20Name%5D&labels=collaboration&body=Please%20complete%20the%20sections%20below%20(and%20attach%20links%20to%20PDF%2Frepo%20if%20needed)%3A%0A%0A**Background%20(%E2%89%A4150%20words)**%0A%0A**Proposed%20contribution%20(%E2%89%A4300%20words)**%0A%0A**Availability%20(hours%2Fweek)**%0A%0A**Links%20(repo%2Fportfolio%2FPDF)**%0A">
+         Open a GitHub issue</a>
     </div>
   </div>
 
@@ -374,13 +374,14 @@
   </div>
 </section>
 
-  <!-- Collaboration Form (Netlify Forms) -->
+<!-- Collaboration Form (Netlify Forms) -->
 <div id="collab-modal" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.8); backdrop-filter: blur(2px);">
   <div style="position:relative; width:90%; max-width:900px; margin:6vh auto; background:#0b0b14; border-radius:12px; box-shadow:0 0 30px #00ffff55; padding:1rem;">
     <button id="close-collab-form" aria-label="Close form" style="position:absolute; top:10px; right:12px; background:rgba(0,0,0,0.5); color:#fff; border:1px solid #00ffff66; border-radius:8px; padding:.4rem .7rem; cursor:pointer;">✕</button>
     <h3 style="color:#00ffff; margin:.25rem 0 1rem;">Collaboration proposal</h3>
 
-    <form name="codexalpha-collab" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/?submitted=1">
+    <!-- IMPORTANT: action now points to home with anchor to avoid 404 -->
+    <form name="codexalpha-collab" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/#digital-hub-join" accept-charset="UTF-8">
       <input type="hidden" name="form-name" value="codexalpha-collab">
       <p style="display:none;"><label>Don’t fill this out: <input name="bot-field"></label></p>
 
@@ -402,6 +403,19 @@
     </form>
   </div>
 </div>
+
+<script>
+// OPEN/CLOSE Netlify form modal
+const openCollab = document.getElementById('open-collab-form');
+const collabModal = document.getElementById('collab-modal');
+const closeCollab = document.getElementById('close-collab-form');
+
+if (openCollab && collabModal && closeCollab) {
+  openCollab.addEventListener('click', (e) => { e.preventDefault(); collabModal.style.display = 'block'; });
+  closeCollab.addEventListener('click', () => { collabModal.style.display = 'none'; });
+  collabModal.addEventListener('click', (e) => { if (e.target === collabModal) collabModal.style.display = 'none'; });
+}
+</script>
 
 
 
@@ -458,16 +472,6 @@
     cosmicLinkElement.href = cosmicImages[0];
     setInterval(updateCosmicImage, intervalTimeCosmic);
 
-    // OPEN/CLOSE Netlify form modal
-const openCollab = document.getElementById('open-collab-form');
-const collabModal = document.getElementById('collab-modal');
-const closeCollab = document.getElementById('close-collab-form');
-
-if (openCollab && collabModal && closeCollab) {
-  openCollab.addEventListener('click', (e) => { e.preventDefault(); collabModal.style.display = 'block'; });
-  closeCollab.addEventListener('click', () => { collabModal.style.display = 'none'; });
-  collabModal.addEventListener('click', (e) => { if (e.target === collabModal) collabModal.style.display = 'none'; });
-}
   </script>
 </body>
 </html>

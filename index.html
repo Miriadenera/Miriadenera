@@ -298,13 +298,19 @@
     </li>
   </section>
 
-    <!-- DIGITAL HUB (condensed, single section) -->
+  <!-- DIGITAL HUB (condensed, single section) -->
   <section id="digital-hub">
     <h2>Codex Alpha Digital Hub</h2>
-    <p>
-      A unified place for theory, code, data and collaboration — tightly integrated with DOI-tracked releases and reproducible workflows.
-      Mission: advance and validate the Codex Alpha framework with open, testable methods.
-    </p>
+
+    <!-- Preambolo: cos'è e a chi serve -->
+    <div style="
+      font-family: Consolas, 'Courier New', monospace; white-space: pre-wrap;
+      line-height:1.55; color:#cfefff; background:rgba(0,0,0,0.40);
+      padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
+The Digital Hub is the operational entry-point for Codex Alpha: one place to access papers (DOIs),
+code, data and collaboration policies. Everything here is designed to be reproducible, citable and
+verifiable, so external teams can audit, reproduce and extend the work before opening a pull request.
+    </div>
 
     <!-- Quick actions -->
     <div class="button-container" style="margin-bottom:1rem;">
@@ -315,25 +321,39 @@
       <a class="neon-button" href="#digital-hub-press">Press</a>
     </div>
 
-    <!-- Methods (condensed) -->
+    <!-- Methods (condensed, cleaned) -->
     <h3 id="digital-hub-methods" style="color:#00ffff;">Methods &amp; Reproducibility</h3>
-    <p>
-      Environments: <code>environment.yml</code> (conda) + <code>requirements.txt</code>. Container: <code>Dockerfile</code> with pinned versions.
-      Determinism: document random seeds and note any non-deterministic kernels.
-    </p>
-    <ol>
-      <li>Clone: <code>github.com/Miriadenera/codex-alpha-*</code></li>
-      <li><code>conda env create -f environment.yml</code> (or Docker build)</li>
-      <li>Run notebooks in <code>simulations/</code> top-to-bottom</li>
-      <li>Compare outputs with reference logs (Zenodo DOI)</li>
-    </ol>
-    <p style="margin-top:.5rem;">
-      Cite software/data via <code>CITATION.cff</code> and listed DOIs.
-    </p>
 
-    <!-- Data (condensed) -->
+    <!-- Preambolo Methods -->
+    <div style="
+      font-family: Consolas, 'Courier New', monospace; white-space: pre-wrap;
+      line-height:1.55; color:#cfefff; background:rgba(0,0,0,0.40);
+      padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
+This section is for collaborators and reviewers. It explains how to set up the exact software
+environment, run the public simulations, and verify results against DOI-archived artefacts.
+Follow these steps if you want to reproduce figures/tables, contribute code or perform independent checks.
+    </div>
+
+    <!-- Blocco monospace unico (no bullet/number) -->
+    <div style="
+      font-family: Consolas, 'Courier New', monospace; white-space: pre-wrap;
+      line-height:1.55; color:#cfefff; background:rgba(0,0,0,0.40);
+      padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
+Environments: environment.yml (conda) + requirements.txt
+Container:   Dockerfile with pinned versions
+Determinism: document random seeds and note any non-deterministic kernels
+
+Clone:       github.com/Miriadenera/codex-alpha-*
+Create env:  conda env create -f environment.yml    (or: docker build .)
+Run:         notebooks in simulations/  top-to-bottom
+Validate:    compare outputs with reference logs (Zenodo DOI)
+
+Cite software/data via CITATION.cff and the listed DOIs.
+    </div>
+
+    <!-- Data (condensed, bullets disattivati) -->
     <h3 id="digital-hub-data" style="color:#00ffff;">Data &amp; Releases</h3>
-    <ul>
+    <ul style="list-style:none; padding-left:0; margin-left:0;">
       <li>
         <strong>Codex Alpha v3.0 (Iconoclast Edition)</strong> — DOI:
         <a href="https://doi.org/10.5281/zenodo.17074972" target="_blank">10.5281/zenodo.17074972</a>
@@ -342,20 +362,29 @@
     </ul>
     <p>All releases include SHA256 checksums and a manifest for verification.</p>
 
-    <!-- Collaborate (condensed) -->
+    <!-- Collaborate (condensed, no bullet/number) -->
     <h3 id="digital-hub-join" style="color:#00ffff;">Collaborate with Codex Alpha</h3>
-    <p>We welcome contributions in:</p>
-    <ul>
-      <li>Mathematical physics (GR, QFT, cosmology)</li>
-      <li>Scientific computing (JAX/PyTorch/HPC)</li>
-      <li>Data &amp; visualization</li>
-    </ul>
-    <p>Send a one-page PDF including:</p>
-    <ol>
-      <li>Background (≤150 words)</li>
-      <li>Proposed contribution (≤300 words)</li>
-      <li>Availability (hours/week)</li>
-    </ol>
+
+    <div style="
+      font-family: Consolas, 'Courier New', monospace; white-space: pre-wrap;
+      line-height:1.55; color:#cfefff; background:rgba(0,0,0,0.40);
+      padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
+We welcome contributions in:
+- Mathematical physics (GR, QFT, cosmology)
+- Scientific computing (JAX/PyTorch/HPC)
+- Data & visualization
+    </div>
+
+    <div style="
+      font-family: Consolas, 'Courier New', monospace; white-space: pre-wrap;
+      line-height:1.55; color:#cfefff; background:rgba(0,0,0,0.40);
+      padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
+Send a one-page PDF including:
+• Background (≤150 words)
+• Proposed contribution (≤300 words)
+• Availability (hours/week)
+    </div>
+
     <div class="button-container" style="margin-top:.5rem;">
       <a class="neon-button" href="#" title="Add your Google Form link">Submit via Form</a>
       <a class="neon-button" href="https://github.com/Miriadenera/Miriadenera/issues/new" target="_blank">Open GitHub Issue</a>
@@ -373,6 +402,7 @@
     </p>
     <p><strong>Contact</strong>: <a href="mailto:press@codexalpha.org">press@codexalpha.org</a></p>
   </section>
+
 
 
   <!-- SCRIPTS -->

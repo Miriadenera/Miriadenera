@@ -374,7 +374,7 @@
   </div>
 </section>
 
-<!-- Collaboration Form (Netlify Forms, in-page submit) -->
+<!-- Collaboration Form (Netlify Forms, AJAX + fallback) -->
 <form name="codexalpha-collab"
       method="POST"
       data-netlify="true"
@@ -402,7 +402,7 @@
 </form>
 
 <script>
-  // --- OPEN/CLOSE modal (unchanged behaviour)
+  // --- OPEN/CLOSE modal
   const openCollab = document.getElementById('open-collab-form');
   const collabModal = document.getElementById('collab-modal');
   const closeCollab = document.getElementById('close-collab-form');
@@ -413,9 +413,32 @@
     collabModal.addEventListener('click', (e) => { if (e.target === collabModal) collabModal.style.display = 'none'; });
   }
 
-  // --- Netlify Forms: intercept submit, post via fetch, show success (no redirect, no 404)
+  // --- Netlify Forms: AJAX submit con fallback al subdominio Netlify
   const collabForm = document.forms['codexalpha-collab'];
   if (collabForm) {
+    // Sostituisci con il TUO subdominio Netlify se diverso
+    const NETLIFY_FALLBACK = 'https://codex-alpha-unified-framework.netlify.app/';
+
+    const showOK = () => {
+      const ok = document.createElement('div');
+      ok.style.cssText = 'margin-top:1rem;padding:0.9rem 1rem;border-radius:10px;background:rgba(0,255,255,0.10);border:1px solid #00ffff66;color:#e9f7ff;box-shadow:0 0 18px #00ffff22;';
+      ok.innerHTML = '✅ <strong>Submission received.</strong> We will get back to you. You can also open a public follow-up via GitHub issues.';
+      collabForm.parentElement.appendChild(ok);
+      collabForm.reset();
+      setTimeout(() => { if (collabModal) collabModal.style.display = 'none'; }, 1500);
+    };
+
+    const postEncoded = async (endpoint, payload) => {
+      // redirect:"manual" così un 303 conta come successo
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: payload,
+        redirect: 'manual'
+      });
+      return res;
+    };
+
     collabForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
@@ -424,28 +447,27 @@
       btn.textContent = 'Sending...';
       btn.disabled = true;
 
-      // Netlify richiede application/x-www-form-urlencoded OR FormData.
-      // Qui usiamo URLSearchParams per massima compatibilità.
-      const formData = new FormData(collabForm);
-      const payload = new URLSearchParams(formData).toString();
+      // Prepara payload x-www-form-urlencoded (Netlify-friendly)
+      const data = new FormData(collabForm);
+      // assicurati che 'form-name' sia presente
+      if (!data.get('form-name')) data.set('form-name', 'codexalpha-collab');
+      const payload = new URLSearchParams(data).toString();
 
       try {
-        const res = await fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: payload
-        });
+        // 1) prova sul dominio corrente
+        let res = await postEncoded('/', payload);
 
-        // Se Netlify risponde con 200/204 consideriamo ok
-        if (res.ok) {
-          const ok = document.createElement('div');
-          ok.style.cssText = 'margin-top:1rem;padding:0.9rem 1rem;border-radius:10px;background:rgba(0,255,255,0.10);border:1px solid #00ffff66;color:#e9f7ff;box-shadow:0 0 18px #00ffff22;';
-          ok.innerHTML = '✅ <strong>Submission received.</strong> We will get back to you. You can also open a public follow-up via GitHub issues.';
-          collabForm.parentElement.appendChild(ok);
-          collabForm.reset();
-          setTimeout(() => { if (collabModal) collabModal.style.display = 'none'; }, 1500);
+        // Successo se 200/204/303
+        if (res && (res.status === 200 || res.status === 204 || res.status === 303)) {
+          showOK();
         } else {
-          throw new Error('Netlify returned ' + res.status);
+          // 2) fallback al subdominio Netlify (aggira eventuale 404 del root)
+          res = await postEncoded(NETLIFY_FALLBACK, payload);
+          if (res && (res.status === 200 || res.status === 204 || res.status === 303)) {
+            showOK();
+          } else {
+            throw new Error('Netlify returned ' + (res ? res.status : 'no response'));
+          }
         }
       } catch (err) {
         alert('Submission failed. Please try again or use the GitHub issue button.');
@@ -457,8 +479,6 @@
     });
   }
 </script>
-
-
 
 
 

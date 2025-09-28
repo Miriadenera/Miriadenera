@@ -374,36 +374,49 @@
   </div>
 </section>
 
-<!-- Collaboration Form (Netlify Forms, AJAX + fallback) -->
-<form name="codexalpha-collab"
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      action="/"
-      accept-charset="UTF-8">
-  <input type="hidden" name="form-name" value="codexalpha-collab">
-  <p style="display:none;"><label>Don’t fill this out: <input name="bot-field"></label></p>
+<!-- Collaboration Modal (hidden by default; contains the Netlify form) -->
+<div id="collab-modal" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.8); backdrop-filter: blur(2px);">
+  <div style="position:relative; width:90%; max-width:900px; margin:6vh auto; background:#0b0b14; border-radius:12px; box-shadow:0 0 30px #00ffff55; padding:1rem;">
+    <button id="close-collab-form" aria-label="Close form" style="position:absolute; top:10px; right:12px; background:rgba(0,0,0,0.5); color:#fff; border:1px solid #00ffff66; border-radius:8px; padding:.4rem .7rem; cursor:pointer;">✕</button>
+    <h3 style="color:#00ffff; margin:.25rem 0 1rem;">Collaboration proposal</h3>
 
-  <div style="display:grid; gap:.75rem;">
-    <input name="name"  type="text"  placeholder="Full name" required
-           style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;">
-    <input name="email" type="email" placeholder="Email" required
-           style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;">
-    <textarea name="background" rows="3" placeholder="Background (≤150 words)" required
-              style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;"></textarea>
-    <textarea name="proposal" rows="5" placeholder="Proposed contribution (≤300 words)" required
-              style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;"></textarea>
-    <input name="availability" type="text" placeholder="Availability (hours/week)" required
-           style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;">
-    <input name="links" type="url" placeholder="Link to PDF / portfolio / repo (optional)"
-           style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;">
-    <button type="submit" class="neon-button" style="width:max-content;">Submit</button>
+    <!-- Collaboration Form (Netlify Forms, AJAX + fallback) -->
+    <form name="codexalpha-collab"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/"
+          accept-charset="UTF-8">
+      <input type="hidden" name="form-name" value="codexalpha-collab">
+      <p style="display:none;"><label>Don’t fill this out: <input name="bot-field"></label></p>
+
+      <div style="display:grid; gap:.75rem;">
+        <input name="name"  type="text"  placeholder="Full name" required
+               style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;">
+        <input name="email" type="email" placeholder="Email" required
+               style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;">
+        <textarea name="background" rows="3" placeholder="Background (≤150 words)" required
+                  style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;"></textarea>
+        <textarea name="proposal" rows="5" placeholder="Proposed contribution (≤300 words)" required
+                  style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;"></textarea>
+        <input name="availability" type="text" placeholder="Availability (hours/week)" required
+               style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;">
+        <input name="links" type="url" placeholder="Link to PDF / portfolio / repo (optional)"
+               style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;">
+        <button type="submit" class="neon-button" style="width:max-content;">Submit</button>
+      </div>
+    </form>
+
+    <!-- success message -->
+    <div id="collab-success" style="display:none; margin-top:1rem; padding:0.9rem 1rem; border-radius:10px; background:rgba(0,255,255,0.10); border:1px solid #00ffff66; color:#e9f7ff; box-shadow:0 0 18px #00ffff22;">
+      ✅ <strong>Submission received.</strong> We will get back to you. You can also open a public follow-up via GitHub issues.
+    </div>
   </div>
-</form>
+</div>
 
 <script>
   // --- OPEN/CLOSE modal
-  const openCollab = document.getElementById('open-collab-form');
+  const openCollab = document.getElementById('open-collab-form'); // button in "Collaborate" section
   const collabModal = document.getElementById('collab-modal');
   const closeCollab = document.getElementById('close-collab-form');
 
@@ -416,27 +429,17 @@
   // --- Netlify Forms: AJAX submit con fallback al subdominio Netlify
   const collabForm = document.forms['codexalpha-collab'];
   if (collabForm) {
-    // Sostituisci con il TUO subdominio Netlify se diverso
     const NETLIFY_FALLBACK = 'https://codex-alpha-unified-framework.netlify.app/';
 
-    const showOK = () => {
-      const ok = document.createElement('div');
-      ok.style.cssText = 'margin-top:1rem;padding:0.9rem 1rem;border-radius:10px;background:rgba(0,255,255,0.10);border:1px solid #00ffff66;color:#e9f7ff;box-shadow:0 0 18px #00ffff22;';
-      ok.innerHTML = '✅ <strong>Submission received.</strong> We will get back to you. You can also open a public follow-up via GitHub issues.';
-      collabForm.parentElement.appendChild(ok);
-      collabForm.reset();
-      setTimeout(() => { if (collabModal) collabModal.style.display = 'none'; }, 1500);
-    };
+    const successBox = document.getElementById('collab-success');
 
     const postEncoded = async (endpoint, payload) => {
-      // redirect:"manual" così un 303 conta come successo
-      const res = await fetch(endpoint, {
+      return fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: payload,
-        redirect: 'manual'
+        redirect: 'manual' // treat 303 as success without navigating
       });
-      return res;
     };
 
     collabForm.addEventListener('submit', async (e) => {
@@ -447,24 +450,23 @@
       btn.textContent = 'Sending...';
       btn.disabled = true;
 
-      // Prepara payload x-www-form-urlencoded (Netlify-friendly)
       const data = new FormData(collabForm);
-      // assicurati che 'form-name' sia presente
       if (!data.get('form-name')) data.set('form-name', 'codexalpha-collab');
       const payload = new URLSearchParams(data).toString();
 
       try {
-        // 1) prova sul dominio corrente
         let res = await postEncoded('/', payload);
 
-        // Successo se 200/204/303
         if (res && (res.status === 200 || res.status === 204 || res.status === 303)) {
-          showOK();
+          successBox.style.display = 'block';
+          collabForm.reset();
+          setTimeout(() => { collabModal.style.display = 'none'; successBox.style.display = 'none'; }, 1500);
         } else {
-          // 2) fallback al subdominio Netlify (aggira eventuale 404 del root)
           res = await postEncoded(NETLIFY_FALLBACK, payload);
           if (res && (res.status === 200 || res.status === 204 || res.status === 303)) {
-            showOK();
+            successBox.style.display = 'block';
+            collabForm.reset();
+            setTimeout(() => { collabModal.style.display = 'none'; successBox.style.display = 'none'; }, 1500);
           } else {
             throw new Error('Netlify returned ' + (res ? res.status : 'no response'));
           }
@@ -537,3 +539,4 @@
   </script>
 </body>
 </html>
+

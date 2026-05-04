@@ -6,207 +6,40 @@
   <title>Codex Alpha Research — Beyond Space-Time</title>
   <link rel="icon" type="image/png" href="favicon.png"/>
   <link rel="stylesheet" href="style.css"/>
-
   <style>
-    header {
-      padding: 12vh 5vw 6vh;
-      max-width: 1100px;
-      margin: 0 auto;
-      text-align: left;
-      position: relative;
-      z-index: 1;
-    }
+    header { padding:12vh 5vw 6vh; max-width:1100px; margin:0 auto; text-align:left; position:relative; z-index:1; }
+    header h1 { font-size:clamp(3rem,8vw,6rem); margin:0; color:#fff; text-shadow:0 0 18px #00ffff; letter-spacing:-0.04em; }
+    header h2 { font-size:clamp(1.25rem,2.4vw,2rem); font-weight:400; color:#dffcff; margin:.35em 0 .7em; max-width:900px; line-height:1.25; }
+    .hero-subtitle { max-width:780px; color:#e9f7ff; font-size:1.08rem; line-height:1.7; margin:0 0 1.5rem; }
 
-    header h1 {
-      font-size: clamp(3rem, 8vw, 6rem);
-      margin: 0;
-      color: #ffffff;
-      text-shadow: 0 0 18px #00ffff;
-      letter-spacing: -0.04em;
-    }
+    .button-container { margin-top:2vh; display:flex; flex-wrap:wrap; gap:.8rem; }
+    .neon-button { display:inline-block; padding:.95em 1.35em; background-color:#6a0dad; color:#fff; text-decoration:none; border-radius:10px; box-shadow:0 0 18px #00ffff99; transition:all .3s ease-in-out; font-weight:700; border:1px solid #00ffff55; }
+    .neon-button:hover { background-color:#4b0082; box-shadow:0 0 32px #00ffff; transform:translateY(-1px); }
+    .neon-button.secondary { background-color:rgba(0,0,0,.45); border:1px solid #00ffff88; }
+    .neon-button[href="#"] { cursor:not-allowed; opacity:.75; }
+    .neon-button[href="#"]:hover { box-shadow:0 0 20px #00ffff; background-color:#6a0dad; transform:none; }
 
-    header h2 {
-      font-size: clamp(1.25rem, 2.4vw, 2rem);
-      font-weight: 400;
-      color: #dffcff;
-      margin: 0.35em 0 0.7em;
-      max-width: 900px;
-      line-height: 1.25;
-    }
+    nav { position:fixed; top:0; right:0; padding:1em; background-color:rgba(0,0,0,.72); border-bottom-left-radius:10px; z-index:10; backdrop-filter:blur(6px); }
+    nav a { margin:0 .5em; color:#fff; text-decoration:none; font-weight:700; font-size:.95rem; }
+    nav a:hover { color:#00ffff; text-decoration:none; }
 
-    .hero-subtitle {
-      max-width: 780px;
-      color: #e9f7ff;
-      font-size: 1.08rem;
-      line-height: 1.7;
-      margin: 0 0 1.5rem;
-    }
+    section { padding:10vh 5vw; background:rgba(0,0,0,.62); margin:10vh auto 0; width:92%; max-width:1100px; border-radius:12px; position:relative; z-index:1; box-shadow:0 0 24px #00ffff22; }
+    h2 { color:#00ffff; margin-top:0; }
+    .news-entry { margin-bottom:1.5em; }
 
-    .button-container {
-      margin-top: 2vh;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-    }
+    .cosmic-slideshow-link { display:block; width:100%; height:100%; }
+    .bg-fade { position:fixed; inset:0; background-size:cover; background-position:center; transition:opacity 1s ease; opacity:0; z-index:-1; filter:brightness(.5) contrast(1.05); }
 
-    .neon-button {
-      display: inline-block;
-      padding: 0.95em 1.35em;
-      background-color: #6a0dad;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 10px;
-      box-shadow: 0 0 18px #00ffff99;
-      transition: all .3s ease-in-out;
-      font-weight: 700;
-      border: 1px solid #00ffff55;
-    }
+    .video-grid { display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); align-items:start; }
+    .video-wrap { position:relative; width:100%; padding-top:56.25%; border-radius:12px; overflow:hidden; background:#000; box-shadow:0 0 18px #00ffff33; border:1px solid rgba(0,255,255,.15); }
+    .video-wrap iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
 
-    .neon-button:hover {
-      background-color: #4b0082;
-      box-shadow: 0 0 32px #00ffff;
-      transform: translateY(-1px);
-    }
-
-    .neon-button.secondary {
-      background-color: rgba(0,0,0,0.45);
-      border: 1px solid #00ffff88;
-    }
-
-    .neon-button[href="#"] {
-      cursor: not-allowed;
-      opacity: .75;
-    }
-
-    .neon-button[href="#"]:hover {
-      box-shadow: 0 0 20px #00ffff;
-      background-color: #6a0dad;
-      transform: none;
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      right: 0;
-      padding: 1em;
-      background-color: rgba(0,0,0,0.72);
-      border-bottom-left-radius: 10px;
-      z-index: 10;
-      backdrop-filter: blur(6px);
-    }
-
-    nav a {
-      margin: 0 0.5em;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
-
-    nav a:hover {
-      color: #00ffff;
-      text-decoration: none;
-    }
-
-    section {
-      padding: 10vh 5vw;
-      background: rgba(0,0,0,0.62);
-      margin: 10vh auto 0;
-      width: 92%;
-      max-width: 1100px;
-      border-radius: 12px;
-      position: relative;
-      z-index: 1;
-      box-shadow: 0 0 24px #00ffff22;
-    }
-
-    h2 {
-      color: #00ffff;
-      margin-top: 0;
-    }
-
-    .news-entry {
-      margin-bottom: 1.5em;
-    }
-
-    /* Slideshow link wrapper */
-.cosmic-slideshow-link {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-/* Background cross-fade layers */
-.bg-fade {
-  position: fixed;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  transition: opacity 1s ease;
-  opacity: 0;
-  z-index: -1;
-  filter: brightness(.5) contrast(1.05);
-}
-
-/* --- Media & Interviews --- */
-.video-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  align-items: start;
-}
-
-.video-wrap {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 */
-  border-radius: 12px;
-  overflow: hidden;
-  background: #000;
-  box-shadow: 0 0 18px #00ffff33;
-  border: 1px solid rgba(0,255,255,0.15);
-}
-
-.video-wrap iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-/* Content cards */
-.link-card {
-  border-radius: 12px;
-  padding: 1.1rem 1.3rem;
-  background: rgba(0,0,0,0.55);
-  box-shadow: 0 0 18px #00ffff22;
-  color: #e9f7ff;
-  border: 1px solid rgba(0,255,255,0.12);
-}
-
-.link-card a {
-  color: #00ffff;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.link-card a:hover {
-  text-decoration: underline;
-}
-
-.card-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 0 0 .35rem 0;
-  color: #ffffff;
-}
-
-.card-desc {
-  opacity: .9;
-  margin: .25rem 0 .75rem 0;
-  line-height: 1.6;
-}
+    .link-card { border-radius:12px; padding:1.1rem 1.3rem; background:rgba(0,0,0,.55); box-shadow:0 0 18px #00ffff22; color:#e9f7ff; border:1px solid rgba(0,255,255,.12); }
+    .link-card a { color:#00ffff; font-weight:600; text-decoration:none; }
+    .link-card a:hover { text-decoration:underline; }
+    .card-title { font-size:1.1rem; font-weight:600; margin:0 0 .35rem 0; color:#fff; }
+    .card-desc { opacity:.9; margin:.25rem 0 .75rem 0; line-height:1.6; }
+  </style>
   /* <!-- Google tag (gtag.js) --> */
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QRE1QWMBK"></script>
 <script>

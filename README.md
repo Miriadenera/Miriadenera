@@ -147,8 +147,7 @@ An intensive collaboration tackling the most complex open problems in theoretica
 
 ### **📬 Contact Information**
 - 🏛️ **Institutional**: [davide.cadelano@codexalpha.org](mailto:davide.cadelano@codexalpha.org)  
-- 📧 **Personal**: [miriadenera@gmail.com](mailto:miriadenera@gmail.com)  
-- 📱 **Phone**: +39 366 7449960
+
 
 ---
 

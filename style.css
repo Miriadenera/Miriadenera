@@ -63,6 +63,57 @@ p {
   text-decoration: none;
   border-radius: 8px;
   transition: transform 0.2s, box-shadow 0.2s;
+
+  .computational-banner {
+  background: radial-gradient(circle at top left, #143b5f, #05070d 60%);
+  color: #ffffff;
+  padding: 80px 24px;
+  border-radius: 24px;
+  margin: 40px auto;
+  max-width: 1200px;
+  box-shadow: 0 0 40px rgba(0, 180, 255, 0.18);
+}
+
+.computational-banner-content {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.banner-label {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #7ddcff;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.computational-banner h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin-bottom: 24px;
+}
+
+.computational-banner p {
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  line-height: 1.6;
+  color: #dbeafe;
+  margin-bottom: 36px;
+}
+
+.banner-button {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: #00bfff;
+  color: #020617;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.banner-button:hover {
+  background: #7ddcff;
+}
   box-shadow: 0 0 10px #00ffe0;
 }
 

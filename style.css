@@ -209,3 +209,8 @@ p {
 .framework-cta {
   text-align: center;
 }
+
+.framework-section ul li::marker,
+.framework-section ol li::marker {
+  color: #00ffe0;
+}

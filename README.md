@@ -1,202 +1,340 @@
-# 🌌 Davide Cadelano — Theoretical Physics & Quantum Computing Research
+# 🌌 Davide Cadelano — Theoretical Physics & Quantum Information Research
 
-**Independent Theoretical Physicist** | **Quantum Computing Researcher** | **Unified Field Theory Pioneer**
+**Independent Theoretical Physicist** | **Quantum Information Researcher** | **Codex Alpha Research**
 
-Welcome to my comprehensive research repository, documenting a multi-year journey through the frontiers of theoretical physics, quantum computing, and consciousness research.
+Welcome to my main research repository, documenting a multi-year independent research programme at the intersection of theoretical physics, quantum information, emergent spacetime, computational analysis, and unified field theory.
 
-> **Peer-review:** The manuscript **Codex Alpha – Unified Theory (v3.0)** has been **submitted to *Physical Review D*** (under peer review).
+This repository serves as a public hub for my work on **Codex Alpha**, including its theoretical manuscripts, computational framework, research outputs, and related scientific developments.
 
 ---
 
 ## 🚀 Research Portfolio Overview
 
-### 🧬 **Codex Alpha — Unified Field Theory** (2020–2025)
-*A revolutionary framework unifying General Relativity and Quantum Mechanics*
+### 🧬 **Codex Alpha — Unified Field Theory** (2020–2026)
 
-**Codex Alpha** proposes a unified theoretical framework that connects **General Relativity** and **Quantum Mechanics** through a novel informational structure called the **Telascura**.
+*A theoretical framework exploring an informational extension of General Relativity and Quantum Mechanics*
 
-**Core Equation:**
+**Codex Alpha** proposes a unified theoretical framework in which spacetime geometry is interpreted as an emergent structure arising from an underlying coherent informational substrate called the **Telascura**.
 
+At the core of the model is the coherence-gradient structure represented by:
+
+```text
+𝒢_{μν} + Λg_{μν} = (8πG / c⁴) ⟨ T̂_{μν} ⟩_{∇𝒦}
 ```
-𝒢_{μν} + Λ g_{μν} = (8πG / c⁴) ⟨ T̂_{μν} ⟩_{∇𝒦}
+
+In this formulation, the right-hand side is interpreted as a coherence-weighted energy-momentum response, where the local informational coherence gradient `∇𝒦` controls deviations from the standard geometric-matter coupling of General Relativity.
+
+---
+
+## 🔗 Core Publications
+
+### 📐 **Foundations of Codex Alpha Dynamics — v1.0**  
+*A Variational Derivation of an Informational Extension of Einstein Field Equations*
+
+DOI: [10.5281/zenodo.20355167](https://doi.org/10.5281/zenodo.20355167)  
+Repository: [foundations-of-codex-alpha-dynamics](https://github.com/Miriadenera/foundations-of-codex-alpha-dynamics)
+
+This manuscript provides the minimal variational foundation of the effective continuous sector of Codex Alpha. It derives the informational extension of Einstein field equations from an explicit action principle involving the spacetime metric, a scalar coherence field, ordinary matter fields, and a coherence-weighted Schwinger functional.
+
+**Main contributions:**
+
+- Explicit variational derivation of the Codex Alpha dynamical core
+- Definition of the effective continuous sector of the Telascura
+- Dimensional consistency and minimality of the scalar coherence extension
+- Recovery of General Relativity in the uniform-coherence limit
+- Absence of Ostrogradsky ghosts in the minimal sector
+- Falsifiability through cosmological perturbations, gravitational waves, gravitational lensing, and post-Newtonian regimes
+
+---
+
+### 📘 **Codex Alpha 3.0 — Iconoclast Edition**  
+*Informational Unification of General Relativity and Quantum Mechanics*
+
+DOI: [10.5281/zenodo.17074972](https://doi.org/10.5281/zenodo.17074972)
+
+Codex Alpha 3.0 is the complete theoretical architecture of the project. It develops the broader framework of the Telascura, nodal informational structures, emergent spacetime, retrocausal operators, coherence dynamics, and the extended informational ontology of the theory.
+
+**Research role:**
+
+```text
+Codex Alpha 3.0 — Iconoclast Edition
+= full theoretical architecture
+
+Foundations of Codex Alpha Dynamics
+= minimal variational derivation of the effective continuous sector
 ```
 
+---
 
+### 🧮 **Codex Alpha Computational Framework — v1.0**
 
-This equation suggests that the geometry of spacetime emerges from coherent quantum information embedded in an underlying entangled lattice — the Telascura.
+DOI: [10.5281/zenodo.20335018](https://doi.org/10.5281/zenodo.20335018)
 
-**🔗 Publications:**
-- 📄 **English Version (v3.0, ICONOCLAST)**: [DOI: 10.5281/zenodo.17074972](https://doi.org/10.5281/zenodo.17074972)
-- 📄 **Italian v2.0**: [DOI: 10.5281/zenodo.16131379](https://doi.org/10.5281/zenodo.16131379)
+The **Codex Alpha Computational Framework** is a modular research infrastructure designed to support the computational and data-oriented side of the Codex Alpha programme.
 
-**Key Features:**
-- Variational derivation of unified field equations
-- Formal definition of informational field ∇𝒦
-- Recovery of classical (GR) and quantum (QM) limits
-- Theoretical foundation for exotic phenomena:
-  - Negative mass topologies
-  - Nodal informational crystals
-  - Superluminal entanglement
-  - Temporal navigation and retrocausality
+It provides a structured environment for AI-assisted analysis of large-scale cosmological structures, anomaly detection, graph-based modeling, interpretability, ranking, and exploratory validation of candidate coherence signatures.
+
+**Core objectives:**
+
+- AI-assisted analysis of large-scale cosmological datasets
+- Detection of anomalous astrophysical patterns
+- Graph-based modeling of correlations between astronomical sources
+- Ranking and prioritization of candidate targets
+- Exploratory validation workflows connected to Codex Alpha predictions
+- Preparation of future computational pipelines for observational testing
 
 ---
 
-### 🧠 **QIM METATRON — Quantum Informational Metastructure** (August 2024)
-*Revolutionary quantum computing architecture based on ancient geometry*
+### 📄 **Codex Alpha — Italian v2.0**
 
-**QIM METATRON** is a groundbreaking quantum computing framework that integrates **Metatron’s Cube** with **4D Tesseract** architectures, creating a coherent multidimensional quantum processing system.
+DOI: [10.5281/zenodo.16131379](https://doi.org/10.5281/zenodo.16131379)
 
-**🔧 Technical Specifications:**
-- **208 Qubits** in base configuration (expandable to millions)
-- **13 Primary Nodes** (Metatron Cube structure)
-- **16 Qubits per Tesseract** at each node
-- **Advanced Quantum Algorithms**: Grover’s and Shor’s implementations
-- **Superconducting Materials** with cryogenic cooling systems
-
-**🎯 Applications:**
-- **Cryptography**: Exponential speedup in prime factorization
-- **Molecular Simulations**: Complex quantum state representations
-- **Artificial Intelligence**: Advanced parallel processing for ML algorithms
-- **Consciousness Research**: Symbolic-topological cognition models
-
-**🧩 Unique Features:**
-- Ancient geometry-based quantum architecture
-- Tesseract-enhanced parallel processing
-- Symbolic computational logic for AI interfaces
-- Multidimensional visualization and simulation tools
+The Italian v2.0 version represents an earlier complete formulation of the Codex Alpha theory, developed before the transition toward the expanded Iconoclast structure and the later Foundations manuscript.
 
 ---
 
-### 🌊 **Collaborative Research with Louis-François Claro** (2025)
-*Solving Millennium Problems through 5D Geometric Frameworks*
+## 📐 Foundations of Codex Alpha Dynamics
 
-An intensive collaboration tackling the most complex open problems in theoretical physics through innovative **5D Higgs-Torsion Geometry**.
+**Foundations of Codex Alpha Dynamics** is the formal mathematical companion manuscript to Codex Alpha 3.0.
 
-**📚 Joint Publications:**
+Its purpose is not to expand the theory with additional phenomenological claims, but to isolate and derive the minimal mathematical core of the effective continuous dynamics.
 
-1. **🧠 Yang–Mills Mass Gap Resolution**  
-   DOI: [10.5281/zenodo.16168587](https://doi.org/10.5281/zenodo.16168587)  
-   Novel torsion-induced mass gap mechanism; numerical alignment with QCD predictions.
+The manuscript focuses on the regime in which the underlying discrete informational structure of the Telascura can be approximated by a smooth Lorentzian manifold.
 
-2. **🌌 Hybrid Cosmology + N-Body + Navier–Stokes**  
-   DOI: [10.5281/zenodo.16153428](https://doi.org/10.5281/zenodo.16153428)  
-   Unified geometric field for multiple physical systems; dark energy via negative mass density tensor.
+**Central equation:**
 
-3. **🌊 Complete Navier–Stokes Solution**  
-   DOI: [10.5281/zenodo.16039574](https://doi.org/10.5281/zenodo.16039574)  
-   Geometric field coupling suppressing chaotic dissipation; exact solutions under fractal boundary conditions.
+```text
+G_{μν} + Λg_{μν} = (8πG / c⁴) ⟨ T̂_{μν} ⟩_{∇𝒦}
+```
 
-4. **🌐 Gravitational N-Body Problem in 5D**  
-   DOI: [10.5281/zenodo.15874407](https://doi.org/10.5281/zenodo.15874407)  
-   Stabilization of chaotic systems via informational gradients; implications for galactic dynamics and orbital control.
+Here, the right-hand side is defined as the metric response of a coherence-weighted functional measure rather than introduced phenomenologically.
 
-**📘 Synthesis Work:**  
-**“Fractal Geometric Theory of Fundamental Problems”** — A comprehensive framework merging geometry, torsion, quantum fields, and informational dynamics to solve multiple Millennium-class problems in physics.
+**Key features:**
 
----
-
-## 🔬 Research Methodology & Innovation
-
-### **Theoretical Foundations**
-- **Informational Field Theory**: ∇𝒦 gradient as fundamental force  
-- **5D Geometric Frameworks**: Extended spacetime with internal degrees of freedom  
-- **Fractal-Torsional Coupling**: Novel mathematical structures  
-- **Sacred Geometry Integration**: Metatron Cube quantum architectures
-
-### **Computational Approaches**
-- **GPU-Accelerated Simulations**: High-precision numerical validation  
-- **Quantum Algorithm Implementation**: Grover’s and Shor’s optimizations  
-- **Multidimensional Visualization**: Advanced 3D/4D rendering systems  
-- **Symbolic-Topological Processing**: AI-compatible geometric logic
-
-### **Experimental Predictions**
-- **Mass Gap Values**: 1.61 ± 0.02 GeV (Yang-Mills)  
-- **Cosmological Parameters**: Ω_Λ = 0.692 ± 0.004  
-- **Turbulence Suppression**: 89.3% reduction in chaotic flows  
-- **Orbital Stabilization**: Lyapunov exponent control in N-body systems
+- Variational action principle
+- Coherence scalar field `𝒦`
+- Coherence-weighted Schwinger functional `W[g, ∇𝒦]`
+- Effective continuous approximation of the Telascura
+- Recovery of General Relativity when `∇𝒦 → 0`
+- Explicit domain of perturbative validity
+- Absence of Ostrogradsky ghosts in the minimal continuous sector
+- Possible observational deviations in gravitational and cosmological regimes
 
 ---
 
-## 🏆 Scientific Impact & Recognition
+## 🧮 Codex Alpha Computational Framework
 
-### **Academic Metrics**
-- **ORCID**: [0009-0008-2253-7008](https://orcid.org/0009-0008-2253-7008)  
-- **Publications**: 8+ peer-reviewed preprints on Zenodo  
-- **Citations**: Growing international recognition  
-- **Collaborations**: Multi-institutional partnerships
+The **Codex Alpha Computational Framework** is the computational research layer of the Codex Alpha project.
 
-### **Innovation Highlights**
-- **First Unified Framework** for 3 Millennium Problems  
-- **Novel Quantum Architecture** based on sacred geometry  
-- **Breakthrough in Mass Gap Theory** via torsional mechanisms  
-- **Revolutionary Approach** to consciousness-machine interfaces
+While the theoretical manuscripts establish the formal structure of the model, the computational framework is designed to support exploratory analysis, data organization, anomaly detection, graph modeling, and future comparison with observational datasets.
+
+**Current development focus:**
+
+- Framework architecture
+- Dataset organization
+- Candidate ranking
+- Anomaly detection
+- Graph-based modeling
+- Interpretability modules
+- Exploratory cosmological workflows
+- AI-assisted analysis pipelines
+
+The framework is not intended to replace theoretical derivation. It serves as a bridge between formal predictions and future testable data-driven investigations.
+
+---
+
+## 🧠 QIM METATRON — Quantum Informational Metastructure
+
+*Quantum computing architecture based on multidimensional symbolic geometry*
+
+**QIM METATRON** is a quantum informational architecture exploring the integration of Metatron’s Cube, tesseract structures, symbolic-topological computation, and coherent multidimensional information processing.
+
+**Conceptual elements:**
+
+- Metatron Cube-inspired node architecture
+- Tesseract-enhanced quantum structures
+- Symbolic-topological processing
+- Quantum information organization
+- Exploratory consciousness-machine interface models
+
+**Research role:**
+
+QIM METATRON represents a speculative but structured exploration of how symbolic geometry, quantum logic, and informational coherence may converge in future computational architectures.
+
+---
+
+## 🌊 Collaborative Research with Louis-François Claro
+
+*Exploratory work on 5D geometric frameworks and fundamental physics problems*
+
+This research line includes collaborative work with Louis-François Claro on extended geometric frameworks involving Higgs torsion, negative mass structures, Navier–Stokes, Yang–Mills, cosmology, and N-body dynamics.
+
+### Joint and related publications
+
+1. **Yang–Mills Mass Gap Resolution**  
+   DOI: [10.5281/zenodo.16168587](https://doi.org/10.5281/zenodo.16168587)
+
+2. **Hybrid Cosmology + N-Body + Navier–Stokes**  
+   DOI: [10.5281/zenodo.16153428](https://doi.org/10.5281/zenodo.16153428)
+
+3. **Complete Navier–Stokes Solution**  
+   DOI: [10.5281/zenodo.16039574](https://doi.org/10.5281/zenodo.16039574)
+
+4. **Gravitational N-Body Problem in 5D**  
+   DOI: [10.5281/zenodo.15874407](https://doi.org/10.5281/zenodo.15874407)
+
+These works are exploratory and are part of a broader collaborative research programme on high-dimensional geometric approaches to fundamental physical systems.
+
+---
+
+## 🔬 Research Methodology
+
+### Theoretical Foundations
+
+- Informational extensions of gravitational dynamics
+- Emergent spacetime models
+- Variational principles
+- Scalar coherence fields
+- Effective field theory reasoning
+- Coherence gradients `∇𝒦`
+- Continuous limits of discrete informational networks
+- Recovery of standard General Relativity and quantum-field-theoretic limits
+
+### Computational Approaches
+
+- AI-assisted data analysis
+- Graph-based modeling
+- Cosmological dataset exploration
+- Anomaly detection
+- Ranking and interpretability pipelines
+- Numerical prototyping
+- Future validation against astronomical and cosmological datasets
+
+### Observational Directions
+
+Codex Alpha identifies possible falsifiable deviations in:
+
+- Cosmological perturbations
+- Gravitational-wave propagation
+- Gravitational lensing
+- Post-Newtonian regimes
+- Astrophysical coherence signatures
+- Large-scale structure anomalies
+
+---
+
+## 🏆 Scientific Impact & Research Identity
+
+### Academic identifiers
+
+- **ORCID**: [0009-0008-2253-7008](https://orcid.org/0009-0008-2253-7008)
+- **GitHub**: [github.com/Miriadenera](https://github.com/Miriadenera)
+- **Website**: [codexalpha.org](https://codexalpha.org)
+
+### Research outputs
+
+- Open research manuscripts on Zenodo
+- Independent theoretical physics publications
+- Computational research framework
+- GitHub repositories for public research dissemination
+- Cross-disciplinary work on quantum information, emergent spacetime, and computational cosmology
 
 ---
 
 ## 🌐 Digital Presence & Community
 
-### **🔗 Academic & Repository Links**
-- 🧠 **GitHub**: [github.com/Miriadenera](https://github.com/Miriadenera)  
-- 🌐 **Website**: [www.codexalpha.org](https://www.codexalpha.org)  
+### Academic and repository links
+
+- 🧠 **GitHub**: [github.com/Miriadenera](https://github.com/Miriadenera)
+- 📐 **Foundations Repository**: [foundations-of-codex-alpha-dynamics](https://github.com/Miriadenera/foundations-of-codex-alpha-dynamics)
+- 🌐 **Website**: [www.codexalpha.org](https://www.codexalpha.org)
+- 📄 **Foundations DOI**: [10.5281/zenodo.20355167](https://doi.org/10.5281/zenodo.20355167)
+- 🧮 **Computational Framework DOI**: [10.5281/zenodo.20335018](https://doi.org/10.5281/zenodo.20335018)
 - 🧬 **OpenAIRE**: [Publication Profile](https://explore.openaire.eu/search/publication?pid=10.5281%2Fzenodo.16131379)
 
-### **🌍 Social & Professional Networks**
-- 🔗 **LinkedIn**: [davide-cadelano-5b68a936a](https://www.linkedin.com/in/davide-cadelano-5b68a936a)  
-- 🐦 **X (Twitter)**: [@QIM_METATRON](https://x.com/QIM_METATRON)  
+### Social and professional networks
+
+- 🔗 **LinkedIn**: [davide-cadelano-5b68a936a](https://www.linkedin.com/in/davide-cadelano-5b68a936a)
+- 🐦 **X**: [@QIM_METATRON](https://x.com/QIM_METATRON)
 - 📘 **Facebook**: [Research Profile](https://www.facebook.com/profile.php?id=61577184890331)
 
-### **📬 Contact Information**
-- 🏛️ **Institutional**: [davide.cadelano@codexalpha.org](mailto:davide.cadelano@codexalpha.org)  
+### Contact
 
-
----
-
-## 🧩 Repository Structure
-
-
+- 🏛️ **Institutional email**: [davide.cadelano@codexalpha.org](mailto:davide.cadelano@codexalpha.org)
 
 ---
 
 ## 🧩 Repository Structure
 
-```
+```text
 📁 codex-alpha/
-├── 📄 manuscripts/          # Complete theoretical frameworks
-├── 🧮 simulations/          # GPU-accelerated numerical validations
-├── 🧠 qim-metatron/         # Quantum computing architecture
-├── 🤝 collaborations/       # Joint research with international partners
-├── 📊 visualizations/       # 3D/4D rendering and analysis tools
-├── 📚 publications/         # Peer-reviewed papers and preprints
-└── 🔬 experimental/         # Testable predictions and protocols
+├── 📄 manuscripts/          # Complete theoretical manuscripts
+├── 📐 foundations/          # Minimal variational foundations of Codex Alpha
+├── 🧮 computational/        # Computational framework and analysis tools
+├── 🧠 qim-metatron/         # Quantum informational architecture
+├── 🤝 collaborations/       # Collaborative research with external authors
+├── 📊 visualizations/       # 3D/4D rendering and conceptual visualizations
+├── 📚 publications/         # Papers, preprints, Zenodo releases and citation files
+└── 🔬 experimental/         # Testable predictions, protocols and observational directions
 ```
 
 ---
 
 ## 📎 Citation Formats
 
-### **Codex Alpha (English)**
+### Foundations of Codex Alpha Dynamics
+
 ```bibtex
-@misc{cadelano2025codexalpha,
-  title        = {Codex Alpha – A Unified Theory between General Relativity and Quantum Mechanics},
-  author       = {Davide Cadelano et AI},
-  year         = 2025,
-  doi          = {10.5281/zenodo.15587185},
-  url          = {https://doi.org/10.5281/zenodo.15587185},
+@misc{Cadelano2026Foundations,
+  author       = {Cadelano, Davide},
+  title        = {Foundations of Codex Alpha Dynamics: A Variational Derivation of an Informational Extension of Einstein Field Equations},
+  year         = {2026},
   publisher    = {Zenodo},
-  license      = {Creative Commons Attribution 4.0 International}
+  version      = {1.0},
+  doi          = {10.5281/zenodo.20355167},
+  url          = {https://doi.org/10.5281/zenodo.20355167}
 }
 ```
 
-### **QIM METATRON**
+### Codex Alpha Computational Framework
+
 ```bibtex
-@misc{cadelano2024qimmetatron,
-  title        = {QIM METATRON: Quantum Informational Metastructure \& Tesseract Engine},
-  author       = {Davide Cadelano},
-  year         = 2024,
-  month        = {August},
-  howpublished = {GitHub Repository},
-  url          = {https://github.com/Miriadenera/QIM-METATRON},
-  note         = {208-qubit quantum computing framework based on Metatron Cube architecture}
+@misc{Cadelano2026ComputationalFramework,
+  author       = {Cadelano, Davide},
+  title        = {Codex Alpha Computational Framework},
+  year         = {2026},
+  publisher    = {Zenodo},
+  version      = {1.0},
+  doi          = {10.5281/zenodo.20335018},
+  url          = {https://doi.org/10.5281/zenodo.20335018}
+}
+```
+
+### Codex Alpha 3.0 — Iconoclast Edition
+
+```bibtex
+@misc{Cadelano2025Iconoclast,
+  author       = {Cadelano, Davide},
+  title        = {Codex Alpha -- Unified Theory between General Relativity and Quantum Mechanics ICONOCLAST},
+  year         = {2025},
+  publisher    = {Zenodo},
+  version      = {3.0},
+  doi          = {10.5281/zenodo.17074972},
+  url          = {https://doi.org/10.5281/zenodo.17074972}
+}
+```
+
+### Codex Alpha — Italian v2.0
+
+```bibtex
+@misc{Cadelano2025CodexAlphaItalian,
+  author       = {Cadelano, Davide},
+  title        = {Codex Alpha -- Teoria Unificata: Unificazione Teorica tra Relatività Generale e Meccanica Quantistica},
+  year         = {2025},
+  publisher    = {Zenodo},
+  version      = {2.0},
+  doi          = {10.5281/zenodo.16131379},
+  url          = {https://doi.org/10.5281/zenodo.16131379}
 }
 ```
 
@@ -204,16 +342,21 @@ An intensive collaboration tackling the most complex open problems in theoretica
 
 ## 🚀 Vision Statement
 
-*"The future of physics lies not in the separation of disciplines, but in their geometric unification. Through the marriage of ancient wisdom and quantum mechanics, consciousness and computation, we are building bridges toward a new understanding of reality itself."*
+The future of physics may require a deeper synthesis between geometry, information, computation, and observation.
 
-**Codex Alpha** is not a final statement, but a dynamic reference system — one that invites experimental validation, interdisciplinary contributions, and above all, disciplined imagination.
+**Codex Alpha** is not presented as a final statement, but as a structured research programme: a framework intended to be examined, refined, challenged, and tested.
 
-**QIM METATRON** represents a geometry of meaning — a topological map of how symbols, cognition, and quantum logic might converge into coherent synthetic intelligence.
+Its central objective is to investigate whether spacetime, gravitation, and quantum phenomena can be understood as different effective manifestations of a deeper informational coherence structure.
 
-The future of physics, consciousness, and exploration begins here: with a single node ∇𝒦 that we choose to activate.
+The coherence gradient `∇𝒦` represents the symbolic and mathematical node through which this programme is developed.
 
 ---
 
-### 🪪 License
-📄 All work licensed under: [Creative Commons Attribution 4.0 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+## 🪪 License
+
+All public research material in this repository is released under:
+
+[Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+
+Unless otherwise stated, you are free to share and adapt the material with appropriate attribution.
 

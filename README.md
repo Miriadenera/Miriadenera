@@ -66,7 +66,7 @@ Foundations of Codex Alpha Dynamics
 
 ---
 
-### 🧮 **Codex Alpha Computational Framework — v1.0**
+### 🧮 **Codex Alpha Computational Framework — v0.1.0**
 
 DOI: [10.5281/zenodo.20335018](https://doi.org/10.5281/zenodo.20335018)
 
@@ -304,7 +304,7 @@ Codex Alpha identifies possible falsifiable deviations in:
   title        = {Codex Alpha Computational Framework},
   year         = {2026},
   publisher    = {Zenodo},
-  version      = {1.0},
+  version      = {0.1.0},
   doi          = {10.5281/zenodo.20335018},
   url          = {https://doi.org/10.5281/zenodo.20335018}
 }

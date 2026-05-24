@@ -214,3 +214,150 @@ p {
 .framework-section ol li::marker {
   color: #00ffe0;
 }
+
+/* === FINAL ALIGNMENT PATCH — Codex Alpha Research === */
+
+/* HERO CENTERING */
+header {
+  text-align: center !important;
+}
+
+header h1,
+header h2,
+.hero-subtitle {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+header .button-container {
+  justify-content: center !important;
+}
+
+/* SOFTER PREMIUM CARD GRADIENTS */
+section {
+  background:
+    linear-gradient(135deg, rgba(0, 0, 0, 0.74), rgba(0, 20, 30, 0.58), rgba(0, 0, 0, 0.86)) !important;
+  border: 1px solid rgba(0, 255, 255, 0.14) !important;
+  box-shadow:
+    0 0 28px rgba(0, 255, 255, 0.18),
+    inset 0 0 34px rgba(0, 255, 255, 0.045) !important;
+}
+
+.card,
+.news-entry,
+.book-card,
+.contact-box,
+.link-card {
+  background:
+    radial-gradient(circle at top left, rgba(0, 255, 255, 0.10), transparent 32%),
+    linear-gradient(145deg, rgba(0, 0, 0, 0.72), rgba(0, 18, 24, 0.55), rgba(0, 0, 0, 0.88)) !important;
+  border: 1px solid rgba(0, 255, 255, 0.18) !important;
+  box-shadow:
+    0 0 22px rgba(0, 255, 255, 0.17),
+    inset 0 0 28px rgba(0, 255, 255, 0.035) !important;
+}
+
+/* BOOK CARDS: SAME HEIGHT, SAME INTERNAL ALIGNMENT */
+.book-grid {
+  align-items: stretch !important;
+}
+
+.book-card {
+  height: 100% !important;
+  min-height: 520px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+.book-card-inner {
+  display: grid !important;
+  grid-template-columns: 150px 1fr !important;
+  gap: 1.35rem !important;
+  align-items: start !important;
+  min-height: 300px !important;
+}
+
+.book-card img {
+  width: 150px !important;
+  height: 215px !important;
+  object-fit: contain !important;
+  background: #000 !important;
+  align-self: start !important;
+}
+
+.book-card h3 {
+  min-height: 72px !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.book-card p {
+  text-align: center !important;
+}
+
+.book-card .button-row {
+  margin-top: auto !important;
+  justify-content: center !important;
+}
+
+/* INCUBATOR: SAME HEIGHT COLUMNS */
+#incubator .two-column {
+  align-items: stretch !important;
+}
+
+#incubator .contact-box {
+  min-height: 610px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#incubator .contact-box:first-child {
+  justify-content: space-between !important;
+}
+
+#incubator .contact-box:first-child .button-row {
+  margin-top: auto !important;
+  padding-top: 2rem !important;
+  justify-content: center !important;
+}
+
+#incubator .contact-box:nth-child(2) {
+  justify-content: flex-start !important;
+}
+
+#incubator form.codex-form {
+  flex: 1 !important;
+}
+
+/* PUBLICATION FEATURE ALIGNMENT */
+.publication-feature {
+  align-items: center !important;
+}
+
+.publication-copy {
+  text-align: center !important;
+}
+
+.publication-copy .button-row {
+  justify-content: center !important;
+}
+
+/* MOBILE CLEANUP */
+@media (max-width: 820px) {
+  .book-card {
+    min-height: auto !important;
+  }
+
+  .book-card-inner {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+  }
+
+  #incubator .contact-box {
+    min-height: auto !important;
+  }
+}

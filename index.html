@@ -3,765 +3,1270 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Codex Alpha Research — Beyond Space-Time</title>
+  <title>Codex Alpha Research — Informational Gravity & Emergent Spacetime</title>
   <link rel="icon" type="image/png" href="favicon.png"/>
   <link rel="stylesheet" href="style.css"/>
+
   <style>
-    header { padding:12vh 5vw 6vh; max-width:1100px; margin:0 auto; text-align:left; position:relative; z-index:1; }
-    header h1 { font-size:clamp(3rem,8vw,6rem); margin:0; color:#fff; text-shadow:0 0 18px #00ffff; letter-spacing:-0.04em; }
-    header h2 { font-size:clamp(1.25rem,2.4vw,2rem); font-weight:400; color:#dffcff; margin:.35em 0 .7em; max-width:900px; line-height:1.25; }
-    .hero-subtitle { max-width:780px; color:#e9f7ff; font-size:1.08rem; line-height:1.7; margin:0 0 1.5rem; }
+    :root {
+      --cyan: #00ffff;
+      --cyan-soft: #cfefff;
+      --text: #e9f7ff;
+      --white: #ffffff;
+      --purple: #6a0dad;
+      --purple-dark: #4b0082;
+      --panel: rgba(0, 0, 0, 0.64);
+      --panel-strong: rgba(0, 0, 0, 0.82);
+      --border: rgba(0, 255, 255, 0.18);
+      --shadow: 0 0 24px rgba(0, 255, 255, 0.18);
+    }
 
-    .button-container { margin-top:2vh; display:flex; flex-wrap:nowrap; gap:.8rem; align-items:center; justify-content:flex-start; }
-    .neon-button { display:inline-block; padding:.95em 1.35em; background-color:#6a0dad; color:#fff; text-decoration:none; border-radius:10px; box-shadow:0 0 18px #00ffff99; transition:all .3s ease-in-out; font-weight:700; border:1px solid #00ffff55; white-space:nowrap; margin:0; }
-    .neon-button:hover { background-color:#4b0082; box-shadow:0 0 32px #00ffff; transform:translateY(-1px); }
-    .neon-button.secondary { background-color:rgba(0,0,0,.45); border:1px solid #00ffff88; }
-    .neon-button[href="#"] { cursor:not-allowed; opacity:.75; }
-    .neon-button[href="#"]:hover { box-shadow:0 0 20px #00ffff; background-color:#6a0dad; transform:none; }
+    * {
+      box-sizing: border-box;
+    }
 
-    nav { position:fixed; top:0; right:0; padding:1em; background-color:rgba(0,0,0,.72); border-bottom-left-radius:10px; z-index:10; backdrop-filter:blur(6px); }
-    nav a { margin:0 .5em; color:#fff; text-decoration:none; font-weight:700; font-size:.95rem; }
-    nav a:hover { color:#00ffff; text-decoration:none; }
+    html {
+      scroll-behavior: smooth;
+    }
 
-    section { padding:10vh 5vw; background:rgba(0,0,0,.62); margin:10vh auto 0; width:92%; max-width:1100px; border-radius:12px; position:relative; z-index:1; box-shadow:0 0 24px #00ffff22; }
-    h2 { color:#00ffff; margin-top:0; }
-    .news-entry { margin-bottom:1.5em; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background: #02040a;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
 
-    .cosmic-slideshow-link { display:block; width:100%; height:100%; }
-    .bg-fade { position:fixed; inset:0; background-size:cover; background-position:center; transition:opacity 1s ease; opacity:0; z-index:-1; filter:brightness(.5) contrast(1.05); }
+    a {
+      color: var(--cyan);
+      text-decoration: none;
+    }
 
-    .video-grid { display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); align-items:start; }
-    .video-wrap { position:relative; width:100%; padding-top:56.25%; border-radius:12px; overflow:hidden; background:#000; box-shadow:0 0 18px #00ffff33; border:1px solid rgba(0,255,255,.15); }
-    .video-wrap iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+    a:hover {
+      text-decoration: underline;
+    }
 
-    .link-card { border-radius:12px; padding:1.1rem 1.3rem; background:rgba(0,0,0,.55); box-shadow:0 0 18px #00ffff22; color:#e9f7ff; border:1px solid rgba(0,255,255,.12); }
-    .link-card a { color:#00ffff; font-weight:600; text-decoration:none; }
-    .link-card a:hover { text-decoration:underline; }
-    .card-title { font-size:1.1rem; font-weight:600; margin:0 0 .35rem 0; color:#fff; }
-    .card-desc { opacity:.9; margin:.25rem 0 .75rem 0; line-height:1.6; }
+    .bg-fade {
+      position: fixed;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transition: opacity 1s ease;
+      opacity: 0;
+      z-index: -2;
+      filter: brightness(0.42) contrast(1.08);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(0,255,255,0.12), transparent 30%),
+        radial-gradient(circle at 80% 30%, rgba(106,13,173,0.18), transparent 34%),
+        linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.85));
+      pointer-events: none;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 0.9rem 1rem;
+      background: rgba(0, 0, 0, 0.72);
+      border-bottom-left-radius: 12px;
+      z-index: 10;
+      backdrop-filter: blur(8px);
+      border-left: 1px solid rgba(0,255,255,0.08);
+      border-bottom: 1px solid rgba(0,255,255,0.08);
+    }
+
+    nav a {
+      margin: 0 0.45rem;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    nav a:hover {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+
+    header {
+      padding: 13vh 5vw 7vh;
+      max-width: 1180px;
+      margin: 0 auto;
+      text-align: left;
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: clamp(3.2rem, 8vw, 6.4rem);
+      margin: 0;
+      color: #fff;
+      text-shadow: 0 0 18px var(--cyan);
+      letter-spacing: -0.045em;
+      line-height: 0.95;
+    }
+
+    header h2 {
+      font-size: clamp(1.25rem, 2.4vw, 2rem);
+      font-weight: 400;
+      color: #ffffff;
+      margin: 0.55em 0 0.75em;
+      max-width: 920px;
+      line-height: 1.25;
+    }
+
+    .hero-subtitle {
+      max-width: 850px;
+      color: var(--text);
+      font-size: 1.08rem;
+      line-height: 1.75;
+      margin: 0 0 1.6rem;
+    }
+
+    .button-container,
+    .button-row {
+      margin-top: 1.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .button-row.center {
+      justify-content: center;
+    }
+
+    .neon-button {
+      display: inline-block;
+      padding: 0.9em 1.25em;
+      background: var(--purple);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      box-shadow: 0 0 18px rgba(0,255,255,0.55);
+      transition: all 0.25s ease-in-out;
+      font-weight: 700;
+      border: 1px solid rgba(0,255,255,0.45);
+      white-space: nowrap;
+      margin: 0;
+    }
+
+    .neon-button:hover {
+      background: var(--purple-dark);
+      box-shadow: 0 0 30px var(--cyan);
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    .neon-button.secondary {
+      background: rgba(0, 0, 0, 0.46);
+      border: 1px solid rgba(0,255,255,0.58);
+    }
+
+    .neon-button.subtle {
+      background: rgba(0, 255, 255, 0.08);
+      border: 1px solid rgba(0,255,255,0.28);
+    }
+
+    section {
+      padding: 8vh 5vw;
+      background: var(--panel);
+      margin: 8vh auto 0;
+      width: 92%;
+      max-width: 1120px;
+      border-radius: 16px;
+      position: relative;
+      z-index: 1;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,255,255,0.08);
+    }
+
+    section.compact {
+      padding: 6vh 5vw;
+    }
+
+    h2 {
+      color: var(--cyan);
+      margin-top: 0;
+      margin-bottom: 1rem;
+      text-align: center;
+      letter-spacing: 0.01em;
+    }
+
+    h3 {
+      color: var(--cyan);
+      margin-bottom: 0.65rem;
+    }
+
+    p {
+      color: var(--text);
+    }
+
+    .section-intro {
+      max-width: 850px;
+      margin: 0 auto 2rem;
+      text-align: center;
+      color: var(--cyan-soft);
+      line-height: 1.75;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
+      align-items: stretch;
+    }
+
+    .card {
+      min-height: 100%;
+      border-radius: 14px;
+      padding: 1.25rem;
+      background: rgba(0,0,0,0.56);
+      border: 1px solid var(--border);
+      box-shadow: 0 0 18px rgba(0,255,255,0.10);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #fff;
+      line-height: 1.3;
+    }
+
+    .card p {
+      margin: 0.4rem 0 1rem;
+      color: var(--cyan-soft);
+    }
+
+    .card .meta {
+      font-size: 0.92rem;
+      color: #dffcff;
+      margin-top: auto;
+    }
+
+    .publication-feature {
+      display: grid;
+      grid-template-columns: minmax(240px, 330px) 1fr;
+      gap: 2rem;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    .cover-frame {
+      width: 100%;
+      max-width: 330px;
+      margin: 0 auto;
+      aspect-ratio: 0.695;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      box-shadow: 0 0 22px rgba(0,255,255,0.72);
+      background: #000;
+      overflow: hidden;
+      border: 1px solid rgba(0,255,255,0.22);
+    }
+
+    .cover-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .publication-copy {
+      text-align: left;
+    }
+
+    .publication-copy p {
+      color: var(--text);
+    }
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 1.4rem;
+      align-items: stretch;
+    }
+
+    .book-card {
+      border-radius: 16px;
+      padding: 1.4rem;
+      background: linear-gradient(135deg, rgba(0,0,0,0.64), rgba(0,0,0,0.86));
+      border: 1px solid rgba(0,255,255,0.12);
+      box-shadow: 0 0 20px rgba(0,255,255,0.12);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .book-card-inner {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 1.2rem;
+      align-items: start;
+    }
+
+    .book-card img {
+      width: 150px;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 16px rgba(0,255,255,0.45);
+      background: #000;
+    }
+
+    .news-entry {
+      margin-bottom: 1.4rem;
+      padding: 1.15rem 1.25rem;
+      background: rgba(0,0,0,0.42);
+      border: 1px solid rgba(0,255,255,0.10);
+      border-radius: 12px;
+    }
+
+    .news-entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .video-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      align-items: start;
+    }
+
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 0 18px rgba(0,255,255,0.22);
+      border: 1px solid rgba(0,255,255,0.15);
+    }
+
+    .video-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .link-card {
+      border-radius: 12px;
+      padding: 1.15rem 1.3rem;
+      background: rgba(0,0,0,0.55);
+      box-shadow: 0 0 18px rgba(0,255,255,0.14);
+      color: var(--text);
+      border: 1px solid rgba(0,255,255,0.12);
+      margin-top: 1.25rem;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0 0 0.35rem 0;
+      color: #fff;
+    }
+
+    .card-desc {
+      opacity: 0.92;
+      margin: 0.25rem 0 0.75rem 0;
+      line-height: 1.65;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.2rem;
+      align-items: start;
+    }
+
+    .contact-box {
+      background: rgba(0,0,0,0.48);
+      border: 1px solid rgba(0,255,255,0.13);
+      border-radius: 14px;
+      padding: 1.25rem;
+      box-shadow: 0 0 18px rgba(0,255,255,0.12);
+    }
+
+    form.codex-form {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    form.codex-form input,
+    form.codex-form textarea,
+    form.codex-form select {
+      width: 100%;
+      padding: 0.78rem;
+      border-radius: 9px;
+      border: 1px solid rgba(0,255,255,0.45);
+      background: rgba(0,0,0,0.45);
+      color: var(--text);
+      outline: none;
+    }
+
+    form.codex-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .fineprint {
+      font-size: 0.9rem;
+      color: var(--cyan-soft);
+      opacity: 0.95;
+    }
+
+    footer {
+      width: 92%;
+      max-width: 1120px;
+      margin: 8vh auto 4vh;
+      padding: 2rem;
+      text-align: center;
+      color: var(--cyan-soft);
+      background: rgba(0,0,0,0.55);
+      border-radius: 16px;
+      border: 1px solid rgba(0,255,255,0.08);
+      box-shadow: 0 0 18px rgba(0,255,255,0.12);
+    }
+
+    @media (max-width: 820px) {
+      nav {
+        left: 0;
+        right: 0;
+        border-radius: 0;
+        text-align: center;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      nav a {
+        font-size: 0.84rem;
+      }
+
+      header {
+        padding-top: 15vh;
+      }
+
+      .publication-feature,
+      .book-card-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .publication-copy {
+        text-align: center;
+      }
+
+      .book-card img {
+        margin: 0 auto;
+      }
+
+      .button-container,
+      .button-row {
+        justify-content: center;
+      }
+
+      .neon-button {
+        white-space: normal;
+        text-align: center;
+      }
+    }
   </style>
- <!-- Google tag (gtag.js) --> 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1QRE1QWMBK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-1QRE1QWMBK');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QRE1QWMBK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-1QRE1QWMBK");
+  </script>
 </head>
+
 <body>
   <div id="bg1" class="bg-fade"></div>
   <div id="bg2" class="bg-fade"></div>
 
   <nav>
     <a href="#news">News</a>
-    <a href="#amazon">Amazon</a>
+    <a href="#publications">Publications</a>
+    <a href="#amazon">Books</a>
+    <a href="#framework">Framework</a>
+    <a href="#incubator">Incubator</a>
     <a href="#media">Media</a>
     <a href="#about">About</a>
     <a href="#research">Research</a>
   </nav>
 
   <header>
-    <h1 style="font-size:4em; text-shadow:0 0 10px #00ffff;">Codex Alpha</h1>
-    <h2 style="font-size:1.5em; font-weight:normal; color:#ffffff; margin-top:-0.5em;">
-      Unified Theory of Relativity and Quantum Mechanics
-    </h2>
+    <h1>Codex Alpha</h1>
+    <h2>Informational Gravity, Emergent Spacetime and Quantum Foundations</h2>
+
+    <p class="hero-subtitle">
+      Codex Alpha Research develops a theoretical and computational programme exploring whether spacetime,
+      gravity and quantum phenomena can be understood as effective manifestations of deeper informational
+      coherence structures governed by the gradient ∇𝒦.
+    </p>
 
     <div class="button-container">
-      <a class="neon-button" href="https://doi.org/10.5281/zenodo.17074972" target="_blank">
-        Download PDF 3.0 (Iconoclast) on Zenodo
+      <a class="neon-button" href="https://doi.org/10.5281/zenodo.20355167" target="_blank" rel="noopener">
+        Foundations Manuscript
       </a>
-      <a class="neon-button" href="https://dc1fe0a2.sibforms.com/serve/MUIFAN1IbwjFyUH9Ahm_YDv8yq3x5oXZDWM9BEOllTVrO1unu0QEyyYJ1IALpxyYF87_agqp3VFPu8N-SEm-EbjBkpYGqOQuSxhP-_zaWUvwqHmVmKKvg4pIjJMznXvwf_18qwfa1EDiwyK3iOb0dW62AWb_jm418yevuPrUK6B7qOPcXgxb5qicuTaIQLHjDZ0v9oMTegrseVdzVg==" target="_blank">
+
+      <a class="neon-button secondary" href="https://doi.org/10.5281/zenodo.17074972" target="_blank" rel="noopener">
+        Codex Alpha 3.0 Iconoclast
+      </a>
+
+      <a class="neon-button secondary" href="https://codexalphacomputationalframework.netlify.app" target="_blank" rel="noopener">
+        Computational Framework
+      </a>
+
+      <a class="neon-button secondary" href="https://github.com/Miriadenera" target="_blank" rel="noopener">
+        GitHub
+      </a>
+
+      <a class="neon-button subtle" href="https://dc1fe0a2.sibforms.com/serve/MUIFAN1IbwjFyUH9Ahm_YDv8yq3x5oXZDWM9BEOllTVrO1unu0QEyyYJ1IALpxyYF87_agqp3VFPu8N-SEm-EbjBkpYGqOQuSxhP-_zaWUvwqHmVmKKvg4pIjJMznXvwf_18qwfa1EDiwyK3iOb0dW62AWb_jm418yevuPrUK6B7qOPcXgxb5qicuTaIQLHjDZ0v9oMTegrseVdzVg==" target="_blank" rel="noopener">
         Newsletter
-      </a>
-      <!-- ATTIVATO -->
-      <a class="neon-button" href="https://www.amazon.it/dp/B0FQHP5W58" target="_blank" rel="noopener">
-        🛒 Buy on Amazon (Kindle & Paperback)
-      </a>
-      <a class="neon-button" href="https://github.com/Miriadenera/Miriadenera" target="_blank">
-        Visit GitHub Repository
       </a>
     </div>
   </header>
 
-<!-- AMAZON / BOOK -->
-<section id="amazon" style="margin:4vh auto; width:92%; max-width:1100px; background:linear-gradient(135deg, rgba(0,0,0,0.65), rgba(0,0,0,0.85)); border-radius:12px; padding:2rem; text-align:center;">
-  
-  <h2>Codex Alpha – Iconoclast Edition</h2>
+  <!-- NEWS -->
+  <section id="news" class="compact">
+    <h2>News</h2>
 
-  <p style="color:#fff; margin-bottom:1.8rem; max-width:800px; line-height:1.7; margin-left:auto; margin-right:auto;">
-    <strong>Codex Alpha – Unified Theory (Iconoclast Edition)</strong> is now available as a published book on Amazon.
-    The official open research release remains accessible on Zenodo with DOI.
-  </p>
-
-  <div style="display:flex; gap:2.5rem; align-items:flex-start; justify-content:center; flex-wrap:wrap;">
-    
-    <!-- BOOK -->
-    <a href="https://www.amazon.it/dp/B0FQHP5W58" target="_blank" rel="noopener" style="flex:0 1 300px; margin-top:0.15rem; text-align:center;">
-      <img src="copertina kindle.png"
-           alt="Codex Alpha book cover"
-           style="width:100%; max-width:300px; height:auto; border-radius:12px; box-shadow:0 0 20px #00ffff;">
-    </a>
-
-    <!-- TEXT -->
-    <div style="flex:0 1 560px; text-align:left;">
-
-      <p style="margin:0 0 1.2rem 0; color:#cfefff; line-height:1.7;">
-        <strong>Research release:</strong>
-        <a href="https://doi.org/10.5281/zenodo.17074972" target="_blank" style="color:#00ffff;">10.5281/zenodo.17074972</a><br>
-        <strong>Amazon:</strong> Available now in Kindle & Paperback formats.
+    <div class="news-entry">
+      <p>
+        <strong>May 2026:</strong> Published
+        <em>Foundations of Codex Alpha Dynamics: A Variational Derivation of an Informational Extension of Einstein Field Equations</em>.
+        DOI:
+        <a href="https://doi.org/10.5281/zenodo.20355167" target="_blank" rel="noopener">
+          10.5281/zenodo.20355167
+        </a>.
+        The paperback edition is now available on Amazon.
       </p>
+    </div>
 
-      <p style="color:#e9f7ff; line-height:1.7; margin-bottom:1.2rem;">
-        A theoretical framework exploring the possibility that space-time is not fundamental,
-        but emerges from a deeper coherent informational structure: the Telascura.
+    <div class="news-entry">
+      <p>
+        <strong>May 2026:</strong> Released the
+        <em>Codex Alpha Computational Framework</em>, an AI-assisted infrastructure for exploratory cosmological analysis,
+        anomaly detection, graph-based modeling, ranking and interpretability.
+        DOI:
+        <a href="https://doi.org/10.5281/zenodo.20335018" target="_blank" rel="noopener">
+          10.5281/zenodo.20335018
+        </a>.
       </p>
+    </div>
 
-      <p style="color:#cfefff; line-height:1.7; margin-bottom:1.6rem;">
-        While the full research is freely accessible via DOI, the <strong>printed edition</strong> offers a different experience:
-        a structured, distraction-free immersion into the theory — something closer to studying a physical object than scrolling a document.
-        <br><br>
-        It is designed not just to be read, but to be <em>worked through</em>.
+    <div class="news-entry">
+      <p>
+        <strong>September 2025:</strong> Published
+        <em>Codex Alpha 3.0 — Iconoclast Edition</em> in English.
+        DOI:
+        <a href="https://doi.org/10.5281/zenodo.17074972" target="_blank" rel="noopener">
+          10.5281/zenodo.17074972
+        </a>.
+        The book edition is available on Amazon in Kindle and Paperback formats.
       </p>
+    </div>
 
-      <div style="display:flex; gap:1rem; align-items:center; justify-content:flex-start; flex-wrap:nowrap;">
-        <a class="neon-button" href="https://www.amazon.it/dp/B0FQHP5W58" target="_blank" rel="noopener" style="margin:0; white-space:nowrap;">Buy on Amazon</a>
-        <a class="neon-button secondary" href="https://doi.org/10.5281/zenodo.17074972" target="_blank" style="margin:0; white-space:nowrap;">Open Research DOI</a>
-        <a class="neon-button secondary" href="https://dc1fe0a2.sibforms.com/serve/MUIFAN1IbwjFyUH9Ahm_YDv8yq3x5oXZDWM9BEOllTVrO1unu0QEyyYJ1IALpxyYF87_agqp3VFPu8N-SEm-EbjBkpYGqOQuSxhP-_zaWUvwqHmVmKKvg4pIjJMznXvwf_18qwfa1EDiwyK3iOb0dW62AWb_jm418yevuPrUK6B7qOPcXgxb5qicuTaIQLHjDZ0v9oMTegrseVdzVg==" target="_blank" style="margin:0; white-space:nowrap;">Join the Newsletter</a>
+    <div class="news-entry">
+      <p>
+        <strong>July 2025:</strong> Major site update: redesigned News, About and Research sections with enhanced structure and aesthetic.
+      </p>
+    </div>
+
+    <div class="news-entry">
+      <p>
+        <strong>April 2020:</strong> Origin of the Codex Alpha theoretical research project during the first COVID-19 lockdown.
+        Initial investigations included quantum coherence, negative-mass models and ESA/LIGO/GAIA public datasets.
+      </p>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <h2>Core Publications</h2>
+
+    <p class="section-intro">
+      Codex Alpha is organized as an open research stack: a complete theoretical architecture,
+      a minimal variational foundations manuscript, and a computational framework for exploratory validation.
+    </p>
+
+    <div class="publication-feature">
+      <a href="codex-alpha-dynamics-cover.png" target="_blank" rel="noopener" class="cover-frame">
+        <img src="codex-alpha-dynamics-cover.png" alt="Foundations of Codex Alpha Dynamics cover">
+      </a>
+
+      <div class="publication-copy">
+        <h3>Foundations of Codex Alpha Dynamics</h3>
+        <p>
+          A formal manuscript deriving the minimal effective continuous sector of Codex Alpha from an explicit
+          variational principle. The work focuses on logical derivability, dimensional consistency, GR recovery,
+          absence of Ostrogradsky ghosts in the minimal sector, and falsifiability through possible deviations
+          in cosmological, lensing, gravitational-wave and post-Newtonian regimes.
+        </p>
+
+        <div class="button-row">
+          <a class="neon-button" href="https://doi.org/10.5281/zenodo.20355167" target="_blank" rel="noopener">
+            Read on Zenodo
+          </a>
+          <a class="neon-button secondary" href="https://amzn.eu/d/04Jh6BrX" target="_blank" rel="noopener">
+            Buy on Amazon
+          </a>
+          <a class="neon-button secondary" href="https://github.com/Miriadenera/foundations-of-codex-alpha-dynamics" target="_blank" rel="noopener">
+            GitHub Repository
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-grid" style="margin-top:2rem;">
+      <div class="card">
+        <div>
+          <h3>Codex Alpha 3.0 — Iconoclast Edition</h3>
+          <p>
+            The full theoretical architecture of Codex Alpha, including Telascura, nodal structures,
+            informational curvature, retrocausal operators and the extended ontology of the theory.
+          </p>
+        </div>
+        <p class="meta">
+          DOI:
+          <a href="https://doi.org/10.5281/zenodo.17074972" target="_blank" rel="noopener">
+            10.5281/zenodo.17074972
+          </a>
+        </p>
       </div>
 
-    </div>
-  </div>
-
-</section>
- <!-- NEWS -->
-<section id="news">
-  <h2>News</h2>
-
-  <div class="news-entry">
-    <p>
-      <strong>May 2026:</strong> Published the new formal manuscript
-      <em>Foundations of Codex Alpha Dynamics: A Variational Derivation of an Informational Extension of Einstein Field Equations</em>.
-      DOI:
-      <a href="https://doi.org/10.5281/zenodo.20355167" target="_blank" rel="noopener">
-        10.5281/zenodo.20355167
-      </a>.
-      The paperback edition is now available on Amazon.
-    </p>
-
-    <p>
-      This work presents a minimal variational formulation of the dynamical core of the Codex Alpha framework.
-      Starting from an explicit action principle involving the spacetime metric, a scalar coherence field,
-      ordinary matter fields, and a coherence-weighted Schwinger functional, the manuscript derives an
-      informational extension of Einstein field equations.
-    </p>
-
-    <p>
-      Rather than extending the theory with additional phenomenological claims, the objective is restriction:
-      to isolate the smallest formal structure capable of recovering General Relativity in the appropriate
-      limit while allowing measurable informational deviations in cosmological perturbations, gravitational-wave
-      propagation, gravitational lensing, and post-Newtonian regimes.
-    </p>
-
-    <div style="display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap; margin-top:1.5rem; margin-bottom:1.8rem;">
-
-      <a href="codex-alpha-dynamics-cover.png" target="_blank" style="flex:0 1 320px; display:flex; justify-content:center; text-decoration:none;">
-        <div style="width:320px; height:460px; display:flex; align-items:center; justify-content:center; border-radius:12px; box-shadow:0 0 18px #00ffff; background:#000; overflow:hidden;">
-          <img src="codex-alpha-dynamics-cover.png"
-               alt="Foundations of Codex Alpha Dynamics cover"
-               style="max-width:100%; max-height:100%; object-fit:contain;">
+      <div class="card">
+        <div>
+          <h3>Codex Alpha Computational Framework</h3>
+          <p>
+            AI-assisted computational infrastructure for cosmological structure analysis, anomaly detection,
+            graph-oriented modeling, ranking, interpretability and future data-driven workflows.
+          </p>
         </div>
-      </a>
+        <p class="meta">
+          DOI:
+          <a href="https://doi.org/10.5281/zenodo.20335018" target="_blank" rel="noopener">
+            10.5281/zenodo.20335018
+          </a>
+        </p>
+      </div>
 
-      <a href="codex-alpha-dynamics-abstract.png" target="_blank" style="flex:0 1 320px; display:flex; justify-content:center; text-decoration:none;">
-        <div style="width:320px; height:460px; display:flex; align-items:center; justify-content:center; border-radius:12px; box-shadow:0 0 18px #00ffff; background:#000; overflow:hidden;">
-          <img src="codex-alpha-dynamics-abstract.png"
-               alt="Foundations of Codex Alpha Dynamics abstract preview"
-               style="max-width:100%; max-height:100%; object-fit:contain;">
+      <div class="card">
+        <div>
+          <h3>Codex Alpha — Italian v2.0</h3>
+          <p>
+            Earlier complete Italian formulation of the Codex Alpha theory, preceding the expanded Iconoclast
+            structure and the later Foundations manuscript.
+          </p>
         </div>
-      </a>
+        <p class="meta">
+          DOI:
+          <a href="https://doi.org/10.5281/zenodo.16131379" target="_blank" rel="noopener">
+            10.5281/zenodo.16131379
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
 
+  <!-- AMAZON / BOOKS -->
+  <section id="amazon">
+    <h2>Books & Research Editions</h2>
+
+    <p class="section-intro">
+      The research manuscripts remain openly accessible through DOI releases. Paperback editions are offered
+      for readers who prefer a physical study format and wish to support independent research.
+    </p>
+
+    <div class="book-grid">
+      <div class="book-card">
+        <div class="book-card-inner">
+          <a href="https://amzn.eu/d/04Jh6BrX" target="_blank" rel="noopener">
+            <img src="codex-alpha-dynamics-cover.png" alt="Foundations of Codex Alpha Dynamics book cover">
+          </a>
+
+          <div>
+            <h3>Foundations of Codex Alpha Dynamics</h3>
+            <p>
+              A compact technical manuscript deriving the minimal variational structure of the effective continuous
+              Codex Alpha dynamics.
+            </p>
+            <p>
+              <strong>Research DOI:</strong><br>
+              <a href="https://doi.org/10.5281/zenodo.20355167" target="_blank" rel="noopener">
+                10.5281/zenodo.20355167
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="button-row">
+          <a class="neon-button" href="https://amzn.eu/d/04Jh6BrX" target="_blank" rel="noopener">
+            Buy on Amazon
+          </a>
+          <a class="neon-button secondary" href="https://doi.org/10.5281/zenodo.20355167" target="_blank" rel="noopener">
+            Open DOI
+          </a>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-card-inner">
+          <a href="https://www.amazon.it/dp/B0FQHP5W58" target="_blank" rel="noopener">
+            <img src="copertina kindle.png" alt="Codex Alpha Iconoclast Edition book cover">
+          </a>
+
+          <div>
+            <h3>Codex Alpha 3.0 — Iconoclast Edition</h3>
+            <p>
+              The full theoretical monograph of the Codex Alpha framework, available in Kindle and Paperback formats.
+            </p>
+            <p>
+              <strong>Research DOI:</strong><br>
+              <a href="https://doi.org/10.5281/zenodo.17074972" target="_blank" rel="noopener">
+                10.5281/zenodo.17074972
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="button-row">
+          <a class="neon-button" href="https://www.amazon.it/dp/B0FQHP5W58" target="_blank" rel="noopener">
+            Buy on Amazon
+          </a>
+          <a class="neon-button secondary" href="https://doi.org/10.5281/zenodo.17074972" target="_blank" rel="noopener">
+            Open DOI
+          </a>
+        </div>
+      </div>
     </div>
 
-    <p style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:1.2rem;">
-      <a class="neon-button secondary" href="https://doi.org/10.5281/zenodo.20355167" target="_blank" rel="noopener">
-        Read the Manuscript on Zenodo
-      </a>
-
-      <a class="neon-button secondary" href="https://amzn.eu/d/04Jh6BrX" target="_blank" rel="noopener">
-        Buy on Amazon
-      </a>
-    </p>
-
-    <p style="color:#cfefff; line-height:1.7;">
-      The research PDF remains freely accessible through the official DOI release. For readers who wish to support the continuation of independent research,
-      the paperback edition is available through Amazon. A direct PDF download is also available through a small voluntary contribution of <strong>$5</strong>.
-      These contributions help sustain future development, publication work, simulations, and open dissemination of the Codex Alpha project.
-    </p>
-
-    <p>
+    <div class="link-card">
+      <div class="card-title">Support PDF Library</div>
+      <div class="card-desc">
+        The official research PDFs remain freely accessible through their DOI pages. For readers who wish to support
+        continued independent research, a voluntary direct PDF download is available through the project support page.
+        This support option refers to the Codex Alpha research library and does not replace the official DOI releases.
+      </div>
       <a class="neon-button secondary" href="https://stan.store/codexalpha" target="_blank" rel="noopener">
         Support the Research — PDF Download
       </a>
+    </div>
+  </section>
+
+  <!-- COMPUTATIONAL FRAMEWORK -->
+  <section id="framework">
+    <h2>Codex Alpha Computational Framework</h2>
+
+    <p class="section-intro">
+      An AI-assisted infrastructure for exploratory analysis of cosmological structures, anomaly detection,
+      graph-based modeling, ranking, interpretability and future observational workflows connected to Codex Alpha.
     </p>
-  </div>
 
-  <div class="news-entry">
-    <p>
-      <strong>September 2025:</strong> Published the <em>Codex Alpha 3.0 – Iconoclast Edition</em> (English). DOI:
-      <a href="https://doi.org/10.5281/zenodo.17074972" target="_blank" rel="noopener">
-        10.5281/zenodo.17074972
-      </a>.
-      The book edition is now available on Amazon in Kindle and Paperback formats.
-    </p>
-  </div>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Framework Role</h3>
+        <p>
+          The framework is not a replacement for theoretical derivation. It is the computational and exploratory layer
+          of the project, designed to help move from formal predictions toward testable data-driven workflows.
+        </p>
+      </div>
 
-  <div class="news-entry">
-    <p>
-      <strong>July 2025:</strong> Major site update: redesigned News, About, and Research sections with enhanced structure and aesthetic.
-      Launch of phase 2.0 of the Codex Alpha theory, integrating real astrophysical data from black holes and stellar dynamics.
-    </p>
-  </div>
+      <div class="card">
+        <h3>Current Status</h3>
+        <p>
+          Early-stage modular research infrastructure. Current work focuses on architecture design, dataset structure,
+          anomaly scoring, graph-oriented organization, ranking logic and interpretability modules.
+        </p>
+      </div>
 
-  <div class="news-entry">
-    <p>
-      <strong>June 2025:</strong> Codex Alpha English version officially published on Zenodo with DOI and international indexing.
-    </p>
-  </div>
+      <div class="card">
+        <h3>Planned Direction</h3>
+        <p>
+          Future development includes graph anomaly detection, link prediction, candidate ranking, interpretable embeddings,
+          crossmatching workflows and physics-informed constraints where appropriate.
+        </p>
+      </div>
+    </div>
 
-  <div class="news-entry">
-    <p>
-      <strong>April 2020:</strong> Origin of the Codex Alpha theoretical research project during the first COVID-19 lockdown.
-      Initial investigations included quantum coherence, negative mass models, and ESA/LIGO/GAIA public datasets.
-      Simulations were conducted to identify possible entangled gravitational nodes and emergent spacetime structures.
-    </p>
-  </div>
-</section>
+    <div class="button-row center" style="margin-top:2rem;">
+      <a class="neon-button" href="https://codexalphacomputationalframework.netlify.app" target="_blank" rel="noopener">
+        Explore the Framework
+      </a>
 
-  <section class="computational-banner">
-  <div class="computational-banner-content">
-    <span class="banner-label">New Research Initiative</span>
+      <a class="neon-button secondary" href="https://github.com/Miriadenera/codex-alpha-computational-framework" target="_blank" rel="noopener">
+        GitHub Repository
+      </a>
 
-    <h1>Codex Alpha Computational Framework</h1>
-    <p>
-      AI-assisted analysis of large-scale cosmological structures, emergent correlations,
-      gravitational patterns and high-dimensional astrophysical datasets.
-    </p>
-  <div class="banner-buttons">
-  <a
-    href="https://codexalphacomputationalframework.netlify.app"
-    target="_blank"
-    class="banner-button"
-  >
-    Explore the Framework
-  </a>
-
-  <a
-    href="/computational-framework"
-    class="banner-button banner-button-secondary"
-  >
-    Read the Documentation
-  </a>
-</div>
-  </div>
-</section>
-  <section class="framework-section">
-  <h2>Current Development Status</h2>
-  <p>
-    The Codex Alpha Computational Framework is currently in an early-stage
-    research and prototyping phase.
-  </p>
-  <p>
-    Initial conceptual architecture, operational roadmap and computational
-    objectives have already been defined. Current work is focused on:
-  </p>
-  <ul>
-    <li>Framework architecture design.</li>
-    <li>Evaluation of cosmological datasets and integration strategies.</li>
-    <li>Definition of exploratory topological metrics.</li>
-    <li>Development planning for AI-assisted correlation analysis.</li>
-    <li>Preparation of the first computational prototype.</li>
-  </ul>
-  <p>
-    The project is intended to evolve incrementally through validation against
-    real observational datasets and scalable computational infrastructure.
-  </p>
-</section>
-  <!-- IMAGE STRIP / INTERNAL SLIDESHOW -->
-  <div style="margin:4vh auto; width:90%; max-width:960px; border-radius:12px; overflow:hidden; box-shadow:0 0 25px #00ffff;">
-    <div style="position:relative; width:100%; height:500px;">
-      <a id="cosmic-slideshow-link" href="Subject 109757440 Codex Alpha BH-003.png" target="_blank" title="Click to enlarge" class="cosmic-slideshow-link">
-        <img id="cosmic-slideshow-img" src="Subject 109757440 Codex Alpha BH-003.png" alt="Codex Alpha Slide"
-             style="width:100%; height:100%; object-fit:cover; border-radius:12px;"/>
+      <a class="neon-button secondary" href="https://doi.org/10.5281/zenodo.20335018" target="_blank" rel="noopener">
+        Framework DOI
       </a>
     </div>
-  </div>
+  </section>
+
+  <!-- RESEARCH INCUBATOR / CONTACT -->
+  <section id="incubator">
+    <h2>Research Incubator & Collaboration</h2>
+
+    <p class="section-intro">
+      Codex Alpha Research is open to technically serious collaborations in mathematical physics,
+      computational cosmology, AI-assisted analysis, graph modeling, simulation design and observational validation.
+    </p>
+
+    <div class="two-column">
+      <div class="contact-box">
+        <h3>Collaboration Focus Areas</h3>
+        <p>
+          The project is especially interested in collaborators able to contribute to rigorous theoretical review,
+          numerical prototyping, simulation design, dataset integration, graph-based modeling, anomaly detection,
+          interpretability and reproducible research infrastructure.
+        </p>
+
+        <p>
+          Suitable profiles include independent researchers, physicists, mathematicians, ML engineers,
+          computational scientists, data analysts, visualization specialists and research-oriented developers.
+        </p>
+
+        <div class="button-row">
+          <a class="neon-button" href="mailto:davide.cadelano@codexalpha.org?subject=Codex%20Alpha%20Research%20Collaboration" target="_blank" rel="noopener">
+            Contact by Email
+          </a>
+
+          <a class="neon-button secondary" href="https://github.com/Miriadenera/Miriadenera/issues/new?title=Collaboration%20proposal%3A%20%5BYour%20Name%5D&labels=collaboration&body=Please%20complete%20the%20sections%20below%3A%0A%0A**Background%20(%E2%89%A4150%20words)**%0A%0A**Proposed%20contribution%20(%E2%89%A4300%20words)**%0A%0A**Availability%20(hours%2Fweek)**%0A%0A**Links%20(repo%2Fportfolio%2FPDF)**%0A" target="_blank" rel="noopener">
+            Open GitHub Proposal
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-box">
+        <h3>Submit a Short Proposal</h3>
+
+        <form name="codexalpha-collab" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="codex-form">
+          <input type="hidden" name="form-name" value="codexalpha-collab">
+          <p style="display:none;">
+            <label>Do not fill this out: <input name="bot-field"></label>
+          </p>
+
+          <input name="name" type="text" placeholder="Full name" required>
+          <input name="email" type="email" placeholder="Email" required>
+
+          <select name="focus-area" required>
+            <option value="">Focus area</option>
+            <option value="mathematical-physics">Mathematical physics</option>
+            <option value="computational-framework">Computational framework</option>
+            <option value="ai-graph-modeling">AI / graph modeling</option>
+            <option value="cosmological-data">Cosmological data analysis</option>
+            <option value="visualization">Visualization / outreach</option>
+            <option value="other">Other</option>
+          </select>
+
+          <textarea name="background" placeholder="Background summary, max 150 words" required></textarea>
+          <textarea name="proposal" placeholder="Proposed contribution, max 300 words" required></textarea>
+          <input name="availability" type="text" placeholder="Availability, hours per week">
+          <input name="links" type="url" placeholder="Portfolio, repository or paper link, optional">
+
+          <button type="submit" class="neon-button">Submit Proposal</button>
+        </form>
+
+        <p class="fineprint">
+          Submissions are intended for research collaboration only. Please include a concise technical contribution,
+          not a generic promotional message.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <!-- MEDIA & INTERVIEWS -->
   <section id="media">
     <h2>Media & Interviews</h2>
+
     <div class="video-grid">
-      <!-- Angelica Sirotin short -->
       <div class="video-wrap">
         <iframe
           src="https://www.youtube.com/embed/tyuq-iJpSq0"
-          title="Angelica Sirotin on Codex Alpha" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
+          title="Angelica Sirotin on Codex Alpha"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
-      <!-- Your video #1 -->
+
       <div class="video-wrap">
         <iframe
           src="https://www.youtube.com/embed/AvKcVVA8rzU"
-          title="Codex Alpha – Video 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
+          title="Codex Alpha Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
-      <!-- Your video #2 -->
+
       <div class="video-wrap">
         <iframe
           src="https://www.youtube.com/embed/gPz3whul60g"
-          title="Codex Alpha – Video 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
+          title="Codex Alpha Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
 
-    <div style="margin-top:22px;" class="link-card">
-      <div class="card-title">Sirotin Intelligence – Feature Article</div>
-      <div class="card-desc">“The Universe Isn’t a Machine — It’s an Information Processing System: How Theoretical Physicist Davide Cadelano’s Codex Alpha Framework Challenges Everything We Know About Reality.”</div>
-      <div class="video-wrap" style="padding-top:0; height:0; display:none;">
-        <iframe src="https://www.sirotinintelligence.com/the-universe-isnt-a-machine-its-an-information-processing-system-how-theoretical-physicist-davide-cadelanos-codex-alpha-framework-challenges-everything-we-know-about-reality-2/"></iframe>
+    <div class="link-card">
+      <div class="card-title">Sirotin Intelligence — Feature Article</div>
+      <div class="card-desc">
+        “The Universe Isn’t a Machine — It’s an Information Processing System: How Theoretical Physicist
+        Davide Cadelano’s Codex Alpha Framework Challenges Everything We Know About Reality.”
       </div>
       <a href="https://www.sirotinintelligence.com/the-universe-isnt-a-machine-its-an-information-processing-system-how-theoretical-physicist-davide-cadelanos-codex-alpha-framework-challenges-everything-we-know-about-reality-2/" target="_blank" rel="noopener">
         Read the full article on Sirotin Intelligence →
       </a>
     </div>
   </section>
-<!-- SCIENCE OUTREACH VIDEOS -->
-<section id="science-outreach">
-  <h2>Science Outreach & Visual Experiments</h2>
 
-  <p>
-    This section is dedicated to a visual outreach project created to help younger
-    audiences, students, and curious viewers approach physics, mathematics, and
-    scientific imagination in a more accessible way.
-  </p>
+  <!-- SCIENCE OUTREACH -->
+  <section id="science-outreach">
+    <h2>Science Outreach & Visual Experiments</h2>
 
-  <p>
-    Instead of presenting complex ideas only through equations or formal language,
-    these animations use cinematic storytelling, sci-fi battles, symbolic characters,
-    and visual metaphors to introduce concepts such as energy, structure, coherence,
-    motion, and cosmic networks.
-  </p>
+    <p class="section-intro">
+      A visual outreach project created to help younger audiences, students and curious viewers approach
+      physics, mathematics and scientific imagination through cinematic storytelling and symbolic visual metaphors.
+    </p>
 
-  <p>
-    The goal is not to replace scientific study, but to create a first point of contact:
-    a bridge that can make a young viewer ask questions, become curious, and take a
-    first step toward physics, mathematics, astronomy, and the deeper ideas explored
-    in the Codex Alpha project.
-  </p>
-
-  <div class="video-grid">
-    
-    <!-- Energy VS Telascura -->
-    <div class="video-wrap">
-      <iframe
-        src="https://www.youtube.com/embed/Kfs93zz4jkg"
-        title="Energy VS Telascura – Sci-Fi Stickman Battle"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+    <div class="video-grid">
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/Kfs93zz4jkg"
+          title="Energy VS Telascura — Sci-Fi Stickman Battle"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
     </div>
 
-  </div>
-
-  <!-- Video Description -->
-  <div style="margin-top:22px;" class="link-card">
-    <div class="card-title">Energy VS Telascura</div>
-    <div class="card-desc">
-      A cinematic sci-fi animation designed as an outreach experiment for younger
-      audiences. The video represents the clash between raw energy and structured
-      coherence through a symbolic battle inside a cosmic network. It is not a formal
-      scientific demonstration, but a visual gateway meant to spark curiosity about
-      physics, motion, structure, and the hidden mathematical order behind reality.
+    <div class="link-card">
+      <div class="card-title">Energy VS Telascura</div>
+      <div class="card-desc">
+        A cinematic sci-fi animation designed as an outreach experiment. The video represents the clash between
+        raw energy and structured coherence inside a cosmic network. It is not a formal scientific demonstration,
+        but a visual gateway meant to spark curiosity about physics, motion, structure and mathematical order.
+      </div>
+      <a href="https://www.youtube.com/watch?v=Kfs93zz4jkg" target="_blank" rel="noopener">
+        Watch on YouTube →
+      </a>
     </div>
-    <a href="https://www.youtube.com/watch?v=Kfs93zz4jkg" target="_blank" rel="noopener noreferrer">
-      Watch on YouTube →
-    </a>
-  </div>
+  </section>
 
-  <!-- Playlist -->
-  <div style="margin-top:22px;" class="link-card">
-    <div class="card-title">Sci-Fi Stickman Battles & Mathematical Concepts | Codex Alpha Series</div>
-    <div class="card-desc">
-      A curated series of physics-inspired animations and conceptual battles created
-      to make abstract scientific ideas more intuitive, especially for students and
-      young viewers. Each video uses visual storytelling to transform difficult
-      concepts into accessible images, encouraging curiosity before formal study.
-    </div>
-    <a href="https://www.youtube.com/playlist?list=INSERISCI_ID_PLAYLIST" target="_blank" rel="noopener noreferrer">
-      Open Playlist →
-    </a>
-  </div>
-
-  <p style="margin-top:22px;">
-    This outreach project aims to reduce the distance between advanced theory and
-    human intuition. Its purpose is to make science feel less distant, less abstract,
-    and more alive — especially for the next generation of explorers, students,
-    makers, and future researchers.
-  </p>
-</section>
   <!-- ABOUT -->
   <section id="about">
     <h2>About the Author</h2>
-    <p>
-      <strong>Davide Cadelano</strong> is a physicist, independent researcher, and visionary mind behind <strong>Codex Alpha</strong> — an original unified theoretical framework that seeks to reconcile <em>general relativity</em> and <em>quantum mechanics</em> through an emergent model of spacetime. His work introduces the concept of the <em>Telascura</em>: a coherent quantum informational network from which spacetime itself unfolds, not as a fundamental entity, but as a <em>derivative structure</em> born from informational gradients and coherence fields.
-    </p>
-    <p>
-      Over the span of many years of solitary yet deeply focused research, Cadelano has pursued this bold idea outside of conventional institutions, combining expertise in <em>theoretical physics</em>, <em>quantum field theory</em>, and <em>computational modeling</em>. His interdisciplinary approach integrates principles from gravitation, information theory, and quantum entanglement, proposing a metric-independent model based on the informational flow between entangled nodes — a vision where geometry is no longer the starting point, but the consequence.
-    </p>
-    <p>
-      The <strong>Codex Alpha</strong> project has evolved into a comprehensive theory that includes predictions about <em>negative-mass black holes</em>, <em>superluminal propulsion via nodal engines</em>, and <em>quantum-coherent time projection</em>. It also proposes an informational version of the Einstein Field Equations, introducing a novel gradient operator ∇𝒦 that governs coherence dynamics across spacetime.
-    </p>
-    <p>
-      Cadelano’s mission is to <em>expand the frontiers of modern physics</em> through independent thought, open scientific dissemination, and collaboration with advanced AI systems. His work is published publicly on
-      <a href="https://zenodo.org/doi/10.5281/zenodo.15587185" target="_blank" style="color:#00ffff;">Zenodo</a> and
-      <a href="https://github.com/Miriadenera/Miriadenera" target="_blank" style="color:#00ffff;">GitHub</a>, maintaining transparency, reproducibility, and integrity.
-    </p>
-    <hr>
-    <p style="font-size:0.95em; line-height:1.6;">
-  <strong>Davide Cadelano</strong><br>
-  Theoretical Physicist, Independent Researcher<br>
-  Founder & Lead Theorist – <strong>Codex Alpha Research</strong><br>
-  Author of: <em>Codex Alpha – Unified Theory: Iconoclast Edition (v3.0)</em>
-</p>
 
-<p style="font-size:0.95em; line-height:1.6;">
-  <strong>DOI – Foundations of Codex Alpha Dynamics:</strong>
-  <a href="https://doi.org/10.5281/zenodo.20355167" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.20355167</a><br>
-  
-  <strong>DOI – Codex Alpha v3.0 Iconoclast:</strong>
-  <a href="https://doi.org/10.5281/zenodo.17074972" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.17074972</a><br>
+    <div class="two-column">
+      <div>
+        <p>
+          <strong>Davide Cadelano</strong> is an independent theoretical physicist and founder of
+          <strong>Codex Alpha Research</strong>. His work focuses on gravitational models, quantum frameworks,
+          emergent spacetime, informational curvature and the possible unification of physical laws through
+          coherence-gradient dynamics.
+        </p>
 
-  <strong>DOI – Codex Alpha Computational Framework Technical Whitepaper:</strong>
-  <a href="https://doi.org/10.5281/zenodo.20335018" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.20335018</a><br>
+        <p>
+          Codex Alpha introduces the concept of the <em>Telascura</em>: a coherent quantum-informational structure
+          from which spacetime is treated as an effective emergent geometry. The theory is developed through
+          explicit assumptions, variational principles, perturbative limits, computational workflows and falsifiable
+          observational directions.
+        </p>
 
-  <strong>DOI – Italian v2.0:</strong>
-  <a href="https://doi.org/10.5281/zenodo.16131379" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.16131379</a><br>
+        <p>
+          The current research programme includes the full Codex Alpha 3.0 — Iconoclast Edition, the Foundations
+          manuscript, and the Codex Alpha Computational Framework.
+        </p>
+      </div>
 
-  <strong>ORCID:</strong>
-  <a href="https://orcid.org/0009-0008-2253-7008" target="_blank" rel="noopener noreferrer">https://orcid.org/0009-0008-2253-7008</a><br>
+      <div class="contact-box">
+        <h3>Identifiers & Links</h3>
 
-  <strong>GitHub – Codex Alpha v2.0:</strong>
-  <a href="https://github.com/Miriadenera/codex-alpha-v2.0" target="_blank" rel="noopener noreferrer">https://github.com/Miriadenera/codex-alpha-v2.0</a><br>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:davide.cadelano@codexalpha.org">davide.cadelano@codexalpha.org</a><br>
 
-  <strong>GitHub – Computational Framework:</strong>
-  <a href="https://github.com/Miriadenera/codex-alpha-computational-framework" target="_blank" rel="noopener noreferrer">https://github.com/Miriadenera/codex-alpha-computational-framework</a><br>
+          <strong>ORCID:</strong>
+          <a href="https://orcid.org/0009-0008-2253-7008" target="_blank" rel="noopener">
+            0009-0008-2253-7008
+          </a><br>
 
-  <strong>OpenAIRE:</strong>
-  <a href="https://explore.openaire.eu/search/publication?pid=10.5281%2Fzenodo.16131379" target="_blank" rel="noopener noreferrer">OpenAIRE Entry</a><br>
+          <strong>GitHub:</strong>
+          <a href="https://github.com/Miriadenera" target="_blank" rel="noopener">
+            github.com/Miriadenera
+          </a><br>
 
-  <strong>Website:</strong>
-  <a href="https://www.codexalpha.org" target="_blank" rel="noopener noreferrer">https://www.codexalpha.org</a>
-</p>
+          <strong>LinkedIn:</strong>
+          <a href="https://linkedin.com/in/davide-cadelano-5b68a936a" target="_blank" rel="noopener">
+            linkedin.com/in/davide-cadelano-5b68a936a
+          </a><br>
 
-<p style="font-size:0.95em; line-height:1.6;">
-  <strong>Mail:</strong>
-  <a href="mailto:davide.cadelano@codexalpha.org">davide.cadelano@codexalpha.org</a><br>
+          <strong>X:</strong>
+          <a href="https://x.com/QIM_METATRON" target="_blank" rel="noopener">
+            @QIM_METATRON
+          </a><br>
 
-  <strong>To support the project, get the PDF eBook:</strong>
-  <a href="https://stan.store/codexalpha" target="_blank" rel="noopener noreferrer">https://stan.store/codexalpha</a>
-</p>
-    <p style="font-size:0.95em; line-height:1.6;">
-      <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/davide-cadelano-5b68a936a" target="_blank">linkedin.com/in/davide-cadelano-5b68a936a</a><br>
-      <strong>X (Twitter):</strong> <a href="https://x.com/QIM_METATRON" target="_blank">https://x.com/QIM_METATRON</a><br>
-      <strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61577184890331" target="_blank">Profile</a>
-    </p>
+          <strong>Instagram:</strong>
+          <a href="https://www.instagram.com/codexalpharesearch/" target="_blank" rel="noopener">
+            @codexalpharesearch
+          </a>
+        </p>
+      </div>
+    </div>
   </section>
 
   <!-- RESEARCH -->
   <section id="research">
-    <h2>Codex Alpha Research</h2>
-    <p>
-      The Research section tracks theoretical progress, AI-assisted derivations, numerical simulations, and upcoming publications. Current research integrates real data from ESA's GAIA mission, LIGO gravitational wave detections, and cosmic microwave background patterns, toward deriving the gradient ∇𝒦 of informational coherence between quantum nodes. All collaborators and contributions are published transparently through Zenodo and GitHub for scientific integrity and reproducibility.
-    </p>
+    <h2>Research Directions</h2>
 
-    <h3>🧩 Collaborative Abstract — Davide Cadelano & Louis-François Claro</h3>
-    <p>
-      Over the course of an intensive and highly interdisciplinary collaboration, Davide Cadelano and Louis-François Claro have jointly authored a series of scientific works that tackle some of the most complex open problems in theoretical physics — including the Yang–Mills Mass Gap, the Navier–Stokes equations, and the Gravitational N-body Problem. By merging tools from torsional geometry, fractal dimensionality, and information-based field theory, the authors developed an original 5D framework capable of providing analytical, numerical, and conceptual breakthroughs.
-    </p>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Informational Gravity</h3>
+        <p>
+          Development of coherence-weighted gravitational dynamics, where effective energy-momentum response is
+          controlled by the local coherence gradient ∇𝒦.
+        </p>
+      </div>
 
-    <p>The collaboration evolved through four major publications, each addressing a core component of modern physics:</p>
+      <div class="card">
+        <h3>Emergent Spacetime</h3>
+        <p>
+          Study of spacetime geometry as an effective continuous approximation emerging from a deeper informational
+          network structure.
+        </p>
+      </div>
 
-    <ul>
-      <li><strong>🧠 Yang–Mills Mass Gap</strong><br>
-        <em>Title:</em> Proposal of Unified Resolution of the Yang-Mills Mass Gap via 5D Higgs-Torsion Geometry and Fractal Control<br>
-        <em>DOI:</em> <a href="https://doi.org/10.5281/zenodo.16168587" target="_blank">10.5281/zenodo.16168587</a><br>
-        This work presents a novel mechanism where torsion-induced fields within a 5D framework generate a non-perturbative mass gap, numerically aligned with Quantum Chromodynamics (QCD), and stabilized by fractal convergence criteria.
-      </li>
+      <div class="card">
+        <h3>Weak-Field Signatures</h3>
+        <p>
+          Investigation of possible deviations in post-Newtonian regimes, gravitational lensing, perturbations and
+          gravitational-wave propagation.
+        </p>
+      </div>
 
-      <li><strong>🌌 Hybrid Cosmology + N-Body + Navier–Stokes</strong><br>
-        <em>Title:</em> Proposal of Unified Resolution of Navier-Stokes Equations, N-Body Problem and Cosmology via 5D Higgs-Torsion Geometry<br>
-        <em>DOI:</em> <a href="https://doi.org/10.5281/zenodo.16153428" target="_blank">10.5281/zenodo.16153428</a><br>
-        This paper merges cosmological dynamics with fluidic and gravitational systems, showing how a single geometric-torsional field can regularize turbulence, stabilize N-body orbits, and account for dark energy contributions via a negative mass density tensor.
-      </li>
+      <div class="card">
+        <h3>Computational Cosmology</h3>
+        <p>
+          Data-oriented workflows for anomaly detection, crossmatching, candidate ranking, graph modeling and
+          interpretable exploratory analysis.
+        </p>
+      </div>
 
-      <li><strong>🌊 Navier–Stokes (Complete Solution)</strong><br>
-        <em>Title:</em> Proposal of Complete Solution of the Navier-Stokes Equations via 5D Higgs-Torsion Geometry and Information Dimension<br>
-        <em>DOI:</em> <a href="https://doi.org/10.5281/zenodo.16039574" target="_blank">10.5281/zenodo.16039574</a><br>
-        Focused exclusively on fluid dynamics, this work proposes a geometric field coupling that suppresses chaotic dissipation in incompressible flows, offering an exact solution under controlled fractal boundary conditions.
-      </li>
+      <div class="card">
+        <h3>Mathematical Foundations</h3>
+        <p>
+          Variational methods, ADM decomposition, small-gradient expansions, stability analysis and recovery of
+          General Relativity in the uniform-coherence limit.
+        </p>
+      </div>
 
-      <li><strong>🌐 Three-Body Problem in 5D</strong><br>
-        <em>Title:</em> Proposal of Resolution of the Gravitational N-Body Problem in 5D via Higgs Torsion Gradient and Information Dimension: Theory, Simulation, and Cosmological Implications<br>
-        <em>DOI:</em> <a href="https://doi.org/10.5281/zenodo.15874407" target="_blank">10.5281/zenodo.15874407</a><br>
-        This work extends Newtonian and relativistic dynamics to a 5D torsional framework, demonstrating how chaotic three-body systems can be stabilized via informational gradients, with implications for galactic dynamics and orbital resonance control.
-      </li>
-    </ul>
-
-    <p>
-      These four works converge into a unified theoretical document entitled:
-      <br><strong>📘 Fractal Geometric Theory of Fundamental Problems</strong><br>
-      A comprehensive synthesis that merges geometry, torsion, quantum fields and informational dynamics into a coherent framework designed to solve, regularize and unify several Millennium-class problems in physics.<br><br>
-      The manuscript is now complete.
-    </p>
-
-    <li><strong>🧩 Fractal Geometric Theory of Fundamental Problems</strong><br>
-      <em>Title:</em> Fractal Geometric Theory of Fundamental Problems: Unified Resolution of Yang–Mills Mass Gap, Navier–Stokes, N-Body Problem, and Cosmology<br>
-      <em>DOI:</em> <a href="https://doi.org/10.5281/zenodo.16466845" target="_blank">10.5281/zenodo.16466845</a><br>
-      This research introduces a unified geometric–fractal approach to four Millennium Problems, combining Higgs field torsion, information dimension, and a multifractal formalism. It provides novel analytical and simulation-based resolutions to the Yang–Mills mass gap, Navier–Stokes fluid behavior, gravitational N-body dynamics, and cosmological evolution, all within a 5D topological field framework.
-    </li>
+      <div class="card">
+        <h3>Collaborative Extensions</h3>
+        <p>
+          Open theoretical and computational collaborations, including geometric, fractal, torsional and inference-based
+          approaches relevant to fundamental physics.
+        </p>
+      </div>
+    </div>
   </section>
 
-<!-- DIGITAL HUB (condensed, full-English, no bullets/numbers) -->
-<section id="digital-hub">
-  <h2>Codex Alpha Digital Hub</h2>
+  <!-- COLLABORATIVE WORKS -->
+  <section id="collaborations">
+    <h2>Collaborative Research</h2>
 
-  <!-- Intro -->
-  <div style="background:rgba(0,0,0,0.40); padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
-    This is the operational entry point for <strong>Codex Alpha</strong>: publications (DOIs), code, data, and collaboration guidelines in one place.
-    Everything is designed to be reproducible, citable, and verifiable so external teams can audit, reproduce, and extend the work before opening a pull request.
-  </div>
-
-  <!-- Quick actions -->
-<div class="button-container" style="margin-bottom:1rem; justify-content:center;">
-  <a class="neon-button" href="https://doi.org/10.5281/zenodo.17074972" target="_blank">Latest Release (DOI)</a>
-  <a class="neon-button" href="#digital-hub-methods">Methods</a>
-  <a class="neon-button" href="#digital-hub-data">Data</a>
-  <a class="neon-button" href="#digital-hub-join">Collaborate</a>
-  <a class="neon-button" href="#digital-hub-press">Press</a>
-</div>
-  <!-- METHODS -->
-  <h3 id="digital-hub-methods" style="color:#00ffff;">Methods &amp; Reproducibility</h3>
-  <div style="background:rgba(0,0,0,0.40); padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
-    <p style="margin:.35rem 0;"><strong>Who this is for:</strong> collaborators and reviewers who want to run the public scripts locally and verify outputs against DOI-archived artefacts.</p>
-    <p style="margin:.35rem 0;"><strong>Requirements:</strong> Python (3.x). Install the libraries referenced by the scripts’ <em>import</em> statements and/or in the repository <em>README</em>. If a <code>requirements.txt</code> is present, use it.</p>
-    <p style="margin:.35rem 0;">
-      <strong>Quick setup:</strong><br>
-      Clone: <code>git clone https://github.com/Miriadenera/Miriadenera</code><br>
-      (Optional) virtual env: <code>python -m venv .venv</code> → activate it<br>
-      Install deps: <code>pip install -r requirements.txt</code> (or install packages seen in the scripts’ imports)<br>
-      Run: execute scripts/notebooks in <code>simulations/</code> in the order indicated by the <em>README</em> or file prefixes<br>
-      Validate: compare plots, tables, and logs with the Zenodo release (DOI v3.0)
+    <p class="section-intro">
+      This section tracks selected collaborative and exploratory works connected to high-dimensional geometry,
+      torsion, fractal dimensionality, field theory and complex physical systems.
     </p>
-    <p style="margin:.35rem 0;"><strong>Citation:</strong> use <code>CITATION.cff</code> (if present) and the DOIs listed below to cite software and data.</p>
-  </div>
 
-  <!-- DATA -->
-  <h3 id="digital-hub-data" style="color:#00ffff;">Data &amp; Releases</h3>
-  <div style="background:rgba(0,0,0,0.40); padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
-    <p style="margin:.35rem 0;"><strong>Codex Alpha v3.0 (Iconoclast Edition)</strong> — DOI:
-      <a href="https://doi.org/10.5281/zenodo.17074972" target="_blank">10.5281/zenodo.17074972</a></p>
-    <p style="margin:.35rem 0;"><strong>Supplementary datasets / figures</strong> — will be listed here as they are published with dedicated DOIs.</p>
-    <p style="margin:.35rem 0;">Each release includes SHA256 checksums and a file manifest.</p>
-  </div>
-
-  <!-- COLLABORATE -->
-<h3 id="digital-hub-join" style="color:#00ffff; text-align:center;">
-  Collaborate with Codex Alpha
-</h3>
-
-<div style="background:rgba(0,0,0,0.40); padding:1.2rem 1.5rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0; text-align:center;">
-
-  <p style="margin:.5rem 0; color:#e9f7ff;">
-    <strong>Focus areas:</strong> mathematical physics (GR, QFT, cosmology) · scientific computing (JAX/PyTorch/HPC) · data &amp; visualization
-  </p>
-
-  <p style="margin:.5rem 0 1rem; color:#cfefff;">
-    <strong>Send a one-page PDF with:</strong> Background (≤150 words) · Proposed contribution (≤300 words) · Availability (hours/week)
-  </p>
-
-  <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
-
-    <a class="neon-button" 
-       href="#open-collab" 
-       id="open-collab-form"
-       style="min-width:200px; text-align:center;">
-       Submit via form
-    </a>
-
-    <a class="neon-button secondary" 
-       target="_blank" 
-       rel="noopener"
-       href="https://github.com/Miriadenera/Miriadenera/issues/new?title=Collaboration%20proposal%3A%20%5BYour%20Name%5D&labels=collaboration&body=Please%20complete%20the%20sections%20below%20(and%20attach%20links%20to%20PDF%2Frepo%20if%20needed)%3A%0A%0A**Background%20(%E2%89%A4150%20words)**%0A%0A**Proposed%20contribution%20(%E2%89%A4300%20words)**%0A%0A**Availability%20(hours%2Fweek)**%0A%0A**Links%20(repo%2Fportfolio%2FPDF)**%0A"
-       style="min-width:200px; text-align:center;">
-       Open a GitHub issue
-    </a>
-
-  </div>
-</div>
-
-  <!-- PRESS -->
-  <h3 id="digital-hub-press" style="color:#00ffff;">Press Kit</h3>
-  <div style="background:rgba(0,0,0,0.40); padding:1rem 1.25rem; border-radius:10px; box-shadow:0 0 18px #00ffff22; margin:1rem 0;">
-    <p style="margin:.35rem 0;"><strong>Media summary</strong><br>
-      <em>Codex Alpha</em> proposes an informational unification of General Relativity and Quantum Mechanics in which spacetime emerges from the
-      <em>Telascura</em>, a coherent quantum-informational network. Dynamics are governed by coherence gradients (∇𝒦), leading to falsifiable predictions,
-      reproducible simulations, and observational signatures. The project is openly published with code and datasets tracked by DOIs to enable independent verification and collaboration.</p>
-    <p style="margin:.35rem 0;"><strong>Short bio</strong><br>
-      Davide Cadelano is an independent theoretical physicist and founder of Codex Alpha Research. He studies spacetime as an emergent informational
-      structure governed by ∇𝒦, with implications for quantum nonlocality, propulsion, and cosmology. Publications are released with reproducible code and data.</p>
-    <p style="margin:.35rem 0;"><strong>Press contact:</strong> <a href="mailto:davide.cadelano@codexalpha.org">davide.cadelano@codexalpha.org</a><br>
-      <strong>Quick links:</strong> DOI v3.0 <a href="https://doi.org/10.5281/zenodo.17074972" target="_blank">10.5281/zenodo.17074972</a> ·
-      GitHub <a href="https://github.com/Miriadenera/Miriadenera" target="_blank">Miriadenera/Miriadenera</a> ·
-      Website <a href="https://www.codexalpha.org" target="_blank">codexalpha.org</a></p>
-  </div>
-</section>
-
-<!-- Collaboration Modal (Netlify Forms, iframe target: nessun redirect/404) -->
-<div id="collab-modal" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.8); backdrop-filter: blur(2px);">
-  <div style="position:relative; width:90%; max-width:900px; margin:6vh auto; background:#0b0b14; border-radius:12px; box-shadow:0 0 30px #00ffff55; padding:1rem;">
-    <button id="close-collab-form" aria-label="Close form" style="position:absolute; top:10px; right:12px; background:rgba(0,0,0,0.5); color:#fff; border:1px solid #00ffff66; border-radius:8px; padding:.4rem .7rem; cursor:pointer;">✕</button>
-    <h3 style="color:#00ffff; margin:.25rem 0 1rem;">Collaboration proposal</h3>
-
-    <!-- iframe di destinazione: evita navigazione/redirect -->
-    <iframe name="nf-submit" style="display:none;"></iframe>
-
-    <form name="codexalpha-collab"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          action="/"
-          target="nf-submit"
-          accept-charset="UTF-8">
-      <input type="hidden" name="form-name" value="codexalpha-collab">
-      <p style="display:none;"><label>Don’t fill this out: <input name="bot-field"></label></p>
-
-      <div style="display:grid; gap:.75rem;">
-        <input name="name"  type="text"  placeholder="Full name" required
-               style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;">
-        <input name="email" type="email" placeholder="Email" required
-               style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;">
-        <textarea name="background" rows="3" placeholder="Background (≤150 words)" required
-                  style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;"></textarea>
-        <textarea name="proposal" rows="5" placeholder="Proposed contribution (≤300 words)" required
-                  style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;"></textarea>
-        <input name="availability" type="text" placeholder="Availability (hours/week)" required
-               style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;">
-        <input name="links" type="url" placeholder="Link to PDF / portfolio / repo (optional)"
-               style="padding:.7rem; border-radius:8px; border:1px solid #00ffff55; background:#0b0b14; color:#e9f7ff;">
-        <button id="collab-submit" type="submit" class="neon-button" style="width:max-content;">Submit</button>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Yang–Mills Mass Gap</h3>
+        <p>
+          Proposal of Unified Resolution of the Yang-Mills Mass Gap via 5D Higgs-Torsion Geometry and Fractal Control.
+        </p>
+        <p class="meta">
+          DOI:
+          <a href="https://doi.org/10.5281/zenodo.16168587" target="_blank" rel="noopener">
+            10.5281/zenodo.16168587
+          </a>
+        </p>
       </div>
-    </form>
 
-    <!-- messaggio di successo -->
-    <div id="collab-success" style="display:none; margin-top:1rem; padding:0.9rem 1rem; border-radius:10px; background:rgba(0,255,255,0.10); border:1px solid #00ffff66; color:#e9f7ff; box-shadow:0 0 18px #00ffff22;">
-      ✅ <strong>Submission received.</strong> We will get back to you. You can also open a public follow-up via GitHub issues.
+      <div class="card">
+        <h3>Hybrid Cosmology, N-Body and Navier–Stokes</h3>
+        <p>
+          Unified treatment of Navier–Stokes equations, N-body dynamics and cosmology via 5D Higgs-Torsion geometry.
+        </p>
+        <p class="meta">
+          DOI:
+          <a href="https://doi.org/10.5281/zenodo.16153428" target="_blank" rel="noopener">
+            10.5281/zenodo.16153428
+          </a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Navier–Stokes</h3>
+        <p>
+          Proposal of Complete Solution of the Navier-Stokes Equations via 5D Higgs-Torsion Geometry and Information Dimension.
+        </p>
+        <p class="meta">
+          DOI:
+          <a href="https://doi.org/10.5281/zenodo.16039574" target="_blank" rel="noopener">
+            10.5281/zenodo.16039574
+          </a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Gravitational N-Body Problem</h3>
+        <p>
+          Proposal of Resolution of the Gravitational N-Body Problem in 5D via Higgs Torsion Gradient and Information Dimension.
+        </p>
+        <p class="meta">
+          DOI:
+          <a href="https://doi.org/10.5281/zenodo.15874407" target="_blank" rel="noopener">
+            10.5281/zenodo.15874407
+          </a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Fractal Geometric Theory of Fundamental Problems</h3>
+        <p>
+          Unified synthesis of Yang–Mills Mass Gap, Navier–Stokes, N-Body Problem and cosmology through geometric-fractal methods.
+        </p>
+        <p class="meta">
+          DOI:
+          <a href="https://doi.org/10.5281/zenodo.16466845" target="_blank" rel="noopener">
+            10.5281/zenodo.16466845
+          </a>
+        </p>
+      </div>
     </div>
-  </div>
-</div>
+  </section>
 
-<!-- Form fantasma per la “scansione” di Netlify (assicurare il parsing a build time) -->
-<form name="codexalpha-collab" data-netlify="true" netlify-honeypot="bot-field" style="display:none;">
-  <input type="text" name="name">
-  <input type="email" name="email">
-  <textarea name="background"></textarea>
-  <textarea name="proposal"></textarea>
-  <input type="text" name="availability">
-  <input type="url" name="links">
-</form>
+  <!-- DIGITAL HUB -->
+  <section id="digital-hub">
+    <h2>Codex Alpha Digital Hub</h2>
 
-<script>
-  // --- OPEN/CLOSE modal
-  const openCollab = document.getElementById('open-collab-form'); // pulsante nella sezione "Collaborate"
-  const collabModal = document.getElementById('collab-modal');
-  const closeCollab = document.getElementById('close-collab-form');
-  const collabForm  = document.forms['codexalpha-collab'];
-  const submitBtn   = document.getElementById('collab-submit');
-  const successBox  = document.getElementById('collab-success');
+    <p class="section-intro">
+      The operational entry point for publications, repositories, computational resources, collaboration channels
+      and open research outputs connected to Codex Alpha.
+    </p>
 
-  if (openCollab && collabModal && closeCollab) {
-    openCollab.addEventListener('click', (e) => { e.preventDefault(); collabModal.style.display = 'block'; });
-    closeCollab.addEventListener('click', () => { collabModal.style.display = 'none'; });
-    collabModal.addEventListener('click', (e) => { if (e.target === collabModal) collabModal.style.display = 'none'; });
-  }
+    <div class="card-grid">
+      <div class="card">
+        <h3>DOI Releases</h3>
+        <p>
+          All major theoretical outputs are archived with persistent DOI identifiers for citation and long-term accessibility.
+        </p>
+        <p class="meta">
+          <a href="https://doi.org/10.5281/zenodo.20355167" target="_blank" rel="noopener">Foundations</a> ·
+          <a href="https://doi.org/10.5281/zenodo.17074972" target="_blank" rel="noopener">Iconoclast</a> ·
+          <a href="https://doi.org/10.5281/zenodo.20335018" target="_blank" rel="noopener">Framework</a>
+        </p>
+      </div>
 
-  // Mostra conferma locale quando l’iframe ha “finito”
-  if (collabForm && successBox && submitBtn) {
-    collabForm.addEventListener('submit', () => {
-      submitBtn.textContent = 'Sending...';
-      submitBtn.disabled = true;
-      // L’iframe riceve la risposta di Netlify; diamo un piccolo delay e confermiamo lato UI
-      setTimeout(() => {
-        successBox.style.display = 'block';
-        collabForm.reset();
-        submitBtn.textContent = 'Submit';
-        submitBtn.disabled = false;
-        setTimeout(() => { collabModal.style.display = 'none'; successBox.style.display = 'none'; }, 1500);
-      }, 1200);
-    });
-  }
-</script>
+      <div class="card">
+        <h3>Repositories</h3>
+        <p>
+          Public GitHub repositories host manuscripts, metadata, computational tools, citation files and development resources.
+        </p>
+        <p class="meta">
+          <a href="https://github.com/Miriadenera" target="_blank" rel="noopener">GitHub Profile</a>
+        </p>
+      </div>
 
+      <div class="card">
+        <h3>Press & Media</h3>
+        <p>
+          Media references, interviews and public-facing summaries are collected to support outreach and external communication.
+        </p>
+        <p class="meta">
+          <a href="#media">Media section</a>
+        </p>
+      </div>
+    </div>
+  </section>
 
+  <footer>
+    <strong>Codex Alpha Research</strong><br>
+    Informational Gravity · Emergent Spacetime · Quantum Foundations · Computational Cosmology<br>
+    <a href="mailto:davide.cadelano@codexalpha.org">davide.cadelano@codexalpha.org</a> ·
+    <a href="https://www.codexalpha.org" target="_blank" rel="noopener">codexalpha.org</a>
+  </footer>
 
-  <!-- SCRIPTS -->
+  <!-- Hidden Netlify form for build-time detection -->
+  <form name="codexalpha-collab" data-netlify="true" netlify-honeypot="bot-field" style="display:none;">
+    <input type="text" name="name">
+    <input type="email" name="email">
+    <select name="focus-area">
+      <option value="mathematical-physics">Mathematical physics</option>
+      <option value="computational-framework">Computational framework</option>
+      <option value="ai-graph-modeling">AI / graph modeling</option>
+      <option value="cosmological-data">Cosmological data analysis</option>
+      <option value="visualization">Visualization / outreach</option>
+      <option value="other">Other</option>
+    </select>
+    <textarea name="background"></textarea>
+    <textarea name="proposal"></textarea>
+    <input type="text" name="availability">
+    <input type="url" name="links">
+  </form>
+
   <script>
-    // BACKGROUND SLIDESHOW
-    const backgrounds = ['space_bg_1.jpg','space_bg_2.jpg','space_bg_3.jpg','space_bg_4.jpg'];
+    const backgrounds = [
+      "space_bg_1.jpg",
+      "space_bg_2.jpg",
+      "space_bg_3.jpg",
+      "space_bg_4.jpg"
+    ];
+
     let currentIndexBg = 0;
-    const bg1 = document.getElementById('bg1');
-    const bg2 = document.getElementById('bg2');
+    const bg1 = document.getElementById("bg1");
+    const bg2 = document.getElementById("bg2");
     const intervalTimeBg = 10000;
 
-    function updateBackgrounds(){
+    function updateBackgrounds() {
       const nextIndexBg = (currentIndexBg + 1) % backgrounds.length;
       const nextBg = backgrounds[nextIndexBg];
-      if (bg1.style.opacity == 1){
-        bg2.style.backgroundImage = `url('${nextBg}')`; bg2.style.opacity = 1; bg1.style.opacity = 0;
+
+      if (bg1.style.opacity == 1) {
+        bg2.style.backgroundImage = `url('${nextBg}')`;
+        bg2.style.opacity = 1;
+        bg1.style.opacity = 0;
       } else {
-        bg1.style.backgroundImage = `url('${nextBg}')`; bg1.style.opacity = 1; bg2.style.opacity = 0;
+        bg1.style.backgroundImage = `url('${nextBg}')`;
+        bg1.style.opacity = 1;
+        bg2.style.opacity = 0;
       }
+
       currentIndexBg = nextIndexBg;
     }
-    bg1.style.backgroundImage = `url('${backgrounds[0]}')`; bg1.style.opacity = 1;
+
+    bg1.style.backgroundImage = `url('${backgrounds[0]}')`;
+    bg1.style.opacity = 1;
     setInterval(updateBackgrounds, intervalTimeBg);
-
-    // INTERNAL IMAGE SLIDESHOW
-    const cosmicImages = [
-      'Subject 109757440 Codex Alpha BH-003.png',
-      'Subject 109759123 Codex Alpha-20.png',
-      'Subject 109760980 Codex Alpha BH-QSO-009.png',
-      'Subject 109766453 Codex Alpha BH-001.png',
-      'codex_alpha_field.png',
-      'formula codex(1).png',
-      'gradiente.png',
-      'work in progress.png'
-    ];
-    let currentCosmicIndex = 0;
-    const cosmicImageElement = document.getElementById('cosmic-slideshow-img');
-    const cosmicLinkElement  = document.getElementById('cosmic-slideshow-link');
-    const intervalTimeCosmic = 5000;
-
-    function updateCosmicImage(){
-      currentCosmicIndex = (currentCosmicIndex + 1) % cosmicImages.length;
-      const newSrc = cosmicImages[currentCosmicIndex];
-      cosmicImageElement.src = newSrc;
-      cosmicLinkElement.href = newSrc;
-    }
-    cosmicImageElement.src = cosmicImages[0];
-    cosmicLinkElement.href = cosmicImages[0];
-    setInterval(updateCosmicImage, intervalTimeCosmic);
   </script>
 </body>
 </html>
-

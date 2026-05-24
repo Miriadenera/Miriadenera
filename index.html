@@ -18,7 +18,7 @@
       --panel: rgba(0, 0, 0, 0.64);
       --panel-strong: rgba(0, 0, 0, 0.82);
       --border: rgba(0, 255, 255, 0.18);
-      --shadow: 0 0 24px rgba(0, 255, 255, 0.18);
+      --shadow: 0 0 28px rgba(0, 255, 255, 0.18);
     }
 
     * {
@@ -63,9 +63,10 @@
       inset: 0;
       z-index: -1;
       background:
-        radial-gradient(circle at 20% 10%, rgba(0,255,255,0.12), transparent 30%),
-        radial-gradient(circle at 80% 30%, rgba(106,13,173,0.18), transparent 34%),
-        linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.85));
+        radial-gradient(circle at 18% 12%, rgba(0,255,255,0.13), transparent 30%),
+        radial-gradient(circle at 84% 34%, rgba(106,13,173,0.20), transparent 36%),
+        radial-gradient(circle at 50% 85%, rgba(0,255,255,0.08), transparent 42%),
+        linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.90));
       pointer-events: none;
     }
 
@@ -74,12 +75,13 @@
       top: 0;
       right: 0;
       padding: 0.9rem 1rem;
-      background: rgba(0, 0, 0, 0.72);
+      background: rgba(0, 0, 0, 0.76);
       border-bottom-left-radius: 12px;
       z-index: 10;
       backdrop-filter: blur(8px);
-      border-left: 1px solid rgba(0,255,255,0.08);
-      border-bottom: 1px solid rgba(0,255,255,0.08);
+      border-left: 1px solid rgba(0,255,255,0.10);
+      border-bottom: 1px solid rgba(0,255,255,0.10);
+      box-shadow: 0 0 18px rgba(0,255,255,0.10);
     }
 
     nav a {
@@ -99,7 +101,7 @@
       padding: 13vh 5vw 7vh;
       max-width: 1180px;
       margin: 0 auto;
-      text-align: left;
+      text-align: center;
       position: relative;
       z-index: 1;
     }
@@ -111,15 +113,17 @@
       text-shadow: 0 0 18px var(--cyan);
       letter-spacing: -0.045em;
       line-height: 0.95;
+      text-align: center;
     }
 
     header h2 {
       font-size: clamp(1.25rem, 2.4vw, 2rem);
       font-weight: 400;
       color: #ffffff;
-      margin: 0.55em 0 0.75em;
+      margin: 0.55em auto 0.75em;
       max-width: 920px;
       line-height: 1.25;
+      text-align: center;
     }
 
     .hero-subtitle {
@@ -127,7 +131,8 @@
       color: var(--text);
       font-size: 1.08rem;
       line-height: 1.75;
-      margin: 0 0 1.6rem;
+      margin: 0 auto 1.6rem;
+      text-align: center;
     }
 
     .button-container,
@@ -137,7 +142,7 @@
       flex-wrap: wrap;
       gap: 0.8rem;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
     }
 
     .button-row.center {
@@ -157,6 +162,7 @@
       border: 1px solid rgba(0,255,255,0.45);
       white-space: nowrap;
       margin: 0;
+      text-align: center;
     }
 
     .neon-button:hover {
@@ -178,15 +184,18 @@
 
     section {
       padding: 8vh 5vw;
-      background: var(--panel);
+      background:
+        linear-gradient(135deg, rgba(0, 0, 0, 0.74), rgba(0, 20, 30, 0.58), rgba(0, 0, 0, 0.86));
       margin: 8vh auto 0;
       width: 92%;
       max-width: 1120px;
       border-radius: 16px;
       position: relative;
       z-index: 1;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(0,255,255,0.08);
+      box-shadow:
+        0 0 28px rgba(0, 255, 255, 0.18),
+        inset 0 0 34px rgba(0, 255, 255, 0.045);
+      border: 1px solid rgba(0,255,255,0.14);
     }
 
     section.compact {
@@ -225,13 +234,25 @@
       align-items: stretch;
     }
 
+    .card,
+    .news-entry,
+    .book-card,
+    .contact-box,
+    .link-card {
+      background:
+        radial-gradient(circle at top left, rgba(0, 255, 255, 0.10), transparent 32%),
+        linear-gradient(145deg, rgba(0, 0, 0, 0.72), rgba(0, 18, 24, 0.55), rgba(0, 0, 0, 0.88));
+      border: 1px solid rgba(0, 255, 255, 0.18);
+      box-shadow:
+        0 0 22px rgba(0, 255, 255, 0.17),
+        inset 0 0 28px rgba(0, 255, 255, 0.035);
+      border-radius: 14px;
+    }
+
     .card {
       min-height: 100%;
-      border-radius: 14px;
       padding: 1.25rem;
-      background: rgba(0,0,0,0.56);
-      border: 1px solid var(--border);
-      box-shadow: 0 0 18px rgba(0,255,255,0.10);
+      color: var(--text);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -241,17 +262,20 @@
       margin-top: 0;
       color: #fff;
       line-height: 1.3;
+      text-align: center;
     }
 
     .card p {
       margin: 0.4rem 0 1rem;
       color: var(--cyan-soft);
+      text-align: center;
     }
 
     .card .meta {
       font-size: 0.92rem;
       color: #dffcff;
       margin-top: auto;
+      text-align: center;
     }
 
     .publication-feature {
@@ -285,7 +309,7 @@
     }
 
     .publication-copy {
-      text-align: left;
+      text-align: center;
     }
 
     .publication-copy p {
@@ -300,41 +324,65 @@
     }
 
     .book-card {
-      border-radius: 16px;
+      min-height: 540px;
       padding: 1.4rem;
-      background: linear-gradient(135deg, rgba(0,0,0,0.64), rgba(0,0,0,0.86));
-      border: 1px solid rgba(0,255,255,0.12);
-      box-shadow: 0 0 20px rgba(0,255,255,0.12);
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       gap: 1rem;
     }
 
     .book-card-inner {
       display: grid;
       grid-template-columns: 150px 1fr;
-      gap: 1.2rem;
+      gap: 1.35rem;
       align-items: start;
+      min-height: 330px;
     }
 
     .book-card img {
       width: 150px;
-      max-width: 100%;
+      height: 215px;
+      object-fit: contain;
       border-radius: 10px;
       box-shadow: 0 0 16px rgba(0,255,255,0.45);
       background: #000;
+      align-self: start;
+      display: block;
+    }
+
+    .book-card h3 {
+      min-height: 72px;
+      margin-top: 0;
+      color: var(--cyan);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: center;
+      line-height: 1.35;
+    }
+
+    .book-card p {
+      text-align: center;
+      color: var(--text);
+    }
+
+    .book-card .button-row {
+      margin-top: auto;
+      justify-content: center;
     }
 
     .news-entry {
       margin-bottom: 1.4rem;
       padding: 1.15rem 1.25rem;
-      background: rgba(0,0,0,0.42);
-      border: 1px solid rgba(0,255,255,0.10);
-      border-radius: 12px;
     }
 
     .news-entry:last-child {
       margin-bottom: 0;
+    }
+
+    .news-entry p {
+      text-align: left;
     }
 
     .video-grid {
@@ -364,13 +412,10 @@
     }
 
     .link-card {
-      border-radius: 12px;
       padding: 1.15rem 1.3rem;
-      background: rgba(0,0,0,0.55);
-      box-shadow: 0 0 18px rgba(0,255,255,0.14);
       color: var(--text);
-      border: 1px solid rgba(0,255,255,0.12);
       margin-top: 1.25rem;
+      text-align: center;
     }
 
     .card-title {
@@ -378,32 +423,48 @@
       font-weight: 700;
       margin: 0 0 0.35rem 0;
       color: #fff;
+      text-align: center;
     }
 
     .card-desc {
       opacity: 0.92;
-      margin: 0.25rem 0 0.75rem 0;
+      margin: 0.25rem 0 0.95rem 0;
       line-height: 1.65;
+      text-align: center;
     }
 
     .two-column {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.2rem;
-      align-items: start;
+      align-items: stretch;
     }
 
     .contact-box {
-      background: rgba(0,0,0,0.48);
-      border: 1px solid rgba(0,255,255,0.13);
-      border-radius: 14px;
       padding: 1.25rem;
-      box-shadow: 0 0 18px rgba(0,255,255,0.12);
+      min-height: 610px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #incubator .contact-box:first-child {
+      justify-content: space-between;
+    }
+
+    #incubator .contact-box:first-child .button-row {
+      margin-top: auto;
+      padding-top: 2rem;
+      justify-content: center;
+    }
+
+    #incubator .contact-box:nth-child(2) {
+      justify-content: flex-start;
     }
 
     form.codex-form {
       display: grid;
       gap: 0.75rem;
+      flex: 1;
     }
 
     form.codex-form input,
@@ -423,10 +484,16 @@
       resize: vertical;
     }
 
+    form.codex-form select option {
+      color: #000;
+      background: #fff;
+    }
+
     .fineprint {
       font-size: 0.9rem;
       color: var(--cyan-soft);
       opacity: 0.95;
+      text-align: center;
     }
 
     footer {
@@ -436,9 +503,11 @@
       padding: 2rem;
       text-align: center;
       color: var(--cyan-soft);
-      background: rgba(0,0,0,0.55);
+      background:
+        radial-gradient(circle at top left, rgba(0, 255, 255, 0.08), transparent 35%),
+        linear-gradient(145deg, rgba(0,0,0,0.66), rgba(0,18,24,0.50), rgba(0,0,0,0.86));
       border-radius: 16px;
-      border: 1px solid rgba(0,255,255,0.08);
+      border: 1px solid rgba(0,255,255,0.12);
       box-shadow: 0 0 18px rgba(0,255,255,0.12);
     }
 
@@ -470,8 +539,20 @@
         text-align: center;
       }
 
+      .book-card {
+        min-height: auto;
+      }
+
+      .book-card-inner {
+        min-height: auto;
+      }
+
       .book-card img {
         margin: 0 auto;
+      }
+
+      .contact-box {
+        min-height: auto;
       }
 
       .button-container,
@@ -501,9 +582,9 @@
   <div id="bg2" class="bg-fade"></div>
 
   <nav>
-    <a href="#news">News</a>
     <a href="#publications">Publications</a>
     <a href="#amazon">Books</a>
+    <a href="#news">News</a>
     <a href="#framework">Framework</a>
     <a href="#incubator">Incubator</a>
     <a href="#media">Media</a>
@@ -543,60 +624,6 @@
       </a>
     </div>
   </header>
-
-  <!-- NEWS -->
-  <section id="news" class="compact">
-    <h2>News</h2>
-
-    <div class="news-entry">
-      <p>
-        <strong>May 2026:</strong> Published
-        <em>Foundations of Codex Alpha Dynamics: A Variational Derivation of an Informational Extension of Einstein Field Equations</em>.
-        DOI:
-        <a href="https://doi.org/10.5281/zenodo.20355167" target="_blank" rel="noopener">
-          10.5281/zenodo.20355167
-        </a>.
-        The paperback edition is now available on Amazon.
-      </p>
-    </div>
-
-    <div class="news-entry">
-      <p>
-        <strong>May 2026:</strong> Released the
-        <em>Codex Alpha Computational Framework</em>, an AI-assisted infrastructure for exploratory cosmological analysis,
-        anomaly detection, graph-based modeling, ranking and interpretability.
-        DOI:
-        <a href="https://doi.org/10.5281/zenodo.20335018" target="_blank" rel="noopener">
-          10.5281/zenodo.20335018
-        </a>.
-      </p>
-    </div>
-
-    <div class="news-entry">
-      <p>
-        <strong>September 2025:</strong> Published
-        <em>Codex Alpha 3.0 — Iconoclast Edition</em> in English.
-        DOI:
-        <a href="https://doi.org/10.5281/zenodo.17074972" target="_blank" rel="noopener">
-          10.5281/zenodo.17074972
-        </a>.
-        The book edition is available on Amazon in Kindle and Paperback formats.
-      </p>
-    </div>
-
-    <div class="news-entry">
-      <p>
-        <strong>July 2025:</strong> Major site update: redesigned News, About and Research sections with enhanced structure and aesthetic.
-      </p>
-    </div>
-
-    <div class="news-entry">
-      <p>
-        <strong>April 2020:</strong> Origin of the Codex Alpha theoretical research project during the first COVID-19 lockdown.
-        Initial investigations included quantum coherence, negative-mass models and ESA/LIGO/GAIA public datasets.
-      </p>
-    </div>
-  </section>
 
   <!-- PUBLICATIONS -->
   <section id="publications">
@@ -704,10 +731,12 @@
 
           <div>
             <h3>Foundations of Codex Alpha Dynamics</h3>
+
             <p>
-              A compact technical manuscript deriving the minimal variational structure of the effective continuous
-              Codex Alpha dynamics.
+              A compact technical manuscript deriving the minimal variational structure
+              of the effective continuous Codex Alpha dynamics.
             </p>
+
             <p>
               <strong>Research DOI:</strong><br>
               <a href="https://doi.org/10.5281/zenodo.20355167" target="_blank" rel="noopener">
@@ -721,6 +750,7 @@
           <a class="neon-button" href="https://amzn.eu/d/04Jh6BrX" target="_blank" rel="noopener">
             Buy on Amazon
           </a>
+
           <a class="neon-button secondary" href="https://doi.org/10.5281/zenodo.20355167" target="_blank" rel="noopener">
             Open DOI
           </a>
@@ -735,9 +765,12 @@
 
           <div>
             <h3>Codex Alpha 3.0 — Iconoclast Edition</h3>
+
             <p>
-              The full theoretical monograph of the Codex Alpha framework, available in Kindle and Paperback formats.
+              The full theoretical monograph of the Codex Alpha framework,
+              available in Kindle and Paperback formats.
             </p>
+
             <p>
               <strong>Research DOI:</strong><br>
               <a href="https://doi.org/10.5281/zenodo.17074972" target="_blank" rel="noopener">
@@ -751,6 +784,7 @@
           <a class="neon-button" href="https://www.amazon.it/dp/B0FQHP5W58" target="_blank" rel="noopener">
             Buy on Amazon
           </a>
+
           <a class="neon-button secondary" href="https://doi.org/10.5281/zenodo.17074972" target="_blank" rel="noopener">
             Open DOI
           </a>
@@ -760,14 +794,72 @@
 
     <div class="link-card">
       <div class="card-title">Support PDF Library</div>
+
       <div class="card-desc">
-        The official research PDFs remain freely accessible through their DOI pages. For readers who wish to support
-        continued independent research, a voluntary direct PDF download is available through the project support page.
-        This support option refers to the Codex Alpha research library and does not replace the official DOI releases.
+        The official research PDFs remain freely accessible through their DOI pages.
+        For readers who wish to support continued independent research, a voluntary
+        direct PDF download is available through the project support page.
+        This support option refers to the Codex Alpha research library, including the
+        Iconoclast Edition, and does not replace the official DOI releases.
       </div>
+
       <a class="neon-button secondary" href="https://stan.store/codexalpha" target="_blank" rel="noopener">
         Support the Research — PDF Download
       </a>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section id="news" class="compact">
+    <h2>News</h2>
+
+    <div class="news-entry">
+      <p>
+        <strong>May 2026:</strong> Published
+        <em>Foundations of Codex Alpha Dynamics: A Variational Derivation of an Informational Extension of Einstein Field Equations</em>.
+        DOI:
+        <a href="https://doi.org/10.5281/zenodo.20355167" target="_blank" rel="noopener">
+          10.5281/zenodo.20355167
+        </a>.
+        The paperback edition is now available on Amazon.
+      </p>
+    </div>
+
+    <div class="news-entry">
+      <p>
+        <strong>May 2026:</strong> Released the
+        <em>Codex Alpha Computational Framework</em>, an AI-assisted infrastructure for exploratory cosmological analysis,
+        anomaly detection, graph-based modeling, ranking and interpretability.
+        DOI:
+        <a href="https://doi.org/10.5281/zenodo.20335018" target="_blank" rel="noopener">
+          10.5281/zenodo.20335018
+        </a>.
+      </p>
+    </div>
+
+    <div class="news-entry">
+      <p>
+        <strong>September 2025:</strong> Published
+        <em>Codex Alpha 3.0 — Iconoclast Edition</em> in English.
+        DOI:
+        <a href="https://doi.org/10.5281/zenodo.17074972" target="_blank" rel="noopener">
+          10.5281/zenodo.17074972
+        </a>.
+        The book edition is available on Amazon in Kindle and Paperback formats.
+      </p>
+    </div>
+
+    <div class="news-entry">
+      <p>
+        <strong>July 2025:</strong> Major site update: redesigned News, About and Research sections with enhanced structure and aesthetic.
+      </p>
+    </div>
+
+    <div class="news-entry">
+      <p>
+        <strong>April 2020:</strong> Origin of the Codex Alpha theoretical research project during the first COVID-19 lockdown.
+        Initial investigations included quantum coherence, negative-mass models and ESA/LIGO/GAIA public datasets.
+      </p>
     </div>
   </section>
 
@@ -832,17 +924,19 @@
 
     <div class="two-column">
       <div class="contact-box">
-        <h3>Collaboration Focus Areas</h3>
-        <p>
-          The project is especially interested in collaborators able to contribute to rigorous theoretical review,
-          numerical prototyping, simulation design, dataset integration, graph-based modeling, anomaly detection,
-          interpretability and reproducible research infrastructure.
-        </p>
+        <div>
+          <h3>Collaboration Focus Areas</h3>
+          <p>
+            The project is especially interested in collaborators able to contribute to rigorous theoretical review,
+            numerical prototyping, simulation design, dataset integration, graph-based modeling, anomaly detection,
+            interpretability and reproducible research infrastructure.
+          </p>
 
-        <p>
-          Suitable profiles include independent researchers, physicists, mathematicians, ML engineers,
-          computational scientists, data analysts, visualization specialists and research-oriented developers.
-        </p>
+          <p>
+            Suitable profiles include independent researchers, physicists, mathematicians, ML engineers,
+            computational scientists, data analysts, visualization specialists and research-oriented developers.
+          </p>
+        </div>
 
         <div class="button-row">
           <a class="neon-button" href="mailto:davide.cadelano@codexalpha.org?subject=Codex%20Alpha%20Research%20Collaboration" target="_blank" rel="noopener">
@@ -1093,7 +1187,7 @@
     <h2>Collaborative Research</h2>
 
     <p class="section-intro">
-      This section tracks selected collaborative and exploratory works connected to high-dimensional geometry,
+      Selected collaborative and exploratory works connected to high-dimensional geometry,
       torsion, fractal dimensionality, field theory and complex physical systems.
     </p>
 

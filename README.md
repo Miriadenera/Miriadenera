@@ -85,12 +85,6 @@ It provides a structured environment for AI-assisted analysis of large-scale cos
 
 ---
 
-### 📄 **Codex Alpha — Italian v2.0**
-
-DOI: [10.5281/zenodo.16131379](https://doi.org/10.5281/zenodo.16131379)
-
-The Italian v2.0 version represents an earlier complete formulation of the Codex Alpha theory, developed before the transition toward the expanded Iconoclast structure and the later Foundations manuscript.
-
 ---
 
 ## 📐 Foundations of Codex Alpha Dynamics
@@ -140,6 +134,31 @@ While the theoretical manuscripts establish the formal structure of the model, t
 - AI-assisted analysis pipelines
 
 The framework is not intended to replace theoretical derivation. It serves as a bridge between formal predictions and future testable data-driven investigations.
+
+---
+
+## 📚 Frontiers of Reality — Popular Science Series
+
+*Science outreach project translating foundational questions into accessible narrative essays*
+
+**Frontiers of Reality** is a parallel outreach and publishing project connected to Codex Alpha Research.  
+Its purpose is to build a bridge between advanced theoretical work and a wider public interested in physics, cosmology, time, matter, information, emergence, and the changing scientific image of reality.
+
+The series does not replace the technical Codex Alpha manuscripts. It develops a more readable conceptual path for readers who want to approach contemporary physics without starting from formal equations, while preserving the core research identity of the project: rigor, intellectual honesty, scientific imagination, and the investigation of reality as an informational and emergent structure.
+
+**Work completed:**
+
+- Defined the editorial architecture of the **Frontiers of Reality** series
+- Developed the conceptual framework connecting modern physics, information, emergence, and scientific philosophy
+- Published the opening volumes of the series in English and Italian editions
+- Integrated the series into the broader Codex Alpha public research ecosystem
+- Created dedicated website sections and book pages for long-term discoverability
+- Established a public outreach layer complementary to the technical research manuscripts
+
+**Available books:**
+
+- **The Universe Is Not a Machine** — [Amazon Paperback](https://www.amazon.com/dp/B0H3MGD29H)
+- **Time Is Not a River** — [Amazon Paperback](https://www.amazon.com/dp/B0H5KPQ9TN) · [Kindle](https://www.amazon.com/dp/B0H5KK9KCP)
 
 ---
 
@@ -238,6 +257,7 @@ Codex Alpha identifies possible falsifiable deviations in:
 - Computational research framework
 - GitHub repositories for public research dissemination
 - Cross-disciplinary work on quantum information, emergent spacetime, and computational cosmology
+- Popular science outreach through the Frontiers of Reality series
 
 ---
 
@@ -248,9 +268,9 @@ Codex Alpha identifies possible falsifiable deviations in:
 - 🧠 **GitHub**: [github.com/Miriadenera](https://github.com/Miriadenera)
 - 📐 **Foundations Repository**: [foundations-of-codex-alpha-dynamics](https://github.com/Miriadenera/foundations-of-codex-alpha-dynamics)
 - 🌐 **Website**: [www.codexalpha.org](https://www.codexalpha.org)
+- 📚 **Frontiers of Reality — Amazon**: [The Universe Is Not a Machine](https://www.amazon.com/dp/B0H3MGD29H) · [Time Is Not a River](https://www.amazon.com/dp/B0H5KPQ9TN)
 - 📄 **Foundations DOI**: [10.5281/zenodo.20355167](https://doi.org/10.5281/zenodo.20355167)
 - 🧮 **Computational Framework DOI**: [10.5281/zenodo.20335018](https://doi.org/10.5281/zenodo.20335018)
-- 🧬 **OpenAIRE**: [Publication Profile](https://explore.openaire.eu/search/publication?pid=10.5281%2Fzenodo.16131379)
 
 ### Social and professional networks
 
@@ -275,6 +295,7 @@ Codex Alpha identifies possible falsifiable deviations in:
 ├── 🤝 collaborations/       # Collaborative research with external authors
 ├── 📊 visualizations/       # 3D/4D rendering and conceptual visualizations
 ├── 📚 publications/         # Papers, preprints, Zenodo releases and citation files
+├── 📖 outreach/             # Frontiers of Reality popular science and public-facing materials
 └── 🔬 experimental/         # Testable predictions, protocols and observational directions
 ```
 
@@ -324,19 +345,6 @@ Codex Alpha identifies possible falsifiable deviations in:
 }
 ```
 
-### Codex Alpha — Italian v2.0
-
-```bibtex
-@misc{Cadelano2025CodexAlphaItalian,
-  author       = {Cadelano, Davide},
-  title        = {Codex Alpha -- Teoria Unificata: Unificazione Teorica tra Relatività Generale e Meccanica Quantistica},
-  year         = {2025},
-  publisher    = {Zenodo},
-  version      = {2.0},
-  doi          = {10.5281/zenodo.16131379},
-  url          = {https://doi.org/10.5281/zenodo.16131379}
-}
-```
 
 ---
 

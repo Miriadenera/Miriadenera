@@ -679,6 +679,7 @@ footer .f-links a{margin:0 0.5rem}
     </p>
     <div class="btn-row" style="justify-content:center">
       <a class="btn btn-primary" href="https://codexalphacomputationalframework.netlify.app" target="_blank" rel="noopener">Explore the Framework</a>
+      <a class="btn btn-outline" href="computational-framework.html">Technical Overview</a>
       <a class="btn btn-outline" href="https://github.com/Miriadenera/codex-alpha-computational-framework" target="_blank" rel="noopener">GitHub Repository</a>
       <a class="btn btn-ion" href="https://doi.org/10.5281/zenodo.20335018" target="_blank" rel="noopener">Framework DOI</a>
     </div>
@@ -937,7 +938,6 @@ footer .f-links a{margin:0 0.5rem}
 
   var canvas = document.getElementById('bgcanvas');
   var ctx = canvas.getContext('2d');
-  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   var W = 0, H = 0;
   var nodes = [];
@@ -977,10 +977,9 @@ footer .f-links a{margin:0 0.5rem}
   });
 
   function maybeSpawnPulse(){
-    if(reduceMotion) return;
     if(pulses.length >= MAX_PULSES) return;
     if(!currentEdges.length) return;
-    if(Math.random() > 0.95){
+    if(Math.random() > 0.92){
       var pick = currentEdges[Math.floor(Math.random()*currentEdges.length)];
       pulses.push({a:pick[0], b:pick[1], t:0, speed: rand(0.005,0.009)});
     }
@@ -1061,13 +1060,9 @@ footer .f-links a{margin:0 0.5rem}
   }
 
   function loop(){
-    if(!reduceMotion){
-      step();
-    }
+    step();
     draw();
-    if(!reduceMotion){
-      maybeSpawnPulse();
-    }
+    maybeSpawnPulse();
     requestAnimationFrame(loop);
   }
   loop();

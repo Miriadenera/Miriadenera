@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Codex Alpha Research — Informational Gravity & Emergent Spacetime</title>
-  <meta name="description" content="Codex Alpha Research is an independent, computational research programme exploring informational gravity, emergent spacetime and quantum foundations."/>
+  <meta name="description" content="Codex Alpha Research: an independent theoretical physics programme in informational gravity, emergent spacetime, quantum foundations and computational cosmology."/>
   <meta name="robots" content="index, follow, max-image-preview:large"/>
   <meta name="author" content="Davide Cadelano"/>
   <meta name="keywords" content="Codex Alpha Research, informational gravity, emergent spacetime, quantum foundations, computational cosmology, theoretical physics, Telascura, coherence gradient, Davide Cadelano, Frontiers of Reality"/>
   <link rel="canonical" href="https://codexalpha.org/"/>
 
   <meta property="og:title" content="Codex Alpha Research — Informational Gravity & Emergent Spacetime"/>
-  <meta property="og:description" content="An independent, computational research programme exploring whether spacetime and gravity emerge from a deeper informational coherence structure."/>
+  <meta property="og:description" content="An independent theoretical physics programme in informational gravity, emergent spacetime, quantum foundations and computational cosmology."/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://codexalpha.org/"/>
   <meta property="og:site_name" content="Codex Alpha Research"/>
@@ -21,7 +21,7 @@
 
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Codex Alpha Research — Informational Gravity & Emergent Spacetime"/>
-  <meta name="twitter:description" content="An independent, computational research programme exploring informational gravity, emergent spacetime and quantum foundations."/>
+  <meta name="twitter:description" content="Codex Alpha Research: an independent theoretical physics programme in informational gravity, emergent spacetime, quantum foundations and computational cosmology."/>
   <meta name="twitter:image" content="https://codexalpha.org/codex-alpha-dynamics-cover.png"/>
 
   <link rel="icon" type="image/png" href="favicon.png"/>
@@ -163,7 +163,7 @@ nav{
   padding:0.9rem 2rem; background:rgba(5,6,10,0.7);
   backdrop-filter:blur(10px); border-bottom:1px solid var(--border-soft);
 }
-.nav-brand{font-family:var(--serif); font-weight:600; color:var(--text); font-size:1.05rem; letter-spacing:0.01em}
+.nav-brand{font-family:var(--serif); font-weight:600; color:var(--text); font-size:1.32rem; letter-spacing:0.015em}
 .nav-brand span{color:var(--gold)}
 .nav-links{display:flex; gap:1.6rem; flex-wrap:wrap}
 nav a{color:var(--text-soft); font-size:0.86rem; font-weight:500; letter-spacing:0.01em; position:relative; padding-bottom:3px}
@@ -252,9 +252,12 @@ section h2{font-size:clamp(1.6rem,3vw,2.1rem); text-align:center; margin-bottom:
 .book-card{
   display:grid; grid-template-columns:130px 1fr; gap:1.3rem;
   background:rgba(255,255,255,0.02); border:1px solid var(--border);
-  border-radius:8px; padding:1.4rem; align-items:start;
+  border-radius:8px; padding:1.4rem; align-items:stretch;
 }
+.book-card > a:first-child{align-self:start}
 .book-card img{width:130px; height:188px; object-fit:contain; border-radius:5px; background:#000; display:block}
+.book-card-body{display:flex; flex-direction:column; height:100%}
+.book-card-body .btn-row{margin-top:auto; padding-top:1rem}
 .book-card h3{font-size:1.1rem; margin-bottom:0.4rem; line-height:1.3}
 .book-meta{font-family:var(--mono); font-size:0.74rem; color:var(--ion); margin:0 0 0.6rem}
 .book-card p.desc{font-size:0.9rem; margin:0 0 1rem; color:var(--text-soft)}
@@ -271,7 +274,7 @@ section h2{font-size:clamp(1.6rem,3vw,2.1rem); text-align:center; margin-bottom:
 .tl-content p{font-size:0.9rem; color:var(--text-soft); margin:0}
 
 /* ── INCUBATOR / FORM ── */
-.two-col{display:grid; grid-template-columns:1fr 1fr; gap:1.4rem; align-items:start}
+.two-col{display:grid; grid-template-columns:1fr 1fr; gap:1.4rem; align-items:stretch}
 .codex-form{display:grid; gap:0.7rem}
 .codex-form input, .codex-form textarea, .codex-form select{
   width:100%; padding:0.7rem 0.85rem; border-radius:4px;
@@ -341,6 +344,7 @@ footer .f-links a{margin:0 0.5rem}
   <span class="nav-brand">CODEX <span>ALPHA</span></span>
   <div class="nav-links">
     <a href="#theory">Theory</a>
+    <a href="#research">Research</a>
     <a href="#collaborations">Collaborations</a>
     <a href="#framework">Framework</a>
     <a href="#books">Books</a>
@@ -351,11 +355,12 @@ footer .f-links a{margin:0 0.5rem}
 </nav>
 
 <header>
-  <span class="eyebrow">Independent Research Programme · Computational &amp; Pre-Peer-Review</span>
+  <span class="eyebrow">Independent Research Programme in Theoretical Physics · Computational &amp; Pre-Peer-Review</span>
   <h1>The Universe Isn't a Machine.<br>It's an Information Processing System.</h1>
   <p class="hero-subtitle">
-    Codex Alpha is an independent research programme exploring whether spacetime, gravity and quantum
-    phenomena emerge from a deeper informational coherence structure, governed by the gradient ∇𝒦.
+    Codex Alpha is an independent theoretical physics research programme exploring informational
+    gravity and emergent spacetime — the hypothesis that spacetime, gravitational dynamics and quantum
+    phenomena arise from a deeper informational coherence structure, governed by the gradient ∇𝒦.
   </p>
   <div class="hero-ctas">
     <a class="btn btn-primary" href="https://doi.org/10.5281/zenodo.20355167" target="_blank" rel="noopener">
@@ -403,7 +408,7 @@ footer .f-links a{margin:0 0.5rem}
         The full extended research programme: the Telascura substrate, nodal structures, informational
         curvature, retrocausal operators and the biological bridge.
       </p>
-      <span class="pillar-status status-wip">Awaiting independent peer review</span>
+      <span class="pillar-status status-wip">Submitted to Physical Review D · under review</span>
       <a class="pillar-link" href="https://doi.org/10.5281/zenodo.17074972" target="_blank" rel="noopener">DOI 10.5281/zenodo.17074972 →</a>
     </div>
 
@@ -427,6 +432,52 @@ footer .f-links a{margin:0 0.5rem}
       </p>
       <span class="pillar-status status-done">2 of 11 volumes published</span>
       <a class="pillar-link" href="#books">See the books →</a>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH DIRECTIONS -->
+<section id="research">
+  <span class="section-eyebrow">Theoretical Physics &amp; Computational Cosmology</span>
+  <h2>Research Directions</h2>
+  <p class="section-intro">
+    The recurring themes that connect the theoretical, computational and collaborative layers of
+    Codex Alpha's research programme in theoretical physics.
+  </p>
+  <div class="grid grid-3">
+    <div class="panel">
+      <h3 style="font-size:1rem">Informational Gravity</h3>
+      <p style="font-size:0.88rem; margin-top:0.6rem">Development of coherence-weighted gravitational
+        dynamics, where effective energy-momentum response is controlled by the local coherence
+        gradient ∇𝒦.</p>
+    </div>
+    <div class="panel">
+      <h3 style="font-size:1rem">Emergent Spacetime</h3>
+      <p style="font-size:0.88rem; margin-top:0.6rem">Study of spacetime geometry as an effective
+        continuous approximation emerging from a deeper informational network structure.</p>
+    </div>
+    <div class="panel">
+      <h3 style="font-size:1rem">Weak-Field Signatures</h3>
+      <p style="font-size:0.88rem; margin-top:0.6rem">Investigation of possible deviations in
+        post-Newtonian regimes, gravitational lensing, perturbations and gravitational-wave
+        propagation.</p>
+    </div>
+    <div class="panel">
+      <h3 style="font-size:1rem">Computational Cosmology</h3>
+      <p style="font-size:0.88rem; margin-top:0.6rem">Data-oriented workflows for anomaly detection,
+        crossmatching, candidate ranking, graph modeling and interpretable exploratory analysis.</p>
+    </div>
+    <div class="panel">
+      <h3 style="font-size:1rem">Mathematical Foundations</h3>
+      <p style="font-size:0.88rem; margin-top:0.6rem">Variational methods, ADM decomposition,
+        small-gradient expansions, stability analysis and recovery of General Relativity in the
+        uniform-coherence limit.</p>
+    </div>
+    <div class="panel">
+      <h3 style="font-size:1rem">Collaborative Extensions</h3>
+      <p style="font-size:0.88rem; margin-top:0.6rem">Open theoretical and computational
+        collaborations, including geometric, fractal, torsional and inference-based approaches
+        relevant to fundamental physics.</p>
     </div>
   </div>
 </section>
@@ -495,7 +546,7 @@ footer .f-links a{margin:0 0.5rem}
       <a href="books/the-universe-is-not-a-machine.html" aria-label="Open The Universe Is Not a Machine book page">
         <img src="the-universe-is-not-a-machine-cover.png" alt="The Universe Is Not a Machine book cover" loading="lazy">
       </a>
-      <div>
+      <div class="book-card-body">
         <h3>The Universe Is Not a Machine</h3>
         <p class="book-meta">Frontiers of Reality · Volume I</p>
         <p class="desc">Why the classical image of reality as a predictable mechanism is no longer
@@ -512,7 +563,7 @@ footer .f-links a{margin:0 0.5rem}
       <a href="books/time-is-not-a-river.html" aria-label="Open Time Is Not a River book page">
         <img src="time-is-not-a-river-cover.png" alt="Time Is Not a River book cover" loading="lazy">
       </a>
-      <div>
+      <div class="book-card-body">
         <h3>Time Is Not a River</h3>
         <p class="book-meta">Frontiers of Reality · Volume II</p>
         <p class="desc">Time, causality, memory, entropy and relativity — and the possibility that time
@@ -541,7 +592,7 @@ footer .f-links a{margin:0 0.5rem}
         <a href="https://amzn.eu/d/04Jh6BrX" target="_blank" rel="noopener">
           <img src="codex-alpha-dynamics-cover.png" alt="Foundations of Codex Alpha Dynamics book cover" loading="lazy">
         </a>
-        <div>
+        <div class="book-card-body">
           <h3>Foundations of Codex Alpha Dynamics</h3>
           <p class="book-meta">Research Manuscript · Paperback Edition</p>
           <p class="desc">A compact technical manuscript deriving the minimal variational structure of
@@ -559,7 +610,7 @@ footer .f-links a{margin:0 0.5rem}
         <a href="https://www.amazon.it/dp/B0FQHP5W58" target="_blank" rel="noopener">
           <img src="copertina kindle.png" alt="Codex Alpha Iconoclast Edition book cover" loading="lazy">
         </a>
-        <div>
+        <div class="book-card-body">
           <h3>Codex Alpha 3.0 — Iconoclast Edition</h3>
           <p class="book-meta">Research Manuscript · Kindle &amp; Paperback</p>
           <p class="desc">The full theoretical monograph of the Codex Alpha framework, available in
@@ -591,9 +642,9 @@ footer .f-links a{margin:0 0.5rem}
   <span class="section-eyebrow">The Data Layer</span>
   <h2>Codex Alpha Computational Framework</h2>
   <p class="section-intro">
-    An AI-assisted infrastructure for exploratory analysis of cosmological structures: anomaly detection,
-    graph-based modeling, ranking and interpretability, built to move from formal predictions toward
-    testable, data-driven workflows.
+    An AI-assisted infrastructure for computational cosmology: exploratory analysis of cosmological
+    structures, anomaly detection, graph-based modeling, ranking and interpretability, built to move
+    from formal predictions toward testable, data-driven workflows.
   </p>
 
   <div class="grid grid-3">
@@ -697,7 +748,6 @@ footer .f-links a{margin:0 0.5rem}
       </p>
       <div class="btn-row" style="margin-top:1.2rem">
         <a class="btn btn-primary" href="mailto:davide.cadelano@codexalpha.org?subject=Codex%20Alpha%20Research%20Collaboration" target="_blank" rel="noopener">Contact by Email</a>
-        <a class="btn btn-outline" href="https://github.com/Miriadenera/Miriadenera/issues/new?title=Collaboration%20proposal%3A%20%5BYour%20Name%5D&labels=collaboration&body=Please%20complete%20the%20sections%20below%3A%0A%0A**Background%20(%E2%89%A4150%20words)**%0A%0A**Proposed%20contribution%20(%E2%89%A4300%20words)**%0A%0A**Availability%20(hours%2Fweek)**%0A%0A**Links%20(repo%2Fportfolio%2FPDF)**%0A" target="_blank" rel="noopener">Open GitHub Proposal</a>
       </div>
     </div>
 
@@ -807,9 +857,26 @@ footer .f-links a{margin:0 0.5rem}
     <div>
       <p>
         <strong style="color:var(--text)">Davide Cadelano</strong> is an independent theoretical
-        physicist and founder of Codex Alpha Research. His work focuses on gravitational models, quantum
-        frameworks, emergent spacetime, informational curvature and the possible unification of physical
-        laws through coherence-gradient dynamics.
+        physicist and researcher working on gravitational models, quantum frameworks, emergent
+        spacetime and the unification of physical laws. He leads the formal and conceptual development
+        of <strong style="color:var(--text)">Codex Alpha — Unified Field Theory</strong>, a research
+        framework in which spacetime is modeled as emerging from an informational coherence structure
+        through gradients of the scalar field ∇𝒦.
+      </p>
+      <p>
+        The construction is covariant, recovers General Relativity in the ∇𝒦 → 0 limit, and predicts
+        testable departures in cosmological, gravitational-wave, lensing and weak-field regimes. His
+        work sits at the interface between mathematical modeling, quantum mechanics and general
+        relativity, with emphasis on variational principles, emergent geometry, perturbation theory,
+        metric generation and energy–momentum dynamics.
+      </p>
+      <p>
+        Recent technical results include linear-response kernels, small-gradient expansions, FRW
+        background and perturbation analysis, modified tensor-mode propagation, an ADM Hamiltonian
+        formulation, TOV equations with informational contributions, black-hole thermodynamic
+        extensions and stability analysis. <em>Codex Alpha 3.0 — Iconoclast Edition</em>, the full
+        theoretical architecture of the project, has been submitted to <strong style="color:var(--text)">Physical
+        Review D</strong> and is currently under peer review.
       </p>
       <p>
         Codex Alpha introduces the <em>Telascura</em>: a coherent quantum-informational structure from
@@ -837,7 +904,8 @@ footer .f-links a{margin:0 0.5rem}
   <div class="f-tags">INFORMATIONAL GRAVITY · EMERGENT SPACETIME · QUANTUM FOUNDATIONS · COMPUTATIONAL COSMOLOGY</div>
   <div class="f-links">
     <a href="#theory">Theory</a> · <a href="#collaborations">Collaborations</a> · <a href="#framework">Framework</a> · <a href="#books">Books</a> ·
-    <a href="#validation">Validation</a> · <a href="#incubator">Join the Research</a> · <a href="#about">About</a>
+    <a href="#validation">Validation</a> · <a href="#incubator">Join the Research</a> · <a href="#about">About</a> ·
+    <a href="https://dc1fe0a2.sibforms.com/serve/MUIFAN1IbwjFyUH9Ahm_YDv8yq3x5oXZDWM9BEOllTVrO1unu0QEyyYJ1IALpxyYF87_agqp3VFPu8N-SEm-EbjBkpYGqOQuSxhP-_zaWUvwqHmVmKKvg4pIjJMznXvwf_18qwfa1EDiwyK3iOb0dW62AWb_jm418yevuPrUK6B7qOPcXgxb5qicuTaIQLHjDZ0v9oMTegrseVdzVg==" target="_blank" rel="noopener">Newsletter</a>
   </div>
   <p class="fineprint" style="margin-top:1.2rem">
     <a href="mailto:davide.cadelano@codexalpha.org">davide.cadelano@codexalpha.org</a> ·
@@ -877,6 +945,8 @@ footer .f-links a{margin:0 0.5rem}
   var MAX_DIST = 165;
   var mouse = { x: -9999, y: -9999 };
   var pulses = [];
+  var currentEdges = [];
+  var MAX_PULSES = 3;
 
   function resize(){
     W = canvas.width = window.innerWidth;
@@ -908,14 +978,11 @@ footer .f-links a{margin:0 0.5rem}
 
   function maybeSpawnPulse(){
     if(reduceMotion) return;
-    if(Math.random() > 0.985 && nodes.length > 1){
-      var a = Math.floor(Math.random()*nodes.length);
-      var b = Math.floor(Math.random()*nodes.length);
-      if(a === b) return;
-      var dx = nodes[a].x - nodes[b].x, dy = nodes[a].y - nodes[b].y;
-      if(Math.sqrt(dx*dx+dy*dy) < MAX_DIST*1.4){
-        pulses.push({a:a, b:b, t:0, speed: rand(0.006,0.012)});
-      }
+    if(pulses.length >= MAX_PULSES) return;
+    if(!currentEdges.length) return;
+    if(Math.random() > 0.95){
+      var pick = currentEdges[Math.floor(Math.random()*currentEdges.length)];
+      pulses.push({a:pick[0], b:pick[1], t:0, speed: rand(0.005,0.009)});
     }
   }
 
@@ -941,6 +1008,7 @@ footer .f-links a{margin:0 0.5rem}
 
   function draw(){
     ctx.clearRect(0,0,W,H);
+    currentEdges = [];
 
     for(var i=0;i<nodes.length;i++){
       for(var j=i+1;j<nodes.length;j++){
@@ -948,6 +1016,7 @@ footer .f-links a{margin:0 0.5rem}
         var dx = a.x-b.x, dy = a.y-b.y;
         var d = Math.sqrt(dx*dx+dy*dy);
         if(d < MAX_DIST){
+          currentEdges.push([i,j]);
           var op = (1 - d/MAX_DIST) * 0.16;
           ctx.strokeStyle = 'rgba(111,168,201,' + op.toFixed(3) + ')';
           ctx.lineWidth = 1;
@@ -975,9 +1044,18 @@ footer .f-links a{margin:0 0.5rem}
       var px = na.x + (nb.x-na.x)*pu.t;
       var py = na.y + (nb.y-na.y)*pu.t;
       var alpha = Math.sin(pu.t*Math.PI);
+
+      var glow = ctx.createRadialGradient(px,py,0,px,py,9);
+      glow.addColorStop(0, 'rgba(240,194,114,' + (alpha*0.55).toFixed(3) + ')');
+      glow.addColorStop(1, 'rgba(240,194,114,0)');
+      ctx.fillStyle = glow;
       ctx.beginPath();
-      ctx.arc(px,py,2.2,0,Math.PI*2);
-      ctx.fillStyle = 'rgba(240,194,114,' + (alpha*0.9).toFixed(3) + ')';
+      ctx.arc(px,py,9,0,Math.PI*2);
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(px,py,2.4,0,Math.PI*2);
+      ctx.fillStyle = 'rgba(255,224,164,' + (alpha*0.95).toFixed(3) + ')';
       ctx.fill();
     }
   }
@@ -985,9 +1063,11 @@ footer .f-links a{margin:0 0.5rem}
   function loop(){
     if(!reduceMotion){
       step();
-      maybeSpawnPulse();
     }
     draw();
+    if(!reduceMotion){
+      maybeSpawnPulse();
+    }
     requestAnimationFrame(loop);
   }
   loop();

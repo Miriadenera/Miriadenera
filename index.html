@@ -28,7 +28,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -127,7 +127,7 @@
   --ink:#05060a; --ink-2:#0a0c12; --ink-3:#0e1118;
   --gold:#d8a857; --gold-bright:#f0c272; --gold-dim:#8a6a35;
   --ion:#6fa8c9; --ion-dim:#3d5d6e;
-  --text:#efe9dd; --text-soft:#aba395; --text-faint:#6e6759;
+  --text:#efe9dd; --text-soft:#aba395; --text-faint:#9a9183;
   --border:rgba(216,168,87,0.16); --border-soft:rgba(216,168,87,0.08);
   --serif:'Source Serif 4',Georgia,serif;
   --sans:'IBM Plex Sans',-apple-system,sans-serif;
@@ -281,6 +281,7 @@ section h2{font-size:clamp(1.6rem,3vw,2.1rem); text-align:center; margin-bottom:
   border:1px solid var(--border); background:rgba(255,255,255,0.02);
   color:var(--text); font-family:var(--sans); font-size:0.9rem; outline:none;
 }
+.codex-form input::placeholder, .codex-form textarea::placeholder{color:var(--text-faint); opacity:1}
 .codex-form input:focus, .codex-form textarea:focus, .codex-form select:focus{border-color:var(--gold)}
 .codex-form textarea{min-height:100px; resize:vertical}
 .codex-form select option{color:#000; background:#fff}
@@ -298,6 +299,7 @@ section h2{font-size:clamp(1.6rem,3vw,2.1rem); text-align:center; margin-bottom:
 .news-entry{padding:1rem 0; border-bottom:1px solid var(--border-soft); font-size:0.92rem}
 .news-entry:last-child{border-bottom:none}
 .news-entry strong{color:var(--gold); font-family:var(--mono); font-size:0.82rem; font-weight:500}
+.news-entry a, .lc-desc a, #about p a{text-decoration:underline; text-decoration-color:rgba(216,168,87,0.45)}
 
 /* ── ABOUT ── */
 .identifiers p{font-size:0.92rem; line-height:2}
@@ -762,7 +764,7 @@ footer .f-links a{margin:0 0.5rem}
         </p>
         <input name="name" type="text" placeholder="Full name" required>
         <input name="email" type="email" placeholder="Email" required>
-        <select name="focus-area" required>
+        <select name="focus-area" aria-label="Focus area" required>
           <option value="">Focus area</option>
           <option value="mathematical-physics">Mathematical physics</option>
           <option value="computational-framework">Computational framework</option>
@@ -919,7 +921,7 @@ footer .f-links a{margin:0 0.5rem}
 <form name="codexalpha-collab" data-netlify="true" netlify-honeypot="bot-field" style="display:none;">
   <input type="text" name="name">
   <input type="email" name="email">
-  <select name="focus-area">
+  <select name="focus-area" aria-label="Focus area">
     <option value="mathematical-physics">Mathematical physics</option>
     <option value="computational-framework">Computational framework</option>
     <option value="ai-graph-modeling">AI / graph modeling</option>
